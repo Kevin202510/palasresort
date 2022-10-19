@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
                     <li class="nav-item"><a class="nav-link" href="about.php">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="userManagement.php">User Management</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>

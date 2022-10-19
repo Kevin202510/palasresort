@@ -1,10 +1,10 @@
 <?php 
     class InnovatechAPIFunctions{
         public $que;
-        private $servername='sql112.epizy.com';
-        private $username='epiz_32772662';
-        private $password='XBeGtGF2UJfHN';
-        private $dbname='epiz_32772662_pcms';
+        private $servername='localhost';
+        private $username='root';
+        private $password='';
+        private $dbname='palasresort';
         private $result=array();
         private $mysqli='';
 

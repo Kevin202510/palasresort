@@ -1,9 +1,9 @@
 
 
-    <?php include('layouts/head.php');?>
+    <?php include('Pages/layouts/head.php');?>
 
     <!--================Header Area =================-->
-    <?php include('layouts/header.php');?>
+    <?php include('Pages/layouts/header.php');?>
     <!--================Header Area =================-->
 
         <!--================Breadcrumb Area =================-->
@@ -161,10 +161,10 @@
         <!--================ Testimonial Area  =================-->
         
     <!--================ start footer Area  =================-->	
-    <?php include('layouts/footer.php');?>
+    <?php include('Pages/layouts/footer.php');?>
     <!--================ End footer Area  =================-->
     
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <?php include('layouts/scripts.php');?>
+    <?php include('Pages/layouts/scripts.php');?>
