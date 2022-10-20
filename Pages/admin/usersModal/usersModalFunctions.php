@@ -1,63 +1,69 @@
 <?php
 
-    include('../../Functions/InnovatechAPIFunctions.php');
+    include('../../../Functions/InnovatechAPIFunctions.php');
     $newAPIFunctions = new InnovatechAPIFunctions();
 
 
-    if(isset($_POST['addnewuser'])){
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
+    if(isset($_POST['addNew'])){
+        $firstname = $_POST["fname"];
+        $middlename = $_POST["mname"];
+        $lastname = $_POST["lname"];
         $address = $_POST["address"];
-        $contact = $_POST["contact"];
+        $contact = $_POST["contact_num"];
         $email = $_POST["email"];
+        $username = $_POST["username"];
         $password = $_POST["password"];
         $permission_id = $_POST["permission_id"];
 
-        $newAPIFunctions->insert('userstables',['permission_id'=>$permission_id,
-        'firstname'=>$firstname,
-        'lastname'=>$lastname,
+        $newAPIFunctions->insert('users',['permission_id'=>$permission_id,
+        'fname'=>$firstname,
+        'mname'=>$middlename,
+        'lname'=>$lastname,
         'address'=>$address,
-        'contact'=>$contact,
+        'contact_num'=>$contact,
+        'username'=>$username,
         'email'=>$email,
         'password'=>$password,]);
 
         if($newAPIFunctions){
-            header('location: ../../adminViews/usersList.php');
+            header('location: ../../admin/userManagement.php');
         }else{
             echo '<script>alert("May Error!");</script>';
         }
     }else if(isset($_POST['updateUsers'])){
-        
+        // echo "<script>alert('update');</script>";
         $id = $_POST['id'];
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
+        $firstname = $_POST["fname"];
+        $middlename = $_POST["mname"];
+        $lastname = $_POST["lname"];
         $address = $_POST["address"];
-        $contact = $_POST["contact"];
+        $contact = $_POST["contact_num"];
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $username = $_POST["username"];
         $permission_id = $_POST["permission_id"];
 
-        $newAPIFunctions->update('userstables',['permission_id'=>$permission_id,
-        'firstname'=>$firstname,
-        'lastname'=>$lastname,
+        $newAPIFunctions->update('users',['permission_id'=>$permission_id,
+        'fname'=>$firstname,
+        'mname'=>$middlename,
+        'lname'=>$lastname,
         'address'=>$address,
-        'contact'=>$contact,
-        'email'=>$email,
-        'password'=>$password,],"id='$id'");
+        'contact_num'=>$contact,
+        'username'=>$username,
+        'email'=>$email,],"id='$id'");
 
         if($newAPIFunctions){
-            header('location: ../../adminViews/usersList.php');
+            header('location: ../../admin/userManagement.php');
         }else{
             echo '<script>alert("May Error!");</script>';
         }
-    }else if(isset($_POST['deleteUser'])){
+    }else if(isset($_POST['delete'])){
         
         $id = $_POST['id'];
 
-        $newAPIFunctions->delete('userstables',"id='$id'");
+        $newAPIFunctions->delete('users',"id='$id'");
 
         if($newAPIFunctions){
-            header('location: ../../adminViews/usersList.php');
+            header('location: ../../admin/userManagement.php');
         }else{
             echo '<script>alert("May Error!");</script>';
         }

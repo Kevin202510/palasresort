@@ -54,8 +54,8 @@
             $this->sql = $result = $this->mysqli->query($sql);
         }
 
-        public function selectleftjoin($table,$table1,$attributename,$attributename1){
-            $sql = "SELECT * FROM $table LEFT JOIN $table1 ON $table1.$attributename1=$table.$attributename";
+        public function selectleftjoin($table,$table1,$attributename1,$attributename,$where){
+            $sql = "SELECT * FROM $table LEFT JOIN $table1 ON $table1.$attributename1=$table.$attributename WHERE $where";
 
             $this->sql = $result = $this->mysqli->query($sql);
         }

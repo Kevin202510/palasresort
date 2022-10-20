@@ -1,170 +1,74 @@
+<?php include('page/head.php'); ?>
 
+<?php include('page/sidebar.php'); ?>
 
-    <?php include('../layouts/head.php');?>
+<main class="main-content position-relative border-radius-lg ">
+      <?php include('page/navigationbar.php'); ?>
+      
+      <!-- Content side -->
 
-<!--================Header Area =================-->
-<?php include('../layouts/header.php');?>
-<!--================Header Area =================-->
+        <div class="container-fluid py-4">
 
-    <!--================Breadcrumb Area =================-->
-    <section class="breadcrumb_area">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
-        <div class="container">
-            <div class="page-cover text-center">
-                <h2 class="page-cover-tittle">About Us</h2>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">About</li>
-                </ol>
+            <div class="card" style="margin-top:50px;">
+              <div class="card-body">
+                  <div class="card-title">
+                    <h4 class="card-title">Users Management</h4>
+                    <div class="d-flex flex-row-reverse">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Fullname</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tbody>
+                      <?php
+                          include('../../Functions/InnovatechAPIFunctions.php');
+                          $newAPIFunctions = new InnovatechAPIFunctions();
+                          $newAPIFunctions->selectleftjoin("users","permissions","permissions_id","permission_id","permission_id!=1");
+                          $userLists = $newAPIFunctions->sql;
+                  
+                          $index = 1;
+                          while ($data = mysqli_fetch_assoc($userLists)){
+                      ?>
+                          <tr>
+                              <td class="text-wrap"><?php echo $data['id']; ?></td>
+                              <td class="text-wrap"><?php echo $data["permission_name"]; ?></td>
+                              <td class="text-wrap"><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></td>
+                              <td class="text-wrap"><?php echo $data["address"]; ?></td>
+                              <td class="text-wrap"><?php echo $data["contact_num"]; ?></td>
+                              <td class="text-wrap"><?php echo $data["username"]; ?></td>
+                              <td class="text-wrap"><?php echo $data["email"]; ?></td>
+                              <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['id']; ?>" id="delete">Delete</button></td>
+                          </tr>
+
+                          <?php $index++; } ?>
+                    </tbody>
+                  </table>
+              </div>
             </div>
+            
         </div>
-    </section>
-    <!--================Breadcrumb Area =================-->
+
+
+    <?php include('usersModal/usersEditModal.php'); ?>
+
+      <!-- End Content Side -->
     
-    <!--================ About History Area  =================-->
-    <section class="about_history_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d_flex align-items-center">
-                    <div class="about_content ">
-                        <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
-                        <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
-                        <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="image/about_bg.jpg" alt="img">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ About History Area  =================-->
-    
-    <!--================ Facilities Area  =================-->
-    <section class="facilities_area section_gap">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
-        </div>
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_w">Royal Facilities</h2>
-                <p>Who are in extremely love with eco friendly system.</p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ Facilities Area  =================-->
-    
-    <!--================ Testimonial Area  =================-->
-    <section class="testimonial_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Testimonial from our Clients</h2>
-                <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
-            </div>
-            <div class="testimonial_slider owl-carousel">
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>    
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>    
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ Testimonial Area  =================-->
-    
-<!--================ start footer Area  =================-->	
-<?php include('../layouts/footer.php');?>
-<!--================ End footer Area  =================-->
+</main>
 
+<?php include('page/scripts.php'); ?>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<?php include('../layouts/scripts.php');?>
+<script src="usersModal/usersFunctions.js"></script>

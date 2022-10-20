@@ -1,20 +1,38 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add New User</h4>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="usersModal/usersModalFunctions.php">
+      <form method="POST" action="usersModal/usersModalFunctions.php">
             <input type="hidden" name="id" id="id">
+            <div class="form-group">
+            <label for="exampleInputEmail1">Permission</label>
+                <select class="form-control" id="permissions_id" name="permission_id">
+                    <?php 
+                        $newAPIFunctions->select("permissions","*","permissions_id!=1");
+                        $rolesLists = $newAPIFunctions->sql;
+
+                        while ($datas = mysqli_fetch_assoc($rolesLists)){
+                    ?>
+                    <option value="<?php echo $datas["permissions_id"]; ?>"><?php echo $datas["permission_name"]; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
              <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
-                <input type="text" class="form-control" id="firstname" name="firstname">
+                <input type="text" class="form-control" id="fname" name="fname">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Middle Name</label>
+                <input type="text" class="form-control" id="mname" name="mname">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" class="form-control" id="lastname" name="lastname">
+                <input type="text" class="form-control" id="lname" name="lname">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
@@ -22,33 +40,23 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Contact</label>
-                <input type="text" class="form-control" id="contact" name="contact">
+                <input type="text" class="form-control" id="contact_num" name="contact_num">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="text" class="form-control" id="email" name="email">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="pass">
                 <label for="exampleInputEmail1">Password</label>
                 <input type="password" class="form-control" id="password" name="password">
             </div>
-            <div class="form-group">
-            <label for="exampleInputEmail1">Permission</label>
-                <select class="form-control" id="permission_id" name="permission_id">
-                    <?php 
-                        $newAPIFunctions->select("roles","*");
-                        $rolesLists = $newAPIFunctions->sql;
-                        $index1 = 1;
-
-                        while ($datas = mysqli_fetch_assoc($rolesLists)){
-                    ?>
-                    <option value="<?php echo $index1; ?>"><?php echo $datas["roleName"]; ?></option>
-                    <?php $index1++;} ?>
-                </select>
-            </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</button>
-                <button type="submit" class="btn btn-primary" id="btn-save" name="addnewuser">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="btn-mul" name="addNew">Save changes</button>
             </div>
         </form>
       </div>
@@ -57,24 +65,25 @@
 </div>
 
 
-
-<div class="modal fade" id="myModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Delete User</h4>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="usersModal/usersModalFunctions.php">
+      <form method="POST" action="usersModal/usersModalFunctions.php">
             <input type="hidden" name="id" id="ids">
-             <p>Are you sure you want to delete this User?</p>
+            <p>ARE YOU SURE YOU WANT TO DELETE THIS?</p>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close" data>Close</button>
-                <button type="submit" class="btn btn-primary" id="btn-save" name="deleteUser">Delete</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="btn-mul" name="delete">Save changes</button>
             </div>
         </form>
       </div>
     </div>
   </div>
-</div>  
+</div>
+
