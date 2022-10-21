@@ -14,7 +14,7 @@
                     <li class="nav-item active"><a class="nav-link" href="Pages/admin/index.php">Admin</a></li> 
                     <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
                     <li class="nav-item"><a class="nav-link" href="about.php">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="userManagement.php">User Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.php">Facilities</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>

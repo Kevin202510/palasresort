@@ -31,4 +31,11 @@ $(document).ready(function(){
         $("#exampleModalDelete").modal("show");
     });
     
+    $("#closeform").click(function(){
+        $("#serviceform")[0].reset();
+
+
+        $("#exampleModal").modal("hide");
+    });
+    
 })

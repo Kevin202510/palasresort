@@ -21,15 +21,13 @@
                   </div>
                   <table class="table table-hover">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
+                      <tr >
+                      <th scope="col">#</th>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Facility Type</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Actions</th>
                       </tr>
                     </thead>
@@ -38,7 +36,7 @@
                       <?php
                           include('../../Functions/InnovatechAPIFunctions.php');
                           $newAPIFunctions = new InnovatechAPIFunctions();
-                          $newAPIFunctions->selectleftjoin("users","permissions","id","permission_id","permission_id!=1");
+                          $newAPIFunctions->select("facilities","*");
                           $userLists = $newAPIFunctions->sql;
                   
                           $index = 1;
@@ -46,12 +44,11 @@
                       ?>
                           <tr>
                               <td><?php echo $index; ?></td>
-                              <td><?php echo $data["permission_name"]; ?></td>
-                              <td><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></td>
-                              <td><?php echo $data["address"]; ?></td>
-                              <td><?php echo $data["contact_num"]; ?></td>
-                              <td><?php echo $data["username"]; ?></td>
-                              <td><?php echo $data["email"]; ?></td>
+                              <td><img alt="Chania" width="120" height="120" src="./facilitiesimage/images/<?php echo $data['image']; ?>"></td>
+                              <td><?php echo $data["name"]; ?></td>
+                              <td class="text-wrap"><p> <?php echo $data["description"]." <br> Day Rate : ". $data["day_rate"]." <br> Night Rate : ". $data["night_rate"] . " <br> Overnight Rate : ". $data["overnigth_rate"]?></p></td>
+                              <td><?php echo $data["facility_type"]; ?></td>
+                              <td><?php echo $data["status"]; ?></td>
                               <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['id']; ?>" id="delete">Delete</button></td>
                           </tr>
 
@@ -64,10 +61,11 @@
         </div>
 
 
-    <?php include('usersModal/usersEditModal.php'); ?>
+    <?php include('facilitiesModal/facilitiesEditModal.php'); ?>
 
       <!-- End Content Side -->
     
 </main>
 
 <?php include('page/scripts.php'); ?>
+<script src="facilitiesModal/facilitiesFunctions.js"></script>

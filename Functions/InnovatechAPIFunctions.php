@@ -61,7 +61,7 @@
         }
 
         public function selectleftjoin3(){
-            $sql = "SELECT * FROM `reservations` LEFT JOIN `services` ON services.service_id = reservations.reservation_service_id LEFT JOIN `facilities` ON facilities.facility_id = reservations.reservation_facility_id LEFT JOIN `users` ON users.user_id = reservations.reservation_user_id";
+            $sql = "SELECT * FROM `reservations` LEFT JOIN `services` ON services.service_id = reservations.service_id LEFT JOIN `facilities` ON facilities.id = reservations.facility_id LEFT JOIN `users` ON users.id = reservations.customer_id";
 
             $this->sql = $result = $this->mysqli->query($sql);
         }

@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
-      <form method="POST" action="usersModal/usersModalFunctions.php">
+      <form method="POST" id="serviceform" action="usersModal/usersModalFunctions.php">
             <input type="hidden" name="id" id="id">
             <div class="form-group">
             <label for="exampleInputEmail1">Permission</label>
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Contact</label>
-                <input type="text" class="form-control" id="contact_num" name="contact_num">
+                <input type="number" class="form-control" id="contact_num" name="contact_num">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
@@ -55,7 +55,7 @@
                 <input type="password" class="form-control" id="password" name="password">
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" id="closeform">Close</button>
             <button type="submit" class="btn btn-primary" id="btn-mul" name="addNew">Save changes</button>
             </div>
         </form>
