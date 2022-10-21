@@ -3,9 +3,9 @@
     background: #04091e;
     
 	position: relative;
-    z-index: 1;
+    z-index: -3;
     .bg-parallax{
-        background: url("../image/banner_bg.jpg") no-repeat scroll center 0 / cover;
+        background: url("../image/pic1.jpg") no-repeat scroll center 0 / cover;
         opacity: 0.50;
     }
     .position{
@@ -58,7 +58,7 @@
     
 }
 .hotel_booking_table{
-    background: #04091e;
+    background: #02231c;
     align-items: center;
     padding: 40px 50px 30px;
 	display: flex;
@@ -79,7 +79,7 @@
             position: relative;
             
             .form-control{
-                border: 1px solid #2b3146;
+                border: 1px solid #04091e;
                 background: transparent;
                 border-radius: 0px;
                 font-size: 13px;
