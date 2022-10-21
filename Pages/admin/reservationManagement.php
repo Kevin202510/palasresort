@@ -49,7 +49,7 @@
                               <td class="text-wrap"><p> Date:<?php echo $data["date"]." <br> Time : ". $data["time"]?></p></td>
                               <td class="text-wrap"><p> Adult:<?php echo $data["person_adult_quantity"]." <br> Kids : ". $data["person_kids_quantity"]?></p></td>
                               <td class="text-wrap"><?php echo $data['total_balance']; ?></td>
-                              <td class="text-wrap"><?php echo $data['status']; ?></td>
+                              <td class="text-wrap"><?php echo $data['reservation_status']; ?></td>
                               <td class="text-wrap">Create At<?php echo $data['created_at']." <br> Update At : ".$data['updated_at']?></td>
                               <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['service_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['service_id']; ?>" id="delete">Delete</button></td>
                           </tr>
@@ -63,7 +63,7 @@
         </div>
 
 
-    <?php include('servicesModal/servicesEditModal.php'); ?>
+        <?php include('reservationsModal/resevationsEditModal.php'); ?>
 
       <!-- End Content Side -->
     
@@ -71,4 +71,4 @@
 
 <?php include('page/scripts.php'); ?>
 
-<script src="servicesModal/servicesFunctions.js"></script>
+<script src="reservationsModal/reservationsFunctions.js"></script>

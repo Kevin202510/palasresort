@@ -71,7 +71,7 @@
         }
 
         public function select2(){
-            $sql = "SELECT * FROM `users` WHERE `permission_id`=5";
+            $sql = "SELECT * FROM `users` WHERE `permission_id`=3";
 
             $this->sql = $result = $this->mysqli->query($sql);
         }
