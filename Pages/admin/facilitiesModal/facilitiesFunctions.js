@@ -17,7 +17,7 @@ $(document).ready(function(){
             $("#night_rates").val(datas.night_rate);
             $("#overnigth_rates").val(datas.overnigth_rate);
             $('#facility_types option[value='+datas.facility_type+']').attr("selected", "selected");
-            $('#statuss option[value='+datas.status+']').attr("selected", "selected");
+            // $('#statuss option[value='+datas.status+']').attr("selected", "selected");
             $("#images").val(datas.image);
             $("#facilitiesImages").attr("src","./facilitiesimage/images/"+datas.image);
             $("#newimg").on("click",function(){

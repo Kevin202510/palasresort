@@ -11,7 +11,7 @@
             <input type="hidden" name="id" id="id">
             <div class="form-group">
                 <label for="exampleInputEmail1">Service Name</label>
-                <input type="text" class="form-control" id="service_name" name="service_name">
+                <input type="text" class="form-control" id="service_name" name="service_name" required>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="closeform">Close</button>

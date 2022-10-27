@@ -11,7 +11,7 @@
         $night_rate = $_POST["night_rate"];
         $overnigth_rate = $_POST["overnigth_rate"];
         $facility_type = $_POST["facility_type"];
-        $status = $_POST["status"];
+        // $status = $_POST["status"];
         $image = $_POST["image"];
 
         $newAPIFunctions->insert('facilities',['name'=>$name,
@@ -20,7 +20,6 @@
         'night_rate'=>$night_rate,
         'overnigth_rate'=>$overnigth_rate,
         'facility_type'=>$facility_type,
-        'status'=>$status,
         'image'=>$image,]);
         if($newAPIFunctions){
             header('location: ../../admin/facilitiesMangement.php');
@@ -36,7 +35,7 @@
         $night_rate = $_POST["night_rate"];
         $overnigth_rate = $_POST["overnigth_rate"];
         $facility_type = $_POST["facility_type"];
-        $status = $_POST["status"];
+        // $status = $_POST["status"];
         $image = $_POST["image"];
 
         $newAPIFunctions->update('facilities',['name'=>$name,
@@ -45,7 +44,6 @@
         'night_rate'=>$night_rate,
         'overnigth_rate'=>$overnigth_rate,
         'facility_type'=>$facility_type,
-        'status'=>$status,
         'image'=>$image,],"id='$id'");
 
         if($newAPIFunctions){

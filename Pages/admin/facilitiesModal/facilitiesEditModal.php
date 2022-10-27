@@ -11,10 +11,11 @@
             <input type="hidden" name="id" id="id">
 
             <div class="form-group">
+            <label class="form-label">Facility img</label>
             <input type="file" name="image" id="images"required>
               <div id="tagomoto">
                   <label class="form-label">Facility Image</label>
-                        <img id="facilitiesImages" src="...">
+                        <img id="facilitiesImages" src="..." width="470" height="250">
                       </div>
                       <div class="mb-3">
                     <label class="form-label">Change Facility img</label>
@@ -45,20 +46,20 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Facility Type</label>
                 <select class="dropdown-item" aria-labelledby="btnGroupDrop1" id="facility_types" name="facility_type" required>
-                  <option class="dropdown-item" value="private_rooms">PRIVATE ROOMS</option>
+                  <option class="dropdown-item" value="rooms">PRIVATE ROOMS</option>
                   <option class="dropdown-item" value="nipa_cottage">NIPA COTTAGE </option>
                   <option class="dropdown-item" value="adrenaline_game">ADRENALINE GAME</option>
                   <option class="dropdown-item" value="sports_center">SPORTS CENTER</option>
                   <option class="dropdown-item" value="function_pavillion">FUNCTION PAVILLION</option>
                 </select>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="exampleInputEmail1">Status</label>
                 <select class="dropdown-item" aria-labelledby="btnGroupDrop1" id="statuss" name="status" required>
                   <option class="dropdown-item" value="available">Available</option>
                   <option class="dropdown-item" value="nonavailable">Non-Available</option>
                 </select>
-            </div>
+            </div> -->
             
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="closeform">Close</button>

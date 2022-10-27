@@ -229,10 +229,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
                                 <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	
@@ -245,10 +245,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
                                 <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	
@@ -261,10 +261,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">It S Classified How To Utilize Free</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">It S Classified How To Utilize Free</h4></a> -->
                                 <p>Why do you want to motivate yourself? Actually, just answering that question fully can </p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	
@@ -277,10 +277,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
                                 <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	
@@ -293,10 +293,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
                                 <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	
@@ -309,10 +309,10 @@
                             </div>
                             <div class="details">
                                 <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    <!-- <a href="#" class="button_hover tag_btn">Travel</a>
+                                    <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
                                 <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
                                 <h6 class="date title_color">31st January,2018</h6>
                             </div>	

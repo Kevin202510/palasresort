@@ -24,35 +24,35 @@
             </div>
              <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
-                <input type="text" class="form-control" id="fname" name="fname">
+                <input type="text" class="form-control" id="fname" name="fname"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Middle Name</label>
-                <input type="text" class="form-control" id="mname" name="mname">
+                <input type="text" class="form-control" id="mname" name="mname"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" class="form-control" id="lname" name="lname">
+                <input type="text" class="form-control" id="lname" name="lname"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
-                <input type="text" class="form-control" id="address" name="address">
+                <input type="text" class="form-control" id="address" name="address"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Contact</label>
-                <input type="number" class="form-control" id="contact_num" name="contact_num">
+                <input type="number" class="form-control" id="contact_num" name="contact_num"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="username" name="username">
+                <input type="text" class="form-control" id="username" name="username"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="text" class="form-control" id="email" name="email">
+                <input type="text" class="form-control" id="email" name="email"required>
             </div>
             <div class="form-group" id="pass">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password"required>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="closeform">Close</button>
