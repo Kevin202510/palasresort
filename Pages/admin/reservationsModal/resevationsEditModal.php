@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
-      <form method="POST" id="serviceform" action="reservationsModal/reservationsModalFunctions.php">
+      <form method="POST" id="serviceform">
             <input type="hidden" name="id" id="id">
             
             <div class="form-group">
@@ -26,14 +26,13 @@
             
             <div class="form-group">
                 <label for="exampleInputEmail1">Facilities</label>
-                <select class="dropdown-item"  aria-labelledby="btnGroupDrop1" id="facility_id" name="facility_id" required>
+                <!-- <select class="dropdown-item"  aria-labelledby="btnGroupDrop1" id="facility_id" name="facility_id" required> -->
                     <?php
                         $newAPIFunctions->select("facilities","*");
                         $facilitiesLists = $newAPIFunctions->sql;
                         while ($data = mysqli_fetch_assoc($facilitiesLists)){
                          ?>
-                           
-                    <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data['name']; ?></option>
+                         <input type="checkbox" id="facility_id" name='facility_id' value='[<?php echo $data['id']; ?>]'>  <?php echo $data['name']; ?>                     
                     <?php } ?>
                </select>
             </div>

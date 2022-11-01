@@ -44,8 +44,8 @@
                           while ($data = mysqli_fetch_assoc($serviceLists)){
                       ?>
                           <tr>
-                              <td class="text-wrap"><?php echo $data['id']; ?></td>
-                              <td class="text-wrap"><p> service:<?php echo $data["service_id"]." <br> Facility : ". $data["facility_id"]." <br> Customer: ". $data["customer_id"]?></p></td>
+                              <td class="text-wrap"><?php echo $index?></td>
+                              <td class="text-wrap"><p> service:<?php echo $data["service_name"]." <br> Facility : ". $data["facility_id"]." <br> Customer: ". $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p></td>
                               <td class="text-wrap"><p> Date:<?php echo $data["date"]." <br> Time : ". $data["time"]?></p></td>
                               <td class="text-wrap"><p> Adult:<?php echo $data["person_adult_quantity"]." <br> Kids : ". $data["person_kids_quantity"]?></p></td>
                               <td class="text-wrap"><?php echo $data['total_balance']; ?></td>

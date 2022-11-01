@@ -6,7 +6,7 @@
 
     if(isset($_POST['addNew'])){
         $service_id = $_POST["service_id"];
-        $facility_id  = $_POST["facility_id"];
+        $facility_id  = "[".$_POST['facility_id']."]";
         $customer_id = $_POST["customer_id"];
         $date = $_POST["date"];
         $time = $_POST["time"];
@@ -20,11 +20,11 @@
         'person_adult_quantity'=>$person_adult_quantity,
         'person_kids_quantity'=>$person_kids_quantity,]);
 
-        if($newAPIFunctions){
-            header('location: ../../admin/reservationManagement.php');
-        }else{
-            echo '<script>alert("May Error!");</script>';
-        }
+        // if($newAPIFunctions){
+        //     header('location: ../../admin/reservationManagement.php');
+        // }else{
+        //     echo '<script>alert("May Error!");</script>';
+        // }
     }else if(isset($_POST['updateUsers'])){
         // echo "<script>alert('update');</script>";
         $id = $_POST['id'];

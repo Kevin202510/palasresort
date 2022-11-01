@@ -48,11 +48,11 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="text" class="form-control" id="email" name="email"required>
+                <input type="text" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group" id="pass">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="password" class="form-control" id="password" name="password"required>
+                <input type="password" class="form-control" id="password" name="password">
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="closeform">Close</button>
