@@ -141,6 +141,7 @@
             </div>
         </section>
         <!--================ Accomodation Area  =================-->
+
         
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
