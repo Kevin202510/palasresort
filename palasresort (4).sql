@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2022 at 07:25 AM
+-- Generation Time: Nov 15, 2022 at 03:13 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -63,7 +63,8 @@ INSERT INTO `facilities` (`id`, `name`, `description`, `image`, `day_rate`, `nig
 (7, 'luxroom', 'roomsss', 'pals2.jpg', 432, 678, 89085, 'private_rooms', 'available'),
 (24, 'luxroom', 'roomsss', 'palas.jpg', 200, 300, 399, 'private_rooms', 'available'),
 (25, 'luxroom', 'rooms', 'palas.jpg', 123, 200, 399, 'private_rooms', 'available'),
-(26, 'room', 'rooms', 'pals2.jpg', 1, 2, 3, 'private_rooms', 'available');
+(26, 'room', 'rooms', 'pals2.jpg', 1, 2, 3, 'private_rooms', 'available'),
+(27, 'luxroom', 'rooms', 'rum4.jpg', 100, 200, 300, 'rooms', '');
 
 -- --------------------------------------------------------
 
@@ -155,17 +156,10 @@ CREATE TABLE `reservations` (
   `person_adult_quantity` int(11) NOT NULL,
   `person_kids_quantity` int(11) NOT NULL,
   `total_balance` double NOT NULL,
-  `status` int(11) NOT NULL,
+  `reservation_status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `reservations`
---
-
-INSERT INTO `reservations` (`id`, `service_id`, `facility_id`, `customer_id`, `date`, `time`, `person_adult_quantity`, `person_kids_quantity`, `total_balance`, `status`, `created_at`, `updated_at`) VALUES
-(2, 4, 1, 10, '10/22/22', '12:00pm', 1, 1, 1000, 1000, '2022-10-21 04:50:51', '2022-10-21 04:50:51');
 
 -- --------------------------------------------------------
 
@@ -196,7 +190,8 @@ CREATE TABLE `services` (
 
 INSERT INTO `services` (`service_id`, `service_name`) VALUES
 (3, 'walkin'),
-(4, 'callsevice');
+(4, 'callsevice'),
+(5, 'online');
 
 -- --------------------------------------------------------
 
@@ -224,7 +219,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `username`, `password`) VALUES
 (4, 1, 'asdasd', 'asdasds', 'adasdas', 'asdasdas', 'asdasd', 'asdasdasd', 'asdasdasd', 'asdasdasdas'),
 (10, 2, 'jolo', 'banayo', 'mallare', 'samapaguita', '09878765443', 'customer@gmail.com', 'customer', 'password'),
-(11, 2, 'joana', 'banayo', 'mallare', 'samapaguita', '099876423', 'maria@gmail.com', 'joana', '099876554324');
+(11, 2, 'joana', 'banayo', 'mallare', 'samapaguita', '099876423', 'maria@gmail.com', 'joana', '099876554324'),
+(12, 2, 'tes', 'banayo', 'mallare', 'samapaguita', '9878765442', 'staff@gmail.com', 'maria', 'pass');
 
 --
 -- Indexes for dumped tables
@@ -314,7 +310,7 @@ ALTER TABLE `entrances`
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -338,7 +334,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -350,13 +346,13 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `service_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
