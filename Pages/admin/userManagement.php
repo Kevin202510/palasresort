@@ -44,7 +44,7 @@
                           while ($data = mysqli_fetch_assoc($userLists)){
                       ?>
                           <tr>
-                              <td class="text-wrap"><?php echo $data['id']; ?></td>
+                              <td><?php echo $index; ?></td>
                               <td class="text-wrap"><?php echo $data["permission_name"]; ?></td>
                               <td class="text-wrap"><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></td>
                               <td class="text-wrap"><?php echo $data["address"]; ?></td>

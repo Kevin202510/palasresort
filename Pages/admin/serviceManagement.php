@@ -39,7 +39,7 @@
                           while ($data = mysqli_fetch_assoc($serviceLists)){
                       ?>
                           <tr>
-                              <td class="text-wrap"><?php echo $data['service_id']; ?></td>
+                              <td><?php echo $index; ?></td>
                               <td class="text-wrap"><?php echo $data["service_name"]; ?></td>
                               <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['service_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['service_id']; ?>" id="delete">Delete</button></td>
                           </tr>

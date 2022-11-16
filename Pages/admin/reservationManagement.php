@@ -45,13 +45,13 @@
                       ?>
                           <tr>
                               <td class="text-wrap"><?php echo $index?></td>
-                              <td class="text-wrap"><p> service:<?php echo $data["service_name"]." <br> Facility : ". $data["facility_id"]." <br> Customer: ". $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p></td>
+                              <td class="text-wrap"><p> service:<?php echo $data["service_name"]." <br> Facility : ". $data["name"]." <br> Customer: ". $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p></td>
                               <td class="text-wrap"><p> Date:<?php echo $data["date"]." <br> Time : ". $data["time"]?></p></td>
                               <td class="text-wrap"><p> Adult:<?php echo $data["person_adult_quantity"]." <br> Kids : ". $data["person_kids_quantity"]?></p></td>
                               <td class="text-wrap"><?php echo $data['total_balance']; ?></td>
                               <td class="text-wrap"><?php echo $data['reservation_status']; ?></td>
                               <td class="text-wrap">Create At<?php echo $data['created_at']." <br> Update At : ".$data['updated_at']?></td>
-                              <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['service_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['service_id']; ?>" id="delete">Delete</button></td>
+                              <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['res_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Delete</button></td>
                           </tr>
 
                           <?php $index++; } ?>

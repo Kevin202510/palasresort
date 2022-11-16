@@ -4,8 +4,8 @@
     $newAPIFunctions = new InnovatechAPIFunctions();
 
     if(isset($_POST['id'])){
-    $dataid = "id=" . $_POST['id'];
-    $newAPIFunctions->select("reservation","*",$dataid);
+    $dataid = "res_id=" . $_POST['id'];
+    $newAPIFunctions->select("reservations","*",$dataid);
     $getUser = $newAPIFunctions->sql;
     $res = array();
     while($datass = mysqli_fetch_assoc($getUser)){
