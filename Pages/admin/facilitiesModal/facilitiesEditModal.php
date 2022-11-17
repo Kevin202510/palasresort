@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Facilities</h1>
@@ -23,15 +23,52 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Facility Name</label>
+                <input type="text" class="form-control" id="names" name="name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Facility Descriptionme</label>
+                <input type="text" class="form-control" id="descriptions" name="description" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Day Rate</label>
+                <input type="number" class="form-control" id="day_rates" name="day_rate" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Night Rate</label>
+                <input type="number" class="form-control" id="night_rates" name="night_rate" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Over Night Rate</label>
+                <input type="number" class="form-control" id="overnigth_rates" name="overnigth_rate" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="form-group">
                 <label for="exampleInputEmail1">Facility Name</label>
                 <input type="text" class="form-control" id="names" name="name" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Facility Description</label>
                 <input type="text" class="form-control" id="descriptions" name="description" required>
-            </div>
-            <div class="form-group">
+            </div> -->
+
+            <!-- <div class="form-group">
                 <label for="exampleInputEmail1">Day Rate</label>
                 <input type="number" class="form-control" id="day_rates" name="day_rate" required>
             </div>
@@ -42,7 +79,7 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Over Night Rate</label>
                 <input type="number" class="form-control" id="overnigth_rates" name="overnigth_rate" required>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="exampleInputEmail1">Facility Type</label>
                 <select class="dropdown-item" aria-labelledby="btnGroupDrop1" id="facility_types" name="facility_type" required>

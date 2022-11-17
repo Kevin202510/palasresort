@@ -14,15 +14,17 @@ $(document).ready(function(){
             $("#times").val(datas.time);
             $("#person_adult_quantitys").val(datas.person_adult_quantity);
             $("#person_kids_quantitys").val(datas.person_kids_quantity);
+
+            
+            $("#btn-mul").attr('name',"updateReservations");
+            $("#btn-mul").html("Update Reservations");
+            $("#pass").hide();
+            $("#exampleModal").modal("show");
             
          
         })
 
         // $("#myModalLabel").html("Update User");
-        $("#btn-mul").attr('name',"updateReservations");
-        $("#btn-mul").html("Update Reservations");
-        $("#pass").hide();
-        $("#exampleModal").modal("show");
     });
 
     $("body").on('click','#delete',function(e){
@@ -38,5 +40,45 @@ $(document).ready(function(){
 
         $("#exampleModal").modal("hide");
     });
+
+    $("#times").focusout(function(){
+        var time = $("#times").val().split(':'),
+        hours,minutes,meridian;
+        hours = time[0];
+        minutes = time[1];
+        if (hours > 12) {
+          meridian = 'PM';
+          hours -= 12;
+        } else if (hours < 12) {
+          meridian = 'AM';
+          if (hours == 0) {
+            hours = 12;
+          }
+        } else {
+          meridian = 'PM';
+        }
+        console.log(hours + ':' + minutes + ' ' + meridian);
+    });
+
+function onTimeChange() {
+  var timeSplit = inputEle.value.split(':'),
+    hours,
+    minutes,
+    meridian;
+  hours = timeSplit[0];
+  minutes = timeSplit[1];
+  if (hours > 12) {
+    meridian = 'PM';
+    hours -= 12;
+  } else if (hours < 12) {
+    meridian = 'AM';
+    if (hours == 0) {
+      hours = 12;
+    }
+  } else {
+    meridian = 'PM';
+  }
+  alert(hours + ':' + minutes + ' ' + meridian);
+}
       
 })

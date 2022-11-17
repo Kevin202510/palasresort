@@ -9,56 +9,62 @@
 
         <div class="container-fluid py-4">
 
-            <div class="card" style="margin-top:50px;">
-              <div class="card-body">
-                  <div class="card-title">
-                    <h4 class="card-title">Reservation Management</h4>
-                    <div class="d-flex flex-row-reverse">
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Reserve</th>
-                        <th scope="col">Date and Time</th>
-                        <th scope="col">PersonQuantity</th>
-                        <th scope="col">Balance</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">CreateUpdateAt</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <tbody>
-                      <?php
-                          include('../../Functions/InnovatechAPIFunctions.php');
-                          $newAPIFunctions = new InnovatechAPIFunctions();
-                          $newAPIFunctions->selectleftjoin3();
-                          $serviceLists = $newAPIFunctions->sql;
-                  
-                          $index = 1;
-                          while ($data = mysqli_fetch_assoc($serviceLists)){
-                      ?>
-                          <tr>
-                              <td class="text-wrap"><?php echo $index?></td>
-                              <td class="text-wrap"><p> service:<?php echo $data["service_name"]." <br> Facility : ". $data["name"]." <br> Customer: ". $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p></td>
-                              <td class="text-wrap"><p> Date:<?php echo $data["date"]." <br> Time : ". $data["time"]?></p></td>
-                              <td class="text-wrap"><p> Adult:<?php echo $data["person_adult_quantity"]." <br> Kids : ". $data["person_kids_quantity"]?></p></td>
-                              <td class="text-wrap"><?php echo $data['total_balance']; ?></td>
-                              <td class="text-wrap"><?php echo $data['reservation_status']; ?></td>
-                              <td class="text-wrap">Create At<?php echo $data['created_at']." <br> Update At : ".$data['updated_at']?></td>
-                              <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['res_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Delete</button></td>
-                          </tr>
-
-                          <?php $index++; } ?>
-                    </tbody>
-                  </table>
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-header pb-0">
+              <h6>Reservation Management</h6>
+              <button type="button" style="float:right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add
+              </button>
+            </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reservation Type</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Facility Name</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Customer</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reservation Date</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PersonQuantity</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Balance</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              <?php
+                  include('../../Functions/InnovatechAPIFunctions.php');
+                  $newAPIFunctions = new InnovatechAPIFunctions();
+                  $newAPIFunctions->selectleftjoin3();
+                  $serviceLists = $newAPIFunctions->sql;
+          
+                  $index = 1;
+                  $reserv_stat="Paid";
+                  while ($data = mysqli_fetch_assoc($serviceLists)){
+                    if($data['reservation_status']==0){
+                      $reserv_stat = "Not Paid";
+                    }
+              ?>
+              <tr>
+                <td class="text-wrap"><?php echo $index?></td>
+                <td class="text-wrap"><?php echo $data["service_name"];?></td>
+                <td class="text-wrap"><?php echo $data["name"]; ?></td>
+                <td class="text-wrap"><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></td>
+                <td class="text-wrap"><p> Date:<?php echo $data["date"]." <br> Time : ". $data["time"]?></p></td>
+                <td class="text-wrap"><p> Adult:<?php echo $data["person_adult_quantity"]." <br> Kids : ". $data["person_kids_quantity"]?></p></td>
+                <td class="text-wrap"><?php echo $data["total_balance"]; ?></td>
+                <td class="text-wrap"><?php echo $reserv_stat; ?></td>
+                <td><button style="margin-right:5px;" type="button" class="btn btn-primary" id="edit" data-id="<?php echo $data['res_id']; ?>">Edit</button><button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Delete</button></td>
+              </tr>
+              <?php $index++; } ?>
+              </tbody>
+              </table>
+                </div>
               </div>
             </div>
+          </div>
             
         </div>
 

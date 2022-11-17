@@ -66,6 +66,12 @@
             $this->sql = $result = $this->mysqli->query($sql);
         }
 
+        public function selectleftjoin3where($reservation_id){
+            $sql = "SELECT * FROM `reservations` LEFT JOIN `services` ON services.service_id = reservations.service_id LEFT JOIN `facilities` ON facilities.id = reservations.facility_id LEFT JOIN `users` ON users.id = reservations.customer_id WHERE res_id = $reservation_id";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
         public function __destruct(){
             $this->mysqli->close();
         }
