@@ -8,12 +8,12 @@
         <!--================Banner Area =================-->
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+            	<div class="overlay bg-parallax"  data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
 						<h6>A Perfect Place to Stay & Relax</h6>
 						<h2>PALAS RESORT</h2>
-						<p>A break from everything is much needed every once in a while</p>
+						<p>A place where you can go and relax your mind in the heart of nature</p>
 						<a href="#" class="btn theme_btn button_hover">Get Started</a>
 					</div>
 				</div>
@@ -101,40 +101,35 @@
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
                                 <img src="image/rum1.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
                             </div>
                             <a href="#"><h4 class="sec_h4">Log Cabin</h4></a>
-                            <h5>$250<small>/night</small></h5>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
                                 <img src="image/rum2.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                                
                             </div>
                             <a href="#"><h4 class="sec_h4">Sun Rise Pavilion</h4></a>
-                            <h5>$200<small>/night</small></h5>
+                           
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
                                 <img src="image/rum3.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
                             </div>
-                            <a href="#"><h4 class="sec_h4">Nipa Cottage</h4></a>
-                            <h5>$750<small>/night</small></h5>
+                            <a href="#"><h4 class="sec_h4">Nipa Cottage</h4></a> 
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
-                                <img src="image/rum4.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                                <img src="image/rum4.jpg" alt=""> 
                             </div>
                             <a href="#"><h4 class="sec_h4">Twin Cottage</h4></a>
-                            <h5>$200<small>/night</small></h5>
                         </div>
                     </div>
                 </div>
@@ -145,7 +140,7 @@
         
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            <div class="overlay bg-parallax" style="background-image: url('image/pic7.jpg');background-size: 80%;" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
             </div>
             <div class="container">
                 <div class="section_title text-center">
@@ -155,38 +150,32 @@
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>  
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sport Center</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-users"></i>Activities</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-dice"></i>Adranaline Games</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-home"></i>Function Pavillions</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                 </div>
@@ -200,13 +189,30 @@
                 <div class="row">
                     <div class="col-md-6 d_flex align-items-center">
                         <div class="about_content ">
-                            <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
-                            <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
-                            <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
+                            <h2 class="title title_color">Our Mission & Vision</h2>
+                            <p>To deliver exceptional experiences in a harmonious environment where everyone feels at home. 
+                                To provide warm, sincere, and great service to all our valued guests. Turning moments into memories for our guests.
+                                To consistently provide enjoyable recreation, a safe environment, and memorable vacation experiences for every valued guest and resort employee.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="image/act.jpg" alt="img">
+                    <div id="carouselExampleSlidesOnly" data-interval="2500" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="image/pic8.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/act.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/pic7.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/pic6.jpg" alt="">
+                        </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -216,17 +222,17 @@
         
         
         <!--================ Latest Blog Area  =================-->
-        <section class="latest_blog_area section_gap">
+        <section class="latest_blog_area section_gap" style="background: #04091e">
             <div class="container">
                 <div class="section_title text-center">
-                    <h2 class="title_color">latest posts from blog</h2>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+                    <h2 class="title_color" style="color: white">Latest posts from blog</h2>
+                    <p>Life should not only be lived, it should be celebrated.Celebrate life and love at Palas Resort. </p>
                 </div>
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool1.jpg" alt="post">
+                                <img class="img-fluid" src="image/b2.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -234,15 +240,15 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white">It's more exciting to have activities under the rain. These teams are some of the companies who visited us this rainy season.</p>
+                                <h6 class="date title_color" style="color: white">30th August,2022</h6>
                             </div>	
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool2.jpg" alt="post">
+                                <img class="img-fluid" src="image/b1.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -250,15 +256,15 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white">Some of the many Team Building Activities held on Palas Resort grounds this summer.</p>
+                                <h6 class="date title_color"style="color: white">24th August,2022</h6>
                             </div>	
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool3.jpg" alt="post">
+                                <img class="img-fluid" src="image/b3.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -266,15 +272,15 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">It S Classified How To Utilize Free</h4></a> -->
-                                <p>Why do you want to motivate yourself? Actually, just answering that question fully can </p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white">Campers & Back Packers from Nueva Vizcaya </p>
+                                <h6 class="date title_color" style="color: white">14th May,2022</h6>
                             </div>	
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool4.jpg" alt="post">
+                                <img class="img-fluid" src="image/b4.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -282,15 +288,15 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white"> Expat Solutions Philippines from Clark Pampanga goes to palas resort</p>
+                                <h6 class="date title_color" style="color: white">1st September,2022</h6>
                             </div>	
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool5.jpg" alt="post">
+                                <img class="img-fluid" src="image/b5.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -298,15 +304,15 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white">Thank you PHILRICE of Science City of Munoz for having your team building at Palas resort.</p>
+                                <h6 class="date title_color" style="color: white">14th August,2022</h6>
                             </div>	
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                <img class="img-fluid" src="image/pool/pool6.jpg" alt="post">
+                                <img class="img-fluid" src="image/b6.jpg" alt="post">
                             </div>
                             <div class="details">
                                 <div class="tags">
@@ -314,8 +320,8 @@
                                     <a href="#" class="button_hover tag_btn">Life Style</a> -->
                                 </div>
                                 <!-- <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a> -->
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
+                                <p style="color: white">Thank you PHILRICE of Science City of Munoz for having your team building at Palas resort. </p>
+                                <h6 class="date title_color" style="color: white">31st January,2018</h6>
                             </div>	
                         </div>
                     </div>
