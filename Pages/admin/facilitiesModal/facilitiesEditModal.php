@@ -84,7 +84,8 @@
                 <label for="exampleInputEmail1">Facility Type</label>
                 <select class="dropdown-item" aria-labelledby="btnGroupDrop1" id="facility_types" name="facility_type" required>
                   <option class="dropdown-item" value="rooms">PRIVATE ROOMS</option>
-                  <option class="dropdown-item" value="nipa_cottage">NIPA COTTAGE </option>
+                  <option class="dropdown-item" value="cottage">COTTAGE </option>
+                  <option class="dropdown-item" value="pool">POOL</option>
                   <option class="dropdown-item" value="adrenaline_game">ADRENALINE GAME</option>
                   <option class="dropdown-item" value="sports_center">SPORTS CENTER</option>
                   <option class="dropdown-item" value="function_pavillion">FUNCTION PAVILLION</option>

@@ -15,16 +15,19 @@
                     <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
                     <li class="nav-item"><a class="nav-link" href="about.php">About us</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.php">Facilities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item submenu dropdown">
+                    <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                    <!-- <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
                         </ul>
-                    </li> 
-                    <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </li>  -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li>
                 </ul>
             </div> 
         </nav>

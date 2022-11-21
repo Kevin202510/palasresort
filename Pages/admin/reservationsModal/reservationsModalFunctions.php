@@ -10,7 +10,7 @@
         $facility_id = $_POST["facility_id"];
         $customer_id = $_POST["customer_id"];
         $date = $_POST["date"];
-        $time = date("g:i a", $_POST["time"]);
+        $time = date("g:i a", strtotime($_POST["time"]));
         $person_adult_quantity = $_POST["person_adult_quantity"];
         $person_kids_quantity = $_POST["person_kids_quantity"];
 
@@ -18,11 +18,42 @@
         $serviceLists = $newAPIFunctions->sql;
         $bal;
         while ($data = mysqli_fetch_assoc($serviceLists)){
-            if(date_format(date_create($time),"a")==="pm"){
-                $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
-              }else{
-                $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
-              }
+            if($data["facility_type"] == "pool"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "adrenaline_game"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "sports_center"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "cottage"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                    }else{
+                    $bal = $data["day_rate"];
+                    }
+                } 
+
+            elseif($data["facility_type"] == "rooms"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                  }else{
+                    $bal = $data["day_rate"];
+                  }
+                } 
         }
 
         $newAPIFunctions->insert('reservations',['service_id'=>$service_id,
