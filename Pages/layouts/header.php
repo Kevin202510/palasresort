@@ -25,9 +25,9 @@
                     </li>  -->
                     <!-- <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
                 </ul>
             </div> 
         </nav>

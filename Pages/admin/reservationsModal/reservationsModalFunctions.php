@@ -54,6 +54,13 @@
                     $bal = $data["day_rate"];
                   }
                 } 
+            elseif($data["facility_type"] == "rooms"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                    }else{
+                    $bal = $data["function_pavillion"];
+                    }
+                }
         }
 
         $newAPIFunctions->insert('reservations',['service_id'=>$service_id,
@@ -80,11 +87,61 @@
         $person_adult_quantity = $_POST["person_adult_quantity"];
         $person_kids_quantity = $_POST["person_kids_quantity"];
 
+        $newAPIFunctions->select("facilities","*","id='$facility_id'");
+        $serviceLists = $newAPIFunctions->sql;
+        $bal;
+        while ($data = mysqli_fetch_assoc($serviceLists)){
+            if($data["facility_type"] == "pool"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "adrenaline_game"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "sports_center"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }else{
+                    $bal = $data["day_rate"] * ($person_adult_quantity+$person_kids_quantity);
+                }
+            }
+            elseif($data["facility_type"] == "cottage"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                    }else{
+                    $bal = $data["day_rate"];
+                    }
+                } 
+
+            elseif($data["facility_type"] == "rooms"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                  }else{
+                    $bal = $data["day_rate"];
+                  }
+                } 
+            elseif($data["facility_type"] == "rooms"){
+                if(date_format(date_create($time),"a")==="pm"){
+                    $bal = $data["night_rate"];
+                    }else{
+                    $bal = $data["function_pavillion"];
+                    }
+             } 
+        }
+
         $newAPIFunctions->update('reservations',['service_id'=>$service_id,
         'facility_id'=>$facility_id,
         'customer_id'=>$customer_id,
         'date'=>$date,
         'time'=>$time,
+        'total_balance'=>$bal,
         'person_adult_quantity'=>$person_adult_quantity,
         'person_kids_quantity'=>$person_kids_quantity,],"res_id='$id'");
 
