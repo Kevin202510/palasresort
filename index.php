@@ -14,7 +14,7 @@
 						<h6>A Perfect Place to Stay & Relax</h6>
 						<h2>PALAS RESORT</h2>
 						<p>A place where you can go and relax your mind in the heart of nature</p>
-						<a href="#" class="btn theme_btn button_hover">Get Started</a>
+						<a href="facilities.php" class="btn theme_btn button_hover">Get Started</a>
 					</div>
 				</div>
             </div>
@@ -140,7 +140,7 @@
         
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" style="background-image: url('image/pic7.jpg');background-size: 80%;" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            <div class="overlay bg-parallax" style="background-image: url('image/pic7.jpg'); background-size: 100% 100%" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
             </div>
             <div class="container">
                 <div class="section_title text-center">
