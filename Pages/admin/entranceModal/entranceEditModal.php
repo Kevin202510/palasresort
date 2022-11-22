@@ -50,14 +50,6 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Payment</label>
-                <input type="number" class="form-control" id="payments" name="payments" >
-                </div>
-              </div>
-            </div>
 
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="closeform">Close</button>
@@ -71,6 +63,8 @@
 
 
 <!-- Modal -->
+
+
 <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

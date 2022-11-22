@@ -24,28 +24,28 @@ $(document).ready(function(){
       }
   });
 
-    $("body").on('click','#edit',function(e){
+    $("body").on('click','#pay',function(e){
         
         var idss = $(e.currentTarget).data('id');
      
         $.post("entranceModal/updateentrance.php",{reserv_id: idss},function(data,status){
             var datas = JSON.parse(data);
-          // $("#reservation_ids").val(datas.res_id);
-          // $("#customername").val(datas.fname + " " + datas.mname + " " + datas.lname);
-          // $("#facilityname").val(datas.name);
-          // $("#total_balance").val(datas.total_balance);
-          // let status_res = "Paid";
-          // if(datas.reservation_status==0){
-          //   status_res = "Not Paid";
-          // }
-          // $("#payment_status").val(status_res);
-          // $("#reservation_date_time").val(datas.date +" "+ datas.time);
+          $("#reservation_ids").val(datas.res_id);
+          $("#customername").val(datas.fname + " " + datas.mname + " " + datas.lname);
+          $("#facilityname").val(datas.name);
+          $("#total_balance").val(datas.total_balance);
+          let status_res = "Paid";
+          if(datas.reservation_status==0){
+            status_res = "Not Paid";
+          }
+          $("#payment_status").val(status_res);
+          $("#reservation_date_time").val(datas.date +" "+ datas.time);
 
           
-          //   $("#btn-mul").attr('name',"Payment");
-          //   $("#btn-mul").html("Payment");
-          //   $("#pass").hide();
-          //   $("#exampleModal").modal("show");
+            $("#btn-mul").attr('name',"Payment");
+            $("#btn-mul").html("Payment");
+            $("#pass").hide();
+            $("#exampleModal").modal("show");
             
          
         })
