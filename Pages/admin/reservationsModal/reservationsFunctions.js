@@ -1,62 +1,30 @@
 $(document).ready(function(){
 
-    $("#btn-mul").click(function(e){
-        e.preventDefault(); 
-        let arr = [];
-        $.each($("input[name='facility_id']:checked"), function(){
-            arr.push($(this).val());
-        });
-
-        let newarrayfacility_id = arr.toString().replace(/[\[\]']+/g,'');
-        // alert(newarrayfacility_id);
-        let datatoadd = {
-            facility_id:newarrayfacility_id,
-            service_id:$("#service_id").val(),
-            customer_id:$("#customer_id").val(),
-            date:$("#date").val(),
-            time:$("#time").val(),
-            person_adult_quantity:$("#person_adult_quantity").val(),
-            person_kids_quantity:$("#person_kids_quantity").val(),
-            addNew:$("#btn-mul").val(),
-        }
-
-            $.post("reservationsModal/reservationsModalFunctions.php",datatoadd,function(data,status){
-
-                if(status=="success"){
-                    $("#exampleModal").modal("hide");
-                }
-
-                setTimeout(function () {
-                    alert("YOUR WORK HAS BEEN SAVE!");
-                    location.reload();
-                }, 2000);
-
-                // alert("ghasdas");
-
-            });
-
-        // setTimeout(add(),3000);
-
-        // location.reload();
-
-    });
-
     $("body").on('click','#edit',function(e){
         
         var idss = $(e.currentTarget).data('id');
-        $.post("servicesModal/updateservices.php",{id: idss},function(data,status){
-            // alert(datas);
+     
+        $.post("reservationsModal/updatereservations.php",{id: idss},function(data,status){
             var datas = JSON.parse(data);
-            $("#id").val(datas.service_id);
-            // alert(datas.service_name);
-            $("#service_name").val(datas.service_name);
+            $("#id").val(datas.res_id);
+            $('#service_ids option[value='+datas.service_id+']').attr("selected", "selected");
+            $('#facility_ids option[value='+datas.facility_id+']').attr("selected", "selected");
+            $('#customer_ids option[value='+datas.customer_id+']').attr("selected", "selected");
+            $("#dates").val(datas.date);
+            $("#times").val(datas.time);
+            $("#person_adult_quantitys").val(datas.person_adult_quantity);
+            $("#person_kids_quantitys").val(datas.person_kids_quantity);
+
+            
+            $("#btn-mul").attr('name',"updateReservations");
+            $("#btn-mul").html("Update Reservations");
+            $("#pass").hide();
+            $("#exampleModal").modal("show");
+            
+         
         })
 
         // $("#myModalLabel").html("Update User");
-        $("#btn-mul").attr('name',"updateServices");
-        $("#btn-mul").html("Update Service");
-        $("#pass").hide();
-        $("#exampleModal").modal("show");
     });
 
     $("body").on('click','#delete',function(e){
@@ -72,5 +40,45 @@ $(document).ready(function(){
 
         $("#exampleModal").modal("hide");
     });
+
+    $("#times").focusout(function(){
+        var time = $("#times").val().split(':'),
+        hours,minutes,meridian;
+        hours = time[0];
+        minutes = time[1];
+        if (hours > 12) {
+          meridian = 'PM';
+          hours -= 12;
+        } else if (hours < 12) {
+          meridian = 'AM';
+          if (hours == 0) {
+            hours = 12;
+          }
+        } else {
+          meridian = 'PM';
+        }
+        console.log(hours + ':' + minutes + ' ' + meridian);
+    });
+
+function onTimeChange() {
+  var timeSplit = inputEle.value.split(':'),
+    hours,
+    minutes,
+    meridian;
+  hours = timeSplit[0];
+  minutes = timeSplit[1];
+  if (hours > 12) {
+    meridian = 'PM';
+    hours -= 12;
+  } else if (hours < 12) {
+    meridian = 'AM';
+    if (hours == 0) {
+      hours = 12;
+    }
+  } else {
+    meridian = 'PM';
+  }
+  alert(hours + ':' + minutes + ' ' + meridian);
+}
       
 })
