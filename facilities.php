@@ -11,6 +11,7 @@
         <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
         <div class="container">
             <div class="banner_content text-center">
+                <h6>A Perfect Place to Stay & Relax</h6>
                 <h2>PALAS RESORT</h2>
                 <h2>FACILITIES</h2>
             </div>
