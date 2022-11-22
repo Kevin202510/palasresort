@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="image/a1.jpg" alt="img">
+                        <img class="img-fluid" src="image/pic4.jpg" alt="img">
                     </div>
                 </div>
             </div>
@@ -41,48 +41,43 @@
         
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            <div class="overlay bg-parallax"  style="background-image: url('image/pic7.jpg');background-size: 100% 100%" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
             </div>
             <div class="container">
+            <div class="container">
                 <div class="section_title text-center">
-                    <h2 class="title_w">Royal Facilities</h2>
+                    <h2 class="title_w">Facilities</h2>
                     <p>Who are in extremely love with eco friendly system.</p>
                 </div>
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>  
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sport Center</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-users"></i>Activities</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-dice"></i>Adranaline Games</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            <h4 class="sec_h4"><i class="lnr lnr-home"></i>Function Pavillions</h4>
                         </div>
                     </div>
                 </div>
@@ -91,18 +86,17 @@
         <!--================ Facilities Area  =================-->
         
         <!--================ Testimonial Area  =================-->
-        <section class="testimonial_area section_gap">
+        <section class="testimonial_area section_gap" style="background-color: #04091e; padding: 30px">
             <div class="container">
                 <div class="section_title text-center">
-                    <h2 class="title_color">Testimonial from our Clients</h2>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+                    <h2 style="color:white;">Reviews</h2>
                 </div>
                 <div class="testimonial_slider owl-carousel">
                     <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                        <img class="rounded-circle" src="image/re1.png" alt="">
                         <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                            <p>Friendly staff and a place were evry body to enjoy like swimming and many activities u can do like team building and many more..i will recommended a very beautiful place for family relatives and friends...🌳🌺💚</p>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Claire Corpuz </h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>
@@ -113,10 +107,10 @@
                         </div>
                     </div>    
                     <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                        <img class="rounded-circle" src="image/re2.png" alt="">
                         <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                            <p>Perfect hideaway. Sobrang peaceful and relaxing yung paligid. Ang dami ding activities na pwedeng gawin. Ang babait din ng mga staff.</p>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Anjo Fregillana</h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>
@@ -127,10 +121,10 @@
                         </div>
                     </div>
                     <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                        <img class="rounded-circle" src="image/re1.png" alt="">
                         <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                            <p>Visited them last weekend and the family did enjoy! They have different activities that you can do with your friends or families. We did Archery, Airsoft, Wall Climbing, Team Games and ATV. Place is clean and service is great. Will definitely go back. Thank you Palas Resort for the great weekend!</p>
+                            <a href="#"><h4 class="sec_h4">Rosilyn Lagula</h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>
@@ -141,10 +135,10 @@
                         </div>
                     </div>    
                     <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
+                        <img class="rounded-circle" src="image/re2.png" alt="">
                         <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                            <p>thanks PALAS RESORT Nagenjoy kami Lalo n mga anak ko... very accommodating and approachable mga employees...napakababait Nila..sana pagbalik namin matry na namin Ang ATV..highly recommended...🥰🥰🥰 babalik kami for sure.. </p>
+                            <a href="#"><h4 class="sec_h4">Daisy Magtuto</h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>

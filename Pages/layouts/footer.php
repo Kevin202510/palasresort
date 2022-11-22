@@ -1,14 +1,12 @@
-<footer style="background-color: white; padding: 20px 0px">
+<footer class="footer-area section_gap" style="background-color: white; padding: 5px 0px">
     <div class="container">			
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6 class="footer_title" style="color: black;">Contact Us</h6>
-                    <p style="color: #000000"><i class="lnr lnr-phone" style="color: #00FF00"></i> 0927 858 6887</p>
-                    <p style="color: #000000"><i class="lnr lnr-envelope" style="color:#00FF00"></i>   palasresort@yahoo.com</p>
-                    <p style="color: #000000"><i class="lnr lnr-map-marker" style="color:#00FF00"></i>   Rio Chico, Gen.Tinio, General Tinio,<br>Philippines</p>
-                    <div class="col-lg-4 col-sm-12 footer-social">
-                <a href="https://web.facebook.com/palasresort"><i class="fa fa-facebook"></i></a>
-                   
+            <div class="col-lg-12 col-md-12 ">
+                <div class="single-footer-widget">   
+                <div class="row">
+                <h6 class="footer_title" style="color: black;">Contact Us :</h6>
+                    <p style="color: #000000; margin-left: 50px;"><i class="lnr lnr-phone" style="color: blue"></i> 0927 858 6887</p>
+                    <p style="color: #000000; margin-left: 50px;"><i class="lnr lnr-envelope" style="color: blue"></i>   palasresort@yahoo.com</p>
+                    <p style="color: #000000; margin-left: 50px;"><i class="lnr lnr-map-marker" style="color: blue"></i>   Rio Chico, Gen.Tinio, General Tinio,Philippines</p>
                     </div>
                 </div>
             </div>			
