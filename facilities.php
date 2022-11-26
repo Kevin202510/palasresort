@@ -1,4 +1,4 @@
-
+<?php   session_start();?>
     <?php include('Pages/layouts/head.php');?>
 
 <!--================Header Area =================-->
@@ -28,57 +28,74 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="book_tabel_item">
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker11'>
-                                            <input type='text' class="form-control" placeholder="Arrival Date"/>
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
+                            <form method="POST" id="serviceform" action="reservationsModal/reservationsModalFunctions.php">
+                                <input type="hidden" name="id" id="id">
+                                    <div class="input-group">
+                                    <select class="wide"  aria-labelledby="btnGroupDrop1" id="service_ids" name="service_id" required>
+                                        <?php
+                                         include('./Functions/InnovatechAPIFunctions.php');
+                                         $newAPIFunctions = new InnovatechAPIFunctions();
+                                            $newAPIFunctions->select("services","*","service_id=5");
+                                            $serviceLists = $newAPIFunctions->sql;
+                                            while ($data = mysqli_fetch_assoc($serviceLists)){
+                                                ?>
+                                        <option class="dropdown-item" value = "<?php echo $data['service_id']; ?>" ><?php echo $data['service_name']; ?></option>
+                                        <?php } ?>
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" placeholder="Departure Date"/>
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
+                                    
+                                    <div class="input-group">
+                                        <select class="wide"  aria-labelledby="btnGroupDrop1" id="facility_ids" name="facility_id" required>
+                                        <?php
+                                            $newAPIFunctions->select("facilities","*");
+                                            $serviceLists = $newAPIFunctions->sql;
+                                            while ($data = mysqli_fetch_assoc($serviceLists)){
+                                                ?>
+                                        <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data['name']; ?></option>
+                                        <?php } ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group">
+                                    <select class="wide"  aria-labelledby="btnGroupDrop1" id="customer_ids" name="customer_id" required>
+                                        <?php
+                                        if(isset($_SESSION['ID'])){
+                                            $id=$_SESSION['ID'];
+                                            $sq="id='$id'";
+                                            $newAPIFunctions->select("users","*",$sq);
+                                            $userLists = $newAPIFunctions->sql;
+                                                while ($data = mysqli_fetch_assoc($userLists)){
+                                                ?>
+                                        <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></option>
+                                        <?php }} ?>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="book_tabel_item">
                                     <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Adult">Adult</option>
-                                            <option value="1">Old</option>
-                                            <option value="2">Younger</option>
-                                            <option value="3">Potato</option>
-                                        </select>
+                                    <input type="number" class="form-control" id="person_adult_quantitys" name="person_adult_quantity" placeholder="Adult Quantity" required>
                                     </div>
                                     <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Child">Child</option>
-                                            <option value="1">Child</option>
-                                            <option value="2">Baby</option>
-                                            <option value="3">Child</option>
-                                        </select>
+                                    <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity" placeholder="Kids Quantity" >
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-4">
                                 <div class="book_tabel_item">
                                     <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="Child">Number of Rooms</option>
-                                            <option value="1">Room 01</option>
-                                            <option value="2">Room 02</option>
-                                            <option value="3">Room 03</option>
-                                        </select>
+                                    <input type="date" class="form-control" id="dates" name="date">
                                     </div>
-                                    <a class="book_now_btn button_hover" href="#">Book Now</a>
+                                    <div class="input-group">
+                                    <input type="time" class="form-control" id="times" name="time">
+                                    </div>
                                 </div>
-                            </div>
+                                <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="customerreserve">Book Now</button>
+                                   
+                            </div>       
+                      </form> 
                         </div>
                     </div>
                 </div>
@@ -89,22 +106,24 @@
 <!--================Banner Area =================-->
 
 <!--================ Accomodation Area  =================-->
+
 <section class="accomodation_area section_gap">
 
    <div class="container">
+    
+  
         <div class="section_title text-center">
             <h2 class="title_color">Rooms Accomodation</h2>
             <p>The more we feel concern for others and seek their well-being, the more friends we will have and the more welcome we will feel </p>
-        </div>
+        </div>  
         <div class="row mb_30">
         <?php
-        include('./Functions/InnovatechAPIFunctions.php');
-        $newAPIFunctions = new InnovatechAPIFunctions();
         $newAPIFunctions->select("facilities","*");
         $userLists = $newAPIFunctions->sql;
 
         while ($data = mysqli_fetch_assoc($userLists)){
-            if($data["facility_type"] == "rooms"){
+             if($data["facility_type"] == "rooms"){
+             
              ?>
             <div class="col-lg-3 col-sm-6">
                 <div class="accomodation_item text-center">
@@ -125,40 +144,6 @@
       
     
     </div>
-    
-     
-<br>
-<br>
-
- <div class="container">
-        <div class="section_title text-center">
-            <h2 class="title_color">Adrenaline Game</h2>
-            <p>The more we feel concern for others and seek their well-being, the more friends we will have and the more welcome we will feel </p>
-        </div>
-        <div class="row mb_30">
-        <?php
-        $newAPIFunctions->select("facilities","*");
-        $userLists = $newAPIFunctions->sql;
-
-        while ($data = mysqli_fetch_assoc($userLists)){
-            if($data["facility_type"] == "adrenaline_game"){
-             ?>
-            <div class="col-lg-3 col-sm-6">
-                <div class="accomodation_item text-center">
-                    <div class="hotel_img">
-                    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="250" height="300" alt="">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                    </div>
-                    <a href="#"><h4 class="sec_h4">Log Cabin</h4></a>
-                    <p>Name:<small><?php echo $data["name"]; ?></small>
-                   description:<small><?php echo $data["description"]; ?></small></p>
-                    <h7>Day Rate: <small>₱<?php echo $data["day_rate"]; ?></small><br>Night Rate: <small>₱<?php echo $data["night_rate"]; ?></small><br>Over Night: <small>₱<?php echo $data["overnigth_rate"]; ?></small></h7>
-                </div>
-               
-            </div>
-            <?php }}?>
-        </div>
-</div>
  
 </section>
 

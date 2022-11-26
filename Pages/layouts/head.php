@@ -1,3 +1,14 @@
+<?php
+
+    if(isset($_POST['logoutnako'])){
+        session_destroy();
+        $_SESSION['PERMISSION_ID'] = 0;
+        $_SESSION['FULLNAME'] = 0;
+        header("location: index.php");
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
