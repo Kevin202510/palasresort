@@ -16,7 +16,7 @@ session_start();
     $username=$_POST["username"];
     $password=$_POST["password"];
 
-    $que = "username='$username' AND password='$password'";
+    $que = "username='$username' AND password='$password' AND email_verified_at != 'NULL'";
     $newAPIFunctions->select("users","*",$que);
     $userLists = $newAPIFunctions->sql;
     $user_id;
