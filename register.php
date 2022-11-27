@@ -88,7 +88,9 @@ background-size: 100% 100%;">
                             <div class="col-md-7">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"></label>
-                                    <?php       
+                                <select class="form-control"  name="permission_id">
+                                    <?php 
+                                     
                                         $newAPIFunctions->select("permissions","*","permissions_id=2");
                                         $rolesLists = $newAPIFunctions->sql;
 
