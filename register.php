@@ -88,15 +88,13 @@ background-size: 100% 100%;">
                             <div class="col-md-7">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"></label>
-                                <select class="form-control" id="permissions_id" name="permission_id" style="width:100%">
-                                    <?php 
-                                     
+                                    <?php       
                                         $newAPIFunctions->select("permissions","*","permissions_id=2");
                                         $rolesLists = $newAPIFunctions->sql;
 
                                         while ($datas = mysqli_fetch_assoc($rolesLists)){
                                     ?>
-                                    <option style="width:100%" value="<?php echo $datas["permissions_id"]; ?>"><?php echo $datas["permission_name"]; ?></option>
+                                      <input type="hidden" value="<?php echo $datas["permissions_id"]; ?>" name="permission_id">
                                     <?php } ?>
                                 </select>
                                 </div>
