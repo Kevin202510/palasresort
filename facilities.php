@@ -173,8 +173,25 @@
                                     </div>
                                 </div>
                                 <?php if(isset($_SESSION['PERMISSION_ID'])){?>
-                                <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking">Book Now</button>
-                                <?php }else{ ?>
+                                       <?php 
+                                        if(isset($_SESSION['ID'])){
+                                            $id=$_SESSION['ID'];
+                                            $sq="id='$id'";
+                                      
+                                       $newAPIFunctions->select("users","*",$sq);
+                                            $userLists = $newAPIFunctions->sql;
+                                                while ($data = mysqli_fetch_assoc($userLists)){?>
+                                                    <?php
+                                                    if($data["email_verified_at"] == NULL) {
+                                                        ?>
+                                                     <li class="nav-item"><a class="book_now_btn button_hover" href="profile.php">Verify Account</a></li>
+                                                
+                                                      <?php } else{?>
+                                                      
+                                                     <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking">Book Now</button>
+                                                     <?php }?> 
+                                         <?php }}}else{ ?>
+
                                         <li class="nav-item"><a class="book_now_btn button_hover" href="register.php">Register</a></li>
                                 <?php }?>
                             </div>       

@@ -13,7 +13,7 @@ if (isset($_POST["verify_email"]))
     $newAPIFunctions->update('users',['email_verified_at'=> $formatted],"email = '" . $email . "' AND verification_code = '" . $verification_code . "'");
 
         if($newAPIFunctions){
-            header('location: login.php');
+            header('location: index.php');
         }else{
             echo '<script>alert("May Error!");</script>';
         }
