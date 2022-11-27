@@ -5,11 +5,11 @@
         <?php include('Pages/layouts/header.php');?>
         <!--================Header Area =================-->
 
-          
+    <section>      
         <div class="section_title text-center">
             <h2 class="title_color">RESERVE</h2>
         </div>  
-        <div class="row mb_30">
+        <div class="">
         <?php
           include('./Functions/InnovatechAPIFunctions.php');
           $newAPIFunctions = new InnovatechAPIFunctions();
@@ -23,26 +23,29 @@
                if($data["customer_id"]==$id){
              
              ?>
-            <div class="col-lg-3 col-sm-6">
-                <div class="accomodation_item text-center">
-                    <div class="hotel_img">
-                    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="250" height="300" alt="">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                    </div>
-                    <p><?php echo $data["service_name"]."Time : ". $data["name"]?></p>
-                    <p><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p>
-                    <p>Date:<?php echo $data["date"]."Time : ". $data["time"]?></p>
+            <div class="col-lg-8" style="margin-left: 100px">
+                    <div class="row accomodation_item text-center">
+                        <div class="hotel_img">
+                        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="150" height="200" alt="">
+                            <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        </div>
+                        <div class="hotel_img">
+                            <p><?php echo $data["service_name"]."Time : ". $data["name"]?></p>
+                            <p><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p>
+                            <p>Date:<?php echo $data["date"]."Time : ". $data["time"]?></p>
                     <p>Adult:<?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." Balance : ". $data["total_balance"]?></p>
-                </div>
+                        </div>
+                    </div>
                
             </div>
             
-            <?php }}}?>
+
         </div>
+      
       
     
     </div>
- 
+    <?php }}}?>
 </section>
         
         <!--================ start footer Area  =================-->	

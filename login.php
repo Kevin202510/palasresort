@@ -52,26 +52,29 @@ session_start();
 ?>
     
     <?php include('Pages/layouts/head.php');?>
-<!-- 
+
     <header class="header_area">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light"> -->
+        <nav class="navbar navbar-expand-lg navbar-light">
 
             <!-- Brand and toggle get grouped for better mobile display -->
-            <!-- <a class="navbar-brand logo_h" href="index.php"><img src="image/pic5.png" alt=""><img src="image/pals.png" alt=""></a>
+            <a class="navbar-brand logo_h" href="index.php"><img src="image/pic5.png" alt=""><img src="image/pals.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button> -->
+            </button>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
-            <!-- <div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
+            <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
+            </ul>
         
             </div> 
         </nav>
     </div>
-</header> -->
+</header>
 
       
     <section class="accomodation_area section_gap"style="background-image: url('image/act.jpg');background-repeat: no-repeat;
