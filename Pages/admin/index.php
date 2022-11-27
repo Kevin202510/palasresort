@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php include('page/head.php'); ?>
 
 <?php include('page/sidebar.php'); ?>
