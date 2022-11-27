@@ -88,11 +88,7 @@ background-size: 100% 100%;">
                             <div class="col-md-7">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"></label>
-<<<<<<< HEAD
-                                <select class="form-control" id="permissions_id" name="permission_id" style="width:100%">
-=======
                                 <select class="form-control"  name="permission_id">
->>>>>>> 645b3586387f85cfd50f71804b0816038f1a027a
                                     <?php 
                                      
                                         $newAPIFunctions->select("permissions","*","permissions_id=2");
