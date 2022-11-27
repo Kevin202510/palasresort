@@ -26,6 +26,12 @@
 
 <?php 
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
     include('./Functions/InnovatechAPIFunctions.php');
     $newAPIFunctions = new InnovatechAPIFunctions();
 
@@ -40,25 +46,76 @@
             $password = $_POST["password"];
             $permission_id = $_POST["permission_id"];
 
+            $mail = new PHPMailer(true);
 
-                    $newAPIFunctions->insert('users',['permission_id'=>$permission_id,
-                    'fname'=>$firstname,
-                    'mname'=>$middlename,
-                    'lname'=>$lastname,
-                    'address'=>$address,
-                    'contact_num'=>$contact,
-                    'username'=>$username,
-                    'email'=>$email,
-                    'password'=>$password,]);
+    try {
+        //Enable verbose debug output
+        $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;
 
-                    if($newAPIFunctions){
-                        echo "<script>alert('Sucess Fully To Create Account');</script>";
-                        header('location:login.php');
-                        
-                    }else{
-                        echo "<script>alert('May Error!'');</script>";
-               
-                }
+        //Send using SMTP
+        $mail->isSMTP();
+
+        //Set the SMTP server to send through
+        $mail->Host = 'smtp.gmail.com';
+
+        //Enable SMTP authentication
+        $mail->SMTPAuth = true;
+
+        //SMTP username
+        $mail->Username = 'torreschelsea114@gmail.com';
+
+        //SMTP password
+        $mail->Password = 'aimeupnhjmpmxypf';
+
+        //Enable TLS encryption;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+
+        //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Port = 587;
+
+        //Recipients
+        $mail->setFrom('torreschelsea114@gmail.com', 'palasresort.com');
+
+        //Add a recipient
+        $mail->addAddress($email, $firstname);
+
+        //Set email format to HTML
+        $mail->isHTML(true);
+
+        $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
+
+        $mail->Subject = 'Email verification';
+        $mail->Body    = '<p>Your verification code is: <b style="font-size: 30px;">' . $verification_code . '</b><a href="http://localhost/palasresort/email-verification.php?email="' . $email.'">VERIFY MY ACCOUNT</a></p>';
+
+        $mail->send();
+        // echo 'Message has been sent';
+
+        $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
+
+        $newAPIFunctions->insert('users',['permission_id'=>$permission_id,
+        'fname'=>$firstname,
+        'mname'=>$middlename,
+        'lname'=>$lastname,
+        'address'=>$address,
+        'contact_num'=>$contact,
+        'username'=>$username,
+        'email'=>$email,
+        'password'=>$password,
+        'verification_code'=>$verification_code]);
+
+        if($newAPIFunctions){
+            echo "<script>alert('Sucess Fully To Create Account');</script>";
+            header('location: email-verification.php?email=' . $email);
+            
+        }else{
+            echo "<script>alert('May Error!'');</script>";
+   
+    }
+
+        exit();
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
     } 
 ?>
 
