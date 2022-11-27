@@ -81,7 +81,7 @@
         'person_kids_quantity'=>$person_kids_quantity,]);
         if($newAPIFunctions){
             echo "<script>alert('Sucess Reserve!');</script>";
-            header('location:facilities.php');
+
         }else{
             echo '<script>alert("May Error!");</script>';
         }
@@ -110,7 +110,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="book_tabel_item">
-                            <form method="POST" id="serviceform">
+                            <form method="POST" >
                                 <input type="hidden" name="id" id="id">
                                     <div class="input-group">
                                     <select class="wide"  aria-labelledby="btnGroupDrop1" id="service_ids" name="service_id" required>
