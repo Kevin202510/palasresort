@@ -26,6 +26,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['FULLNAME']; ?></a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="nav-link" href="profile.php"><?php echo $_SESSION['FULLNAME']; ?></a></li>
+                            <li class="nav-item"><a class="nav-link" href="profile.php">My Reserves</a></li>
                             <li class="nav-item">
                                 <form method="post">
                                     <input type="submit" name="logoutnako" class="nav-link" value="Logout">
@@ -42,7 +43,7 @@
                     <?php }?>
                     <!-- <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>  <li class="nav-item"><a class="nav-link" href="login.php">login</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li> -->
                 </ul>

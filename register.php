@@ -96,7 +96,7 @@ background-size: 100% 100%;">
 
                                         while ($datas = mysqli_fetch_assoc($rolesLists)){
                                     ?>
-                                    <option style="width:100%" value="<?php echo $datas["permissions_id"]; ?>"><?php echo $datas["permission_name"]; ?></option>
+                                      <input type="hidden" value="<?php echo $datas["permissions_id"]; ?>" name="permission_id">
                                     <?php } ?>
                                 </select>
                                 </div>
