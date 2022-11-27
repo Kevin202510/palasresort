@@ -29,6 +29,11 @@ session_start();
         }else{
             $_SESSION['PERMISSION_ID'] = $data['permission_id'];
             $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname']." ".$data['mname'];
+            $_SESSION['ADDRESS'] = $data['address'];
+            $_SESSION['CONTACT_NUM'] = $data['contact_num'];
+            $_SESSION['EMAIL'] = $data['email '];
+            $_SESSION['USERNAME'] = $data['username'];
+            $_SESSION['PASSWORD'] = $data['	password'];
             $_SESSION['ID'] = $data['id'];
             header("location: index.php");
         }
@@ -47,8 +52,8 @@ session_start();
 ?>
     
     <?php include('Pages/layouts/head.php');?>
-
-    <!-- <header class="header_area">
+<!-- 
+    <header class="header_area">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light"> -->
 
@@ -61,10 +66,8 @@ session_start();
             </button> -->
             <!-- Collect the nav links, forms, and other content for toggling -->
 
-            <!-- <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
-                </ul>
+            <!-- <div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
+        
             </div> 
         </nav>
     </div>
@@ -97,13 +100,17 @@ background-size: 100% 100%;">
                            </div>
                           
                            <div class="col-md-12 text-center ">
-                              <button type="submit" name ="login"class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-                           </div>
+                              <button type="submit" name ="login"class=" btn btn-block mybtn btn-info tx-tfm">Login</button>
+                              <button   class=" btn btn-block mybtn btn-info tx-tfm"name="logoutnako" class="nav-link">home</button>
+                            </div>
+                           
                            <div class="col-md-12 ">
                               <div class="login-or">
                                 
                            <div class="form-group">
                               <p class="text-center"style="color:white;">Don't have account? <a href="register.php" id="signup">Create An Account</a></p>
+                            </div>  
+                          
                         </form>
                      </div>
 				</div>

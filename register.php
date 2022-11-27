@@ -85,7 +85,7 @@ background-size: 100% 100%;">
                             <input type="hidden" name="id" id="id">
 
                             <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"></label>
                                 <select class="form-control"  name="permission_id">
@@ -101,64 +101,67 @@ background-size: 100% 100%;">
                                 </select>
                                 </div>
                             </div>
+                            </div>
+
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">First Name</label>
                                 <input type="text" class="form-control"  name="fname"required>
                                 </div>
                             </div>
-                            </div>
-
-                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Middle Name</label>
                                 <input type="text" class="form-control"  name="mname"required>
                                 </div>
                             </div>
+                            </div>
+
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Last Name</label>
                                 <input type="text" class="form-control"  name="lname"required>
                                 </div>
                             </div>
-                            </div>
-
-                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Address</label>
                                 <input type="text" class="form-control"  name="address"required>
                                 </div>
                             </div>
+                            </div>
+
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Contact Number</label>
                                 <input type="number" class="form-control"  name="contact_num"required>
                                 </div>
                             </div>
-                            </div>
-
-                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Username</label>
                                 <input type="text" class="form-control"  name="username"required>
                                 </div>
                             </div>
+                            </div>
+                             <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Email Address</label>
                                 <input type="text" class="form-control" name="email" required>
                                 </div>
                             </div>
-                            </div>
-                            <div class="form-group" id="pass">
+                            <div class="col-md-6" id="pass">
                                 <label for="exampleInputEmail1"style="color:white;">Password</label>
                                 <input type="password" class="form-control"  name="password" required>
                             </div>
-                            <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary"  name="register">Submit</button>
+                         </div>
+                             <br>
+                            <div class="col-md-12 text-center ">
+                            <button type="submit" class="btn btn-info"  name="register">Create Account</button>
                             </div>
                         </form>
                         <p class="text-center"style="color:white;">You have account? <a href="login.php" id="signup">LogIn Account</a></p>
