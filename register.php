@@ -125,14 +125,15 @@ require 'vendor/autoload.php';
 
 
 <section class="accomodation_area section_gap" style="background-image: url('image/act.jpg');background-repeat: no-repeat;
-  background-attachment: fixed;
-background-size: 100% 100%;">
+        background-attachment: fixed;
+        background-size: 100% 100%;">
         <div class="container">
-        <div class="card" style="width: 40rem;margin-left: 280px;background-color: hsla(0, 0%, 0%, 0.5);" > 
+        <div class="d-flex justify-content-center">
+        <div class="card" style="width: 40rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
         <div class="row" >
 			<div class="col-md-20 mx-auto">
 
-    <div id="second">
+                <div id="second">
 			      <div class="myform form">
                         <div class="logo mb-3">
                            <div class="col-md-12 text-center">
@@ -227,7 +228,8 @@ background-size: 100% 100%;">
                 </div>
             </div> 
         </div>
-    </div>  
+    </div> 
+    </div>
 </section>
 
 
