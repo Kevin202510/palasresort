@@ -125,3 +125,10 @@ background-size: 100% 100%;">
 
 <?php include('Pages/layouts/footer.php');?>
 <?php include('Pages/layouts/scripts.php');?>
+
+<script>
+    window.history.forward();
+             function noBack() { 
+                  window.history.forward(); 
+             }
+</script>
