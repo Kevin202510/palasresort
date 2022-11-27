@@ -16,7 +16,7 @@ session_start();
     $username=$_POST["username"];
     $password=$_POST["password"];
 
-    $que = "username='$username' AND password='$password' AND email_verified_at != 'NULL'";
+    $que = "username='$username' AND password='$password'";
     $newAPIFunctions->select("users","*",$que);
     $userLists = $newAPIFunctions->sql;
     $user_id;
@@ -81,7 +81,8 @@ session_start();
   background-attachment: fixed;
 background-size: 100% 100%;">
             <div class="container" >
-            <div class="card" style="width: 30rem;margin-left: 350px;background-color: hsla(0, 0%, 0%, 0.5);" > 
+            <div class="d-flex justify-content-center">
+            <div class="card" style="width: 30rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
             <div class="row" >
 			<div class="col-md-5 mx-auto">
 			<div  id="first">  
@@ -92,7 +93,7 @@ background-size: 100% 100%;">
 						 </div>
 					</div>
              
-                   <form action="" method="post" >
+                           <form action="" method="post" >
                            <div class="form-group">
                               <label for="exampleInputEmail1"style="color:white;">Username</label>
                               <input type="text" name="username"  class="form-control"   placeholder="User">
@@ -114,7 +115,7 @@ background-size: 100% 100%;">
                               <p class="text-center"style="color:white;">Don't have account? <a href="register.php" id="signup">Create An Account</a></p>
                             </div>  
                           
-                        </form>
+                            </form>
                      </div>
 				</div>
 			</div>
@@ -122,7 +123,7 @@ background-size: 100% 100%;">
 			</div>
 		</div>
       </div>   
-    
+      </div> 
             </div>
         </section>
 
