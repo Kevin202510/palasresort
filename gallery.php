@@ -1,4 +1,4 @@
-
+<?php   session_start();?>
     <?php include('Pages/layouts/head.php');?>
 
 <!--================Header Area =================-->
