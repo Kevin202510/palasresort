@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2022 at 03:13 PM
+-- Generation Time: Nov 27, 2022 at 01:29 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -31,7 +31,7 @@ CREATE TABLE `entrances` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `reservation_id` bigint(20) UNSIGNED NOT NULL,
   `time_in` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `time_out` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'To update if customer want''s to extends.',
+  `time_out` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'To update if customer want''s to extends.',
   `balance` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Remaining balance if they extends.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -58,13 +58,11 @@ CREATE TABLE `facilities` (
 --
 
 INSERT INTO `facilities` (`id`, `name`, `description`, `image`, `day_rate`, `night_rate`, `overnigth_rate`, `facility_type`, `status`) VALUES
-(1, 'airsoft', 'Game', 'earsoft.jpg', 100, 200, 298, 'adrenaline_game', 'available'),
-(2, 'pool', 'Swiming', 'palas.jpg', 150, 175, 199, 'nipa_cottage', 'available'),
-(7, 'luxroom', 'roomsss', 'pals2.jpg', 432, 678, 89085, 'private_rooms', 'available'),
-(24, 'luxroom', 'roomsss', 'palas.jpg', 200, 300, 399, 'private_rooms', 'available'),
-(25, 'luxroom', 'rooms', 'palas.jpg', 123, 200, 399, 'private_rooms', 'available'),
-(26, 'room', 'rooms', 'pals2.jpg', 1, 2, 3, 'private_rooms', 'available'),
-(27, 'luxroom', 'rooms', 'rum4.jpg', 100, 200, 300, 'rooms', '');
+(35, 'Pool', 'pools', 'palas.jpg', 150, 175, 200, 'pool', ''),
+(36, 'Cottage', 'Cottage', 'rum3.jpg', 300, 600, 900, 'cottage', ''),
+(37, 'luxroom', 'room1', 'rum2.jpg', 1000, 1500, 2000, 'rooms', ''),
+(38, 'Teambuilding', 'Adrenaline Game', 'teambuilding.jpg', 30, 30, 30, 'adrenaline_game', ''),
+(39, 'Airsoft', 'Sports Center', 'earsoft.jpg', 100, 100, 100, 'sports_center', '');
 
 -- --------------------------------------------------------
 
@@ -147,7 +145,7 @@ INSERT INTO `permissions` (`permissions_id`, `permission_name`) VALUES
 --
 
 CREATE TABLE `reservations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `res_id` bigint(20) UNSIGNED NOT NULL,
   `service_id` bigint(20) UNSIGNED NOT NULL,
   `facility_id` bigint(20) UNSIGNED NOT NULL,
   `customer_id` bigint(20) UNSIGNED NOT NULL,
@@ -160,6 +158,14 @@ CREATE TABLE `reservations` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reservations`
+--
+
+INSERT INTO `reservations` (`res_id`, `service_id`, `facility_id`, `customer_id`, `date`, `time`, `person_adult_quantity`, `person_kids_quantity`, `total_balance`, `reservation_status`, `created_at`, `updated_at`) VALUES
+(58, 5, 36, 19, '2022-11-27', '11:30 pm', 1, 1, 600, 0, '2022-11-27 07:34:25', '2022-11-27 07:34:25'),
+(59, 5, 35, 19, '2022-11-26', '7:36 am', 2, 3, 750, 0, '2022-11-27 07:36:16', '2022-11-27 07:36:16');
 
 -- --------------------------------------------------------
 
@@ -217,10 +223,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `username`, `password`) VALUES
-(4, 1, 'asdasd', 'asdasds', 'adasdas', 'asdasdas', 'asdasd', 'asdasdasd', 'asdasdasd', 'asdasdasdas'),
 (10, 2, 'jolo', 'banayo', 'mallare', 'samapaguita', '09878765443', 'customer@gmail.com', 'customer', 'password'),
 (11, 2, 'joana', 'banayo', 'mallare', 'samapaguita', '099876423', 'maria@gmail.com', 'joana', '099876554324'),
-(12, 2, 'tes', 'banayo', 'mallare', 'samapaguita', '9878765442', 'staff@gmail.com', 'maria', 'pass');
+(12, 2, 'tes', 'banayo', 'mallare', 'samapaguita', '9878765442', 'staff@gmail.com', 'maria', 'pass'),
+(13, 1, 'Jomari', 'Mallare', 'B', 'Sampaguita', '09876543212', 'jomarimallare2020@gmail.coma', 'superadmin', 'password'),
+(14, 2, 'talin', 'g', 'fajardo', 'sampedro', '09878765443', 'talin@gmail.com', 'talin', 'password'),
+(15, 2, 'che', 'c', 'torres', 'pulongmatong', '09876543212', 'celsea', 'chelsea', 'password'),
+(19, 2, 'gherome', 'b', 'Biglang-awa', 'samapaguita', '09878765443', 'ghe@gmail.com', 'ghe', 'password');
 
 --
 -- Indexes for dumped tables
@@ -268,7 +277,7 @@ ALTER TABLE `permissions`
 -- Indexes for table `reservations`
 --
 ALTER TABLE `reservations`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`res_id`),
   ADD KEY `reservations_service_id_foreign` (`service_id`),
   ADD KEY `reservations_facility_id_foreign` (`facility_id`),
   ADD KEY `reservations_customer_id_foreign` (`customer_id`);
@@ -304,13 +313,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `entrances`
 --
 ALTER TABLE `entrances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -334,7 +343,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `res_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -352,7 +361,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- Constraints for dumped tables
@@ -362,7 +371,7 @@ ALTER TABLE `users`
 -- Constraints for table `entrances`
 --
 ALTER TABLE `entrances`
-  ADD CONSTRAINT `entrances_reservation_id_foreign` FOREIGN KEY (`reservation_id`) REFERENCES `reservations` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `entrance_reservation_id` FOREIGN KEY (`reservation_id`) REFERENCES `reservations` (`res_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `reservations`
@@ -376,7 +385,6 @@ ALTER TABLE `reservations`
 -- Constraints for table `sales`
 --
 ALTER TABLE `sales`
-  ADD CONSTRAINT `sales_reservation_id_foreign` FOREIGN KEY (`reservation_id`) REFERENCES `reservations` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `sales_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
