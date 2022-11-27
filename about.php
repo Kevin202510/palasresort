@@ -7,18 +7,7 @@
     <!--================Header Area =================-->
 
         <!--================Breadcrumb Area =================-->
-        <section class="breadcrumb_area" >
-            <div class="overlay bg-parallax"style="background-image: url('image/act.jpg'); background-size: 100% 100%" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
-            <div class="container">
-                <div class="page-cover text-center">
-                    <h2 class="page-cover-tittle">About Us</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li class="active">About</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
+
         <!--================Breadcrumb Area =================-->
         
         <!--================ About History Area  =================-->
@@ -28,62 +17,36 @@
                     <div class="col-md-6 d_flex align-items-center">
                         <div class="about_content ">
                             <h2 class="title title_color">About Us</h2>
-                            <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
+                            <p>Palas Resort is the combination of innovative design and set apart by an unprecedented level of personalised hospitality, private spaces 
+and bespoke journeys. Here, We Combine comfort, personalized service and exceptional values. 
+The Palas Resort offering so many Rooms, Activities and many more Facilities and it is ideally situated in Rio Chico, Gen.Tinio, General Tinio,Philippines.
+<br>Our purpose is to give our guests a complete experience and a perfect stay. Our staff to have a culture of mutual respect, trust and integrity. Palas Resort is a place that is fun and filled with the unexpected. What we do is always authentic, honest and mindful that less is often so much more.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="image/pic4.jpg" alt="img">
+                    <div id="carouselExampleSlidesOnly" data-interval="2000" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="image/pic8.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/act.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/pic7.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="image/pic6.jpg" alt="">
+                        </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--================ About History Area  =================-->
         
-        <!--================ Facilities Area  =================-->
-        <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax"  style="background-image: url('image/pic7.jpg');background-size: 100% 100%" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
-            </div>
-            <div class="container">
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_w">Facilities</h2>
-                    <p>Who are in extremely love with eco friendly system.</p>
-                </div>
-                <div class="row mb_30">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>  
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sport Center</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-users"></i>Activities</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-dice"></i>Adranaline Games</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-home"></i>Function Pavillions</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================ Facilities Area  =================-->
+       
         
         <!--================ Testimonial Area  =================-->
         <section class="testimonial_area section_gap" style="background-color: #04091e; padding: 30px">
@@ -124,7 +87,7 @@
                         <img class="rounded-circle" src="image/re1.png" alt="">
                         <div class="media-body">
                             <p>Visited them last weekend and the family did enjoy! They have different activities that you can do with your friends or families. We did Archery, Airsoft, Wall Climbing, Team Games and ATV. Place is clean and service is great. Will definitely go back. Thank you Palas Resort for the great weekend!</p>
-                            <a href="#"><h4 class="sec_h4">Rosilyn Lagula</h4></a>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Rosilyn Lagula</h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>
@@ -138,7 +101,51 @@
                         <img class="rounded-circle" src="image/re2.png" alt="">
                         <div class="media-body">
                             <p>thanks PALAS RESORT Nagenjoy kami Lalo n mga anak ko... very accommodating and approachable mga employees...napakababait Nila..sana pagbalik namin matry na namin Ang ATV..highly recommended...🥰🥰🥰 babalik kami for sure.. </p>
-                            <a href="#"><h4 class="sec_h4">Daisy Magtuto</h4></a>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Daisy Magtuto</h4></a>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media testimonial_item">
+                        <img class="rounded-circle" src="image/re2.png" alt="">
+                        <div class="media-body">
+                            <p>Perfect hideaway. Sobrang peaceful and relaxing yung paligid. Ang dami ding activities na pwedeng gawin. Ang babait din ng mga staff. 😁</p>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Angela Aglipay</h4></a>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media testimonial_item">
+                        <img class="rounded-circle" src="image/re2.png" alt="">
+                        <div class="media-body">
+                            <p>friendly staff!!!
+the cottages and the villas are for a large pack but very... veryyyy... super affordable! un talaga ang the best part eh ung nakasave kana, nakapag road trip pa.
+wala naman perfect, my mga downside pa rin, pero pwedi ng palagpasin.</p>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Bequi Espia </h4></a>
+                            <div class="star">
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                <a href="#"><i class="fa fa-star-half-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media testimonial_item">
+                        <img class="rounded-circle" src="image/re2.png" alt="">
+                        <div class="media-body">
+                            <p>We really had a good time, and the time spent with family and friends was all worth it. We had a great deal of outdoor adventure and a whole lot of fun! We enjoyed the activities and had the chance to appreciate the beauty of nature. The staff were awesome! – very accommodating! They just need to improve the quality of the comfort rooms and add more shower rooms. Overall, our Palas experience was superb!</p>
+                            <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Sol de Ver </h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>
                                 <a href="#"><i class="fa fa-star"></i></a>

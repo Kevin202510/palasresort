@@ -8,7 +8,7 @@
         <!--================Banner Area =================-->
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
-            	<div class="overlay bg-parallax"  data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+            	<div class="overlay bg-parallax"  style="background-image:url('image/pic1.jpg')" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
 						<h6>A Perfect Place to Stay & Relax</h6>
@@ -18,76 +18,7 @@
 					</div>
 				</div>
             </div>
-            <div class="hotel_booking_area position">
-                <div class="container">
-                    <div class="hotel_booking_table">
-                        <div class="col-md-3">
-                            <h2>Book<br> Your Room</h2>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="boking_table">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Arrival Date"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Departure Date"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Adult">Adult</option>
-                                                    <option value="1">Old</option>
-                                                    <option value="2">Younger</option>
-                                                    <option value="3">Potato</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Child">Child</option>
-                                                    <option value="1">Child</option>
-                                                    <option value="2">Baby</option>
-                                                    <option value="3">Child</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Child">Number of Rooms</option>
-                                                    <option value="1">Room 01</option>
-                                                    <option value="2">Room 02</option>
-                                                    <option value="3">Room 03</option>
-                                                </select>
-                                            </div>
-                                            <a class="book_now_btn button_hover" href="#">Book Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================Banner Area =================-->
+        
         
         <!--================ Accomodation Area  =================-->
         <section class="accomodation_area section_gap">
@@ -150,32 +81,49 @@
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>  
-                        </div>
+                            <h4 class="sec_h4"><i class="lnr lnr-store"></i>Souvenir Shop</h4>
+                            <p> Palas Resort Souvenir Shop offers a varied array of very affordable gift items. 
+                               locally made products for you to take home as remembrance of your enjoyable stay with us.</p>
+                                  
+                       </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sport Center</h4>
+                        <p>We offer a variety of sports
+                            ATV, Archery, Airsoft, Basketball Shooting, billiards, darts, bike trail, Adventure camp, Garden Maze, 13-cable games, 
+                                Wall Climbing and many more
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
+                            <h4 class="sec_h4"><i class="lnr lnr-apartment"></i>Rooms</h4>
+                            <p>Palas Resort consists of rooms that blend together to form a homey ambiance.
+                            Each room is a showcase of old and contemporary Filipino design. 
+                            The resort has excellent rooms and cottages complete with modern facilities and room service.
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-users"></i>Activities</h4>
+                            <p>We have a range of activities for in-house guests. Activities for the active and for those who just want to take it easy.
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-dice"></i>Adranaline Games</h4>
+                            <p>The Resort offers a variety of games for those who would like to explore the natural beauty of the resort 
+                                . Leave yourself breathless and dazed for a new, exciting, and adventure</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="facilities_item">
                             <h4 class="sec_h4"><i class="lnr lnr-home"></i>Function Pavillions</h4>
+                            <p>Our Pavilion is the perfect venue to help celebrate your special occasion.
+                                 It is also suitable for larger functions, such as seminars, corporate events.
+                                 The location can cater up to approximately 100-150 people sitting at tables. 
+                                 
+
                         </div>
                     </div>
                 </div>

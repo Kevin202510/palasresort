@@ -25,13 +25,9 @@
                     </li>  -->
                     <!-- <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li> -->
-<<<<<<< HEAD
-                    <!-- <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li> -->
-=======
-                    <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
->>>>>>> 22d8025f6d70ae3de6eb720b0b6b8b45a1e6f887
+                    <!-- <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="register.php">Profile</a></li> -->
                 </ul>
             </div> 
         </nav>
