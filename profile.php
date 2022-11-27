@@ -41,6 +41,7 @@
             <img src="image/fac.jpg" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3" style="color:black"><?php echo $data["fname"]  ." ". $data["lname"]; ?></h5>
+            <a href="email-verification.php?email=jomarimallare2020@gmail.com" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true">Verify My Account</a>
         </div>
         </div>
         </div>
