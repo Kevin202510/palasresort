@@ -1,3 +1,4 @@
+
 <?php include('Pages/layouts/head.php');?>
 
 <!-- <header class="header_area">
@@ -88,7 +89,7 @@ background-size: 100% 100%;">
                             <div class="col-md-7">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"></label>
-                                <select class="form-control"  name="permission_id">
+            
                                     <?php 
                                      
                                         $newAPIFunctions->select("permissions","*","permissions_id=2");
@@ -98,7 +99,7 @@ background-size: 100% 100%;">
                                     ?>
                                       <input type="hidden" value="<?php echo $datas["permissions_id"]; ?>" name="permission_id">
                                     <?php } ?>
-                                </select>
+                            
                                 </div>
                             </div>
                             </div>
