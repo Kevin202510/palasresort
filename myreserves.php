@@ -37,7 +37,7 @@
              <div class="card" style="margin-right:10px; margin-top:10px;">
                 <div class="card-body" style="text-align:center;">
                 <div class="col-md-4">
-                    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="250" height="150" alt="">
+                    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="220" height="150" alt="">
                 </div>
                     
                     <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"]."<br>Fullname : ".$data["fname"] ." ". $data["mname"] ." ". $data["lname"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
