@@ -23,12 +23,12 @@ session_start();
     while ($data = mysqli_fetch_assoc($userLists)){
         if($data['permission_id']==1 || $data['permission_id']==3){
             $_SESSION['PERMISSION_ID'] = $data['permission_id'];
-            $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname']." ".$data['mname'];
+            $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname'];
         
             header("location: Pages/admin/index.php");
         }else{
             $_SESSION['PERMISSION_ID'] = $data['permission_id'];
-            $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname']." ".$data['mname'];
+            $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname'];
             $_SESSION['ADDRESS'] = $data['address'];
             $_SESSION['CONTACT_NUM'] = $data['contact_num'];
             $_SESSION['EMAIL'] = $data['email '];

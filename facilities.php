@@ -5,6 +5,8 @@
 <?php include('Pages/layouts/header.php');?>
 <!--================Header Area =================-->
 
+
+
 <!--================Banner Area =================-->
 <section class="banner_area">
 
@@ -249,8 +251,6 @@
 
 
 <!--================ Accomodation Area  =================-->
-
-
 
 
 
