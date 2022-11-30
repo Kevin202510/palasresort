@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 01:29 PM
+-- Generation Time: Nov 30, 2022 at 09:00 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -164,8 +164,9 @@ CREATE TABLE `reservations` (
 --
 
 INSERT INTO `reservations` (`res_id`, `service_id`, `facility_id`, `customer_id`, `date`, `time`, `person_adult_quantity`, `person_kids_quantity`, `total_balance`, `reservation_status`, `created_at`, `updated_at`) VALUES
-(58, 5, 36, 19, '2022-11-27', '11:30 pm', 1, 1, 600, 0, '2022-11-27 07:34:25', '2022-11-27 07:34:25'),
-(59, 5, 35, 19, '2022-11-26', '7:36 am', 2, 3, 750, 0, '2022-11-27 07:36:16', '2022-11-27 07:36:16');
+(65, 5, 35, 60, '2022-11-30', '8:05 am', 1, 1, 300, 0, '2022-11-30 04:05:41', '2022-11-30 04:05:41'),
+(66, 5, 36, 60, '2022-11-29', '8:57 am', 1, 1, 300, 0, '2022-11-30 04:38:33', '2022-11-30 04:38:33'),
+(67, 5, 37, 60, '2022-11-30', '9:10 am', 1, 1, 1000, 0, '2022-11-30 05:10:16', '2022-11-30 05:10:16');
 
 -- --------------------------------------------------------
 
@@ -214,6 +215,8 @@ CREATE TABLE `users` (
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `contact_num` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `verification_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` datetime DEFAULT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -222,14 +225,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `username`, `password`) VALUES
-(10, 2, 'jolo', 'banayo', 'mallare', 'samapaguita', '09878765443', 'customer@gmail.com', 'customer', 'password'),
-(11, 2, 'joana', 'banayo', 'mallare', 'samapaguita', '099876423', 'maria@gmail.com', 'joana', '099876554324'),
-(12, 2, 'tes', 'banayo', 'mallare', 'samapaguita', '9878765442', 'staff@gmail.com', 'maria', 'pass'),
-(13, 1, 'Jomari', 'Mallare', 'B', 'Sampaguita', '09876543212', 'jomarimallare2020@gmail.coma', 'superadmin', 'password'),
-(14, 2, 'talin', 'g', 'fajardo', 'sampedro', '09878765443', 'talin@gmail.com', 'talin', 'password'),
-(15, 2, 'che', 'c', 'torres', 'pulongmatong', '09876543212', 'celsea', 'chelsea', 'password'),
-(19, 2, 'gherome', 'b', 'Biglang-awa', 'samapaguita', '09878765443', 'ghe@gmail.com', 'ghe', 'password');
+INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `verification_code`, `email_verified_at`, `username`, `password`) VALUES
+(59, 1, 'Jomari', 'banayos', 'Mallare', 'sampaguita', '0987675432', 'jomarimallare2020@gmail.com', '166140', '2022-11-27 09:21:13', 'superadmin', 'password'),
+(60, 2, 'jolo', 'banayo', 'Mallare', 'sampaguita', '0987675432', 'jomarimallare000@gmail.com', '233776', '2022-11-30 05:05:03', 'jolo', 'password');
 
 --
 -- Indexes for dumped tables
@@ -343,7 +341,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `res_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `res_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -361,7 +359,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- Constraints for dumped tables
