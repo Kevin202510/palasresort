@@ -22,7 +22,7 @@ $(document).ready(function(){
             $("#facilitiesImages").attr("src","./facilitiesimage/images/"+datas.image);
             $("#newimg").on("click",function(){
                 $("#images").val('');
-                 alert("sadas");
+                //  alert("sadas");
             });
         
             $("#newimg").on("change",function(){
