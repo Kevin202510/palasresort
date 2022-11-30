@@ -51,9 +51,8 @@
 </section>
   
         
-        <!--================ start footer Area  =================-->	
-        <?php include('Pages/layouts/footer.php');?>
-		<!--================ End footer Area  =================-->
+      
+		
         
         
         <!-- Optional JavaScript -->
