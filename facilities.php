@@ -228,6 +228,7 @@
     <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
     <div class="card-body">
+    <img src="image/pic5.png" width="150" height="90" alt="">
                         <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
         <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
     </div>
@@ -255,6 +256,7 @@
         <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
         </div>
@@ -282,6 +284,7 @@
         <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
         </div>
@@ -309,6 +312,7 @@
         <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
         </div>
@@ -336,6 +340,7 @@
         <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
         </div>
@@ -363,6 +368,7 @@
         <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <p class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></p>
         </div>

@@ -39,8 +39,8 @@
                 <div class="col-md-4">
                     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="250" height="150" alt="">
                 </div>
-                    <img src="image/pic5.png" width="120" height="90" alt="">
-                    <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"]."<br>Facility : ".$data["fname"] ." ". $data["mname"] ." ". $data["lname"];?><br>Adult : <?php echo $data["person_adult_quantity"]." <br>Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
+                    
+                    <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"]."<br>Fullname : ".$data["fname"] ." ". $data["mname"] ." ". $data["lname"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
                     <button type="submit" class="btn theme_btn button_hover" id="btn-mul" name="booking">Edit</button>
                     <button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Cancel</button></td>
                 </div>
