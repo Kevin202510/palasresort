@@ -32,7 +32,7 @@
     
  <div class="row">
       <div class="col">
-        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4" style="margin-top: 50px">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4" style="margin-top: 100px">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item active" aria-current="page">User Profile</li>
           </ol>
@@ -48,8 +48,8 @@
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3" style="color:black"><?php echo $data["fname"]  ." ". $data["lname"]; ?></h5>
             <a href="email-verification.php?email=<?php echo $data['email'];?>" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true">Verify My Account</a>
-            <button type="button" style="float:right;" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Edit Users
+            <button type="button"  class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Edit User
               </button>
           </div>
         </div>
@@ -59,7 +59,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0" style="color:black">Full Name :</p>
+                <p class="mb-0" style="color:black">Fullname :</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0" style="color:black"><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></p>
@@ -68,7 +68,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0" style="color:black">Email :</p>
+                <p class="mb-0" style="color:black">Email Address :</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $data['email']; ?></p>
@@ -127,7 +127,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New User</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form method="POST" id="serviceform" action="usersModal/usersModalFunctions.php">
@@ -151,7 +151,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">First Nmae</label>
+                <label for="example-text-input" class="form-control-label">Firstname</label>
                 <input type="text" class="form-control" id="fname" name="fname"required>
                 </div>
               </div>
@@ -160,13 +160,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Midle Name</label>
+                <label for="example-text-input" class="form-control-label">Middlename</label>
                 <input type="text" class="form-control" id="mname" name="mname"required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Last Name</label>
+                <label for="example-text-input" class="form-control-label">Lastname</label>
                 <input type="text" class="form-control" id="lname" name="lname"required>
                 </div>
               </div>
@@ -196,7 +196,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Email</label>
+                <label for="example-text-input" class="form-control-label">Email Address</label>
                 <input type="text" class="form-control" id="email" name="email" required>
                 </div>
               </div>
