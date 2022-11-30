@@ -114,6 +114,12 @@
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
     />
+
+    <img
+    src="image/palss.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
   </div>
 
 

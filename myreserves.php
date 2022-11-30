@@ -16,10 +16,10 @@
     <h2 class="title_color"style="margin-top: 100px"></h2>
 </div> 
 <div class="card">
-    <div class="card-header" style="background-color:yellow">
-        <center><h1>MY RESERVATIONS</h1></center>
+    <div class="card-header" style="background-color:#72cc50">
+        <center><h1 style="color:white">MY RESERVATIONS</h1></center>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="background-color:#FFF36D">
 <div class="row justify-content-center">
 <?php
     include('./Functions/InnovatechAPIFunctions.php');

@@ -27,13 +27,13 @@ The Palas Resort offering so many Rooms, Activities and many more Facilities and
                     <div id="carouselExampleSlidesOnly" data-interval="2000" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="image/pic8.jpg" alt="">
+                        <img class="d-block w-100" src="image/pal1.jpg" alt="">
                         </div>
                         <div class="carousel-item">
                         <img class="d-block w-100" src="image/act.jpg" alt="">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="image/pic7.jpg" alt="">
+                        <img class="d-block w-100" src="image/pal2.jpg" alt="">
                         </div>
                         <div class="carousel-item">
                         <img class="d-block w-100" src="image/pic6.jpg" alt="">
@@ -49,7 +49,7 @@ The Palas Resort offering so many Rooms, Activities and many more Facilities and
        
         
         <!--================ Testimonial Area  =================-->
-        <section class="testimonial_area section_gap" style="background-color: #04091e; padding: 30px">
+        <section class="testimonial_area section_gap" style="background-color: #04091e; padding-bottom:5px">
             <div class="container">
                 <div class="section_title text-center">
                     <h2 style="color:white;">Reviews</h2>

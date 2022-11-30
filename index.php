@@ -25,8 +25,7 @@
         <section class="accomodation_area section_gap">
             <div class="container">
                 <div class="section_title text-center">
-                    <h2 class="title_color">Rooms Accomodation</h2>
-                    <p>The more we feel concern for others and seek their well-being, the more friends we will have and the more welcome we will feel </p>
+                    <h2 class="title_color">Our Best Rooms Accomodation</h2>
                 </div>
                 <div class="row mb_30">
                     <div class="col-lg-3 col-sm-6">
@@ -72,12 +71,11 @@
         
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" style="background-image: url('image/pic7.jpg'); background-size: 100% 100%" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            <div class="overlay bg-parallax" style="background-image: url('image/p3.jpg'); background-size: 120% " data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
             </div>
             <div class="container">
                 <div class="section_title text-center">
                     <h2 class="title_w">Facilities</h2>
-                    <p>Who are in extremely love with eco friendly system.</p>
                 </div>
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">
