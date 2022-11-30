@@ -16,7 +16,7 @@
     <h2 class="title_color"style="margin-top: 100px"></h2>
 </div> 
 <div class="card">
-    <div class="card-header">
+    <div class="card-header" style="background-color:yellow">
         <center><h1>MY RESERVATIONS</h1></center>
     </div>
     <div class="card-body">
@@ -40,7 +40,7 @@
                     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="220" height="150" alt="">
                 </div>
                     
-                    <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"]."<br>Fullname : ".$data["fname"] ." ". $data["mname"] ." ". $data["lname"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
+                    <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
                     <button type="submit" class="btn theme_btn button_hover" id="btn-mul" name="booking">Edit</button>
                     <button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Cancel</button></td>
                 </div>

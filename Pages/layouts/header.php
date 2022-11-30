@@ -23,9 +23,9 @@
                     <li class="nav-item submenu dropdown">
                     <?php 
                     if(isset($_SESSION['PERMISSION_ID'])){?>
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['FULLNAME']; ?></a>
+                        <a href="#" class="nav-link dropdown-toggle" style="margin-right:30px" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['FULLNAME']; ?></a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="profile.php"><?php echo $_SESSION['FULLNAME']; ?></a></li>
+                            <li class="nav-item"><a class="nav-link" href="profile.php">My Profile</a></li>
                             <li class="nav-item"><a class="nav-link" href="myreserves.php">My Reserves</a></li>
                             <li class="nav-item">
                                 <form method="post">
