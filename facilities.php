@@ -5,6 +5,8 @@
 <?php include('Pages/layouts/header.php');?>
 <!--================Header Area =================-->
 
+
+
 <!--================Banner Area =================-->
 <section class="banner_area">
 
@@ -208,50 +210,176 @@
 
 <!--================ Accomodation Area  =================-->
 
-<section class="accomodation_area section_gap">
 
-   <div class="container">
-    
-  
-        <div class="section_title text-center">
-            <h2 class="title_color">Rooms Accomodation</h2>
-            <p>The more we feel concern for others and seek their well-being, the more friends we will have and the more welcome we will feel </p>
-        </div>  
-        <div class="row mb_30">
-        <?php
-        $newAPIFunctions->select("facilities","*");
-        $userLists = $newAPIFunctions->sql;
+<section>
+    <div class="section_title text-center">
+                <h2 class="title_color" style="margin-top: 100px">Rooms Accomodation</h2>
+            </div> 
+    <div class="container"> 
+    <div class="row justify-content-center">
+    <?php
+            $newAPIFunctions->select("facilities","*");
+            $userLists = $newAPIFunctions->sql;
 
-        while ($data = mysqli_fetch_assoc($userLists)){
-             if($data["facility_type"] == "rooms"){
-             
-             ?>
-            <div class="col-lg-3 col-sm-6">
-                <div class="accomodation_item text-center">
-                    <div class="hotel_img">
-                    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="250" height="300" alt="">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                    </div>
-                    <a href="#"><h4 class="sec_h4">Log Cabin</h4></a>
-                    <p>Name:<small><?php echo $data["name"]; ?></small>
-                   description:<small><?php echo $data["description"]; ?></small></p>
-                    <h7>Day Rate: <small>₱<?php echo $data["day_rate"]; ?></small><br>Night Rate: <small>₱<?php echo $data["night_rate"]; ?></small><br>Over Night: <small>₱<?php echo $data["overnigth_rate"]; ?></small></h7>
-                </div>
-               
-            </div>
-            
-            <?php }}?>
-        </div>
-      
-    
+            while ($data = mysqli_fetch_assoc($userLists)){
+                if($data["facility_type"] == "rooms"){
+                
+                ?>
+    <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+    <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+    <div class="card-body">
+    <img src="image/pic5.png" width="150" height="90" alt="">
+                        <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+        <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
     </div>
- 
+    </div>
+    <?php }}?>
+    </div>
+
+</div>
+    </section>
+
+ <section>
+        <div class="section_title text-center">
+                    <h2 class="title_color" style="margin-top: 100px">Cottage</h2>
+                </div> 
+        <div class="container"> 
+        <div class="row justify-content-center">
+        <?php
+                $newAPIFunctions->select("facilities","*");
+                $userLists = $newAPIFunctions->sql;
+
+                while ($data = mysqli_fetch_assoc($userLists)){
+                    if($data["facility_type"] == "cottage"){
+                    
+                    ?>
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+        <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
+                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+        </div>
+        </div>
+        <?php }}?>
+        </div>
+
+    </div>
 </section>
 
+<section>
+        <div class="section_title text-center">
+                    <h2 class="title_color" style="margin-top: 100px">Function Pavillion</h2>
+                </div> 
+        <div class="container"> 
+        <div class="row justify-content-center">
+        <?php
+                $newAPIFunctions->select("facilities","*");
+                $userLists = $newAPIFunctions->sql;
+
+                while ($data = mysqli_fetch_assoc($userLists)){
+                    if($data["facility_type"] == "function_pavillion"){
+                    
+                    ?>
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+        <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
+                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+        </div>
+        </div>
+        <?php }}?>
+        </div>
+
+    </div>
+</section>
+
+<section>
+        <div class="section_title text-center">
+                    <h2 class="title_color" style="margin-top: 100px">Pools</h2>
+                </div> 
+        <div class="container"> 
+        <div class="row justify-content-center">
+        <?php
+                $newAPIFunctions->select("facilities","*");
+                $userLists = $newAPIFunctions->sql;
+
+                while ($data = mysqli_fetch_assoc($userLists)){
+                    if($data["facility_type"] == "pool"){
+                    
+                    ?>
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+        <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
+                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+        </div>
+        </div>
+        <?php }}?>
+        </div>
+
+    </div>
+</section>
+
+<section>
+        <div class="section_title text-center">
+                    <h2 class="title_color" style="margin-top: 100px">Sports Center</h2>
+                </div> 
+        <div class="container"> 
+        <div class="row justify-content-center">
+        <?php
+                $newAPIFunctions->select("facilities","*");
+                $userLists = $newAPIFunctions->sql;
+
+                while ($data = mysqli_fetch_assoc($userLists)){
+                    if($data["facility_type"] == "sports_center"){
+                    
+                    ?>
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+        <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
+                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
+        </div>
+        </div>
+        <?php }}?>
+        </div>
+
+    </div>
+</section>
+
+<section>
+        <div class="section_title text-center">
+                    <h2 class="title_color"style="margin-top: 100px">Adrenaline Game</h2>
+                </div> 
+        <div class="container"> 
+        <div class="row justify-content-center">
+        <?php
+                $newAPIFunctions->select("facilities","*");
+                $userLists = $newAPIFunctions->sql;
+
+                while ($data = mysqli_fetch_assoc($userLists)){
+                    if($data["facility_type"] == "adrenaline_game"){
+                    
+                    ?>
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
+        <div class="card-body">
+        <img src="image/pic5.png" width="150" height="90" alt="">
+                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
+        </div>
+        </div>
+        <?php }}?>
+        </div>
+
+    </div>
+</section>
 
 <!--================ Accomodation Area  =================-->
-
-
 
 
 
