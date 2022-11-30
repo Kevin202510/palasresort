@@ -68,7 +68,12 @@ session_start();
 
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
             <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li> 
+            <li class="nav-item active">
+            <form method="post">
+                <button name="logoutnako" class=" btn btn-block mybtn btn-info tx-tfm" class="nav-link">home</button>
+
+            </form>    
+        </li> 
             </ul>
         
             </div> 
@@ -105,7 +110,6 @@ background-size: 100% 100%;">
                           
                            <div class="col-md-12 text-center ">
                               <button type="submit" name ="login"class=" btn btn-block mybtn btn-info tx-tfm">Login</button>
-                              <button   class=" btn btn-block mybtn btn-info tx-tfm"name="logoutnako" class="nav-link">home</button>
                             </div>
                            
                            <div class="col-md-12 ">

@@ -1,4 +1,4 @@
-<footer class="footer-area section_gap" style="background-color: white; padding: 5px 0px">
+<footer class="footer-area section_gap" style="background-color: white; padding: 5px 0px ">
     <div class="container">			
             <div class="col-lg-12 col-md-12 ">
                 <div class="single-footer-widget">   

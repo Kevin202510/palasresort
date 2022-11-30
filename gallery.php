@@ -9,7 +9,7 @@
 
 <div class="row"style="margin-top:100px;background-color: #FFF36D">
 
-<div class="row col-md-12" style="margin-top:100px;background-color: #FFF36D; padding-left:50px;">
+<div class="row col-md-12" style="margin-top:50px;background-color: #FFF36D; padding-left:50px;">
 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
       src="image/p7.jpg"
@@ -25,11 +25,10 @@
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-    src="image/p3.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
+   <video width="400" height="240" autoplay muted>
+  <source src="image/vid.mp4" type="video/mp4">
+
+</video>
 
     <img
     src="image/p4.jpg"

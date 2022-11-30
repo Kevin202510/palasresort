@@ -29,7 +29,7 @@
                             <li class="nav-item"><a class="nav-link" href="myreserves.php">My Reserves</a></li>
                             <li class="nav-item">
                                 <form method="post">
-                                    <input type="submit" name="logoutnako" class="nav-link" value="Logout">
+                                    <input type="submit" name="logoutnako" class="btn btn-primary btn-sm" style="width:100%" class="nav-link" value="Logout">
                                 </form>
                             </li>
                         </ul>
