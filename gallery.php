@@ -19,13 +19,13 @@
     <img
       src="image/p7.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
+      alt=""
     />
 
     <img
     src="image/p6.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
+      alt=""
     />
   </div>
 
@@ -38,7 +38,7 @@
     <img
     src="image/p4.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
+      alt=""
     />
   </div>
 
@@ -46,13 +46,13 @@
     <img
     src="image/p5.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
+      alt=""
     />
 
     <img
     src="image/p2.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
+      alt=""
     />
   </div>
 
@@ -62,13 +62,13 @@
     <img
       src="image/q1.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
+      alt=""
     />
 
     <img
     src="image/q2.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
+      alt=""
     />
   </div>
 
@@ -76,13 +76,13 @@
     <img
     src="image/q3.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
+      alt=""
     />
 
     <img
     src="image/q4.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
+      alt=""
     />
   </div>
 
@@ -90,40 +90,34 @@
     <img
     src="image/q5.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
+      alt=""
     />
 
     <img
     src="image/q6.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
+      alt=""
     />
   </div>
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
     src="image/q7.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
+      alt=""
     />
 </div>
     <div class="col-lg-4 mb-4 mb-lg-0">
     <img
     src="image/q8.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
+      alt=""
     />
   </div>
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
     src="image/pic2.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-
-    <img
-    src="image/palss.png"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
+      alt=""
     />
   </div>
 

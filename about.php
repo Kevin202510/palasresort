@@ -58,7 +58,7 @@ The Palas Resort offering so many Rooms, Activities and many more Facilities and
                     <div class="media testimonial_item">
                         <img class="rounded-circle" src="image/re1.png" alt="">
                         <div class="media-body">
-                            <p>Friendly staff and a place were evry body to enjoy like swimming and many activities u can do like team building and many more..i will recommended a very beautiful place for family relatives and friends...🌳🌺💚</p>
+                            <p>Friendly staff and a place were everybody to enjoy like swimming and many activities u can do like team building and many more..i will recommended a very beautiful place for family relatives and friends...🌳🌺💚</p>
                             <a href="https://web.facebook.com/palasresort/reviews"><h4 class="sec_h4">Claire Corpuz </h4></a>
                             <div class="star">
                                 <a href="#"><i class="fa fa-star"></i></a>

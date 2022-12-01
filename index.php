@@ -172,7 +172,7 @@
         <section class="latest_blog_area section_gap" style="background: #04091e">
             <div class="container">
                 <div class="section_title text-center">
-                    <h2 class="title_color" style="color: white">Latest posts from blog</h2>
+                    <h2 class="title_color" style="color: white">Posts from blog</h2>
                     <p>Life should not only be lived, it should be celebrated.Celebrate life and love at Palas Resort. </p>
                 </div>
                 <div class="row mb_30">
