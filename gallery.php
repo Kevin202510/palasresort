@@ -8,8 +8,13 @@
 <!-- Gallery -->
 
 <div class="row"style="margin-top:100px;background-color: #FFF36D">
-
 <div class="row col-md-12" style="margin-top:50px;background-color: #FFF36D; padding-left:50px;">
+
+<div style="broder:solid"> <video width="115%" height="95%"  autoplay loop>
+  <source src="image/vid.mp4" type="video/mp4">
+
+</video></div>
+
 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
       src="image/p7.jpg"
@@ -25,11 +30,11 @@
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
-   <video width="400" height="240" autoplay muted>
-  <source src="image/vid.mp4" type="video/mp4">
-
-</video>
-
+  <img
+    src="image/p2.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
     <img
     src="image/p4.jpg"
       class="w-100 shadow-1-strong rounded mb-4"

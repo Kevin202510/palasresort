@@ -37,11 +37,14 @@
              <div class="card" style="margin-right:10px; margin-top:10px;">
                 <div class="card-body" style="text-align:center;">
                 <div class="col-md-4">
+                    <div class="card">
                     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="220" height="150" alt="">
+                    </div>
                 </div>
                     
                     <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
-                    <button type="submit" class="btn theme_btn button_hover" id="btn-mul" name="booking">Edit</button>
+                    <!-- <button type="submit" class="btn theme_btn button_hover" id="btn-mul" name="booking">Edit</button> -->
+                    <button style="margin-right:5px;" type="button" class="btn theme_btn button_hover" id="edit" data-id="<?php echo $data['res_id']; ?>">Edit</button>
                     <button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Cancel</button></td>
                 </div>
              </div>
@@ -59,8 +62,10 @@
         
       
 		
-        
+<?php include('myreservationsModal/myresevationsEditModal.php'); ?>
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <?php include('Pages/layouts/scripts.php');?>
+ <?php include('Pages/layouts/scripts.php');?>
+        
+<script src="myreservationsModal/myreservationsFunctions.js"></script>       

@@ -61,11 +61,11 @@
                     $bal = $data["day_rate"];
                   }
                 } 
-            elseif($data["facility_type"] == "rooms"){
+            elseif($data["facility_type"] == "function_pavillion"){
                 if(date_format(date_create($time),"a")==="pm"){
                     $bal = $data["night_rate"];
                     }else{
-                    $bal = $data["function_pavillion"];
+                    $bal = $data["day_rate"];
                     }
                 }
         }
