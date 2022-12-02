@@ -47,10 +47,8 @@
             <img src="image/fac.jpg" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3" style="color:black"><?php echo $data["fname"]  ." ". $data["lname"]; ?></h5>
-            <a href="email-verification.php?email=<?php echo $data['email'];?>" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true">Verify My Account</a>
-            <button type="button"  class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Edit User
-              </button>
+            <a href="email-verification.php?email=<?php echo $data['email'];?>" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-key" aria-hidden="true"></i>Verify My Account</a>
+            <button style="margin-right:5px;" type="button" class="btn btn-secondary" id="edit" data-id="<?php echo $data['id']; ?>"><i class="fa fa-pencil " aria-hidden="true"></i>Edit Profile</button>
           </div>
         </div>
         </div>
@@ -121,147 +119,9 @@
 </section>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New User</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form method="POST" id="serviceform" action="usersModal/usersModalFunctions.php">
-            <input type="hidden" name="id" id="id">
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Permission</label>
-                <select class="form-control" id="permissions_id" name="permission_id">
-                    <?php 
-                        $newAPIFunctions->select("permissions","*","permissions_id!=1");
-                        $rolesLists = $newAPIFunctions->sql;
-
-                        while ($datas = mysqli_fetch_assoc($rolesLists)){
-                    ?>
-                    <option value="<?php echo $datas["permissions_id"]; ?>"><?php echo $datas["permission_name"]; ?></option>
-                    <?php } ?>
-                </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Firstname</label>
-                <input type="text" class="form-control" id="fname" name="fname"required>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Middlename</label>
-                <input type="text" class="form-control" id="mname" name="mname"required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Lastname</label>
-                <input type="text" class="form-control" id="lname" name="lname"required>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Address</label>
-                <input type="text" class="form-control" id="address" name="address"required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Contact Number</label>
-                <input type="number" class="form-control" id="contact_num" name="contact_num"required>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username"required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Email Address</label>
-                <input type="text" class="form-control" id="email" name="email" required>
-                </div>
-              </div>
-            </div>
-            <div class="form-group" id="pass">
-                <label for="exampleInputEmail1">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="closeform">Close</button>
-            <button type="submit" class="btn btn-primary" id="btn-mul" name="addNew">Save changes</button>
-            </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal -->
-
-<script>
-      $(document).ready(function(){
-
-      $("body").on('click','#edit',function(e){
-
-      var idss = $(e.currentTarget).data('id');
-      $.post("usersModal/updateuser.php",{id: idss},function(data,status){
-          var datas = JSON.parse(data);
-          $("#id").val(datas.id);
-          $("#fname").val(datas.fname);
-          $("#mname").val(datas.mname);
-          $("#lname").val(datas.lname);
-          $("#address").val(datas.address);
-          $("#contact_num").val(datas.contact_num);
-          $("#username").val(datas.username);
-          $("#email").val(datas.email);
-          // alert(datas.permission_id);
-          $('#permissions_id option[value='+datas.permission_id+']').attr("selected", "selected");
-      })
-
-      // $("#myModalLabel").html("Update User");
-      $("#btn-mul").attr('name',"updateUsers");
-      $("#btn-mul").html("Update User");
-      $("#pass").hide();
-      $("#exampleModal").modal("show");
-      });
-
-      $("body").on('click','#delete',function(e){
-
-      var idss = $(e.currentTarget).data('id');
-      $("#ids").val(idss);
-      $("#exampleModalDelete").modal("show");
-      });
-
-      $("#closeform").click(function(){
-      $("#serviceform")[0].reset();
-
-
-      $("#exampleModal").modal("hide");
-      });
-
-      })
-
-</script>
-    
-        
+<?php include('profileModal/profileEditModal.php'); ?>  
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <?php include('Pages/layouts/scripts.php');?>
+
+        <script src="profileModal/profileFunctions.js"></script>

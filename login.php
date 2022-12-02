@@ -24,7 +24,6 @@ session_start();
         if($data['permission_id']==1 || $data['permission_id']==3){
             $_SESSION['PERMISSION_ID'] = $data['permission_id'];
             $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname'];
-            $_SESSION['ID'] = $data['id'];
         
             header("location: Pages/admin/index.php");
         }else{

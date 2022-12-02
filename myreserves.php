@@ -43,7 +43,6 @@
                 </div>
                     
                     <p class="card-text">Service : <?php echo $data["service_name"]."<br>"."Facility : ". $data["name"];?><br>Adult : <?php echo $data["person_adult_quantity"]." Kids : ". $data["person_kids_quantity"]." <br>Balance :₱ ". $data["total_balance"]?><small class="text-muted"><br>Date : <?php echo $data["date"]."Time : ". $data["time"]?></small></p>
-                    <!-- <button type="submit" class="btn theme_btn button_hover" id="btn-mul" name="booking">Edit</button> -->
                     <button style="margin-right:5px;" type="button" class="btn theme_btn button_hover" id="edit" data-id="<?php echo $data['res_id']; ?>">Edit</button>
                     <button type="button" class="btn btn-danger" data-id="<?php echo $data['res_id']; ?>" id="delete">Cancel</button></td>
                 </div>
