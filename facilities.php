@@ -114,7 +114,7 @@
                                 <div class="book_tabel_item">
                             <form method="POST" >
                                 <input type="hidden" name="id" id="id">
-                                    <div class="input-group">
+                                    <div class="input-group"  style="background-color:white">
                                     <select class="wide"  aria-labelledby="btnGroupDrop1" id="service_ids" name="service_id" required>
                                         <?php
                                             $newAPIFunctions->select("services","*","service_id=5");
@@ -126,7 +126,7 @@
                                         </select>
                                     </div>
                                     
-                                    <div class="input-group">
+                                    <div class="input-group"  style="background-color:white">
                                         <select class="wide"  aria-labelledby="btnGroupDrop1" id="facility_ids" name="facility_id" required>
                                         <?php
                                             $newAPIFunctions->select("facilities","*");
@@ -138,7 +138,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="input-group">
+                                    <div class="input-group" >
                                     <select class="wide"  aria-labelledby="btnGroupDrop1" id="customer_ids" name="customer_id" required>
                                         <?php
                                         if(isset($_SESSION['ID'])){
@@ -210,9 +210,9 @@
 <!--================ Accomodation Area  =================-->
 
 
-<section>
+<section style="background-image:url('image/wood.jpg')">
     <div class="section_title text-center">
-                <h2 class="title_color" style="margin-top: 100px">Rooms Accomodation</h2>
+                <h2 class="title_color" style=" height:50px;background-color:#fae746;">Rooms Accomodation</h2>
             </div> 
     <div class="container"> 
     <div class="row justify-content-center">
@@ -224,11 +224,10 @@
                 if($data["facility_type"] == "rooms"){
                 
                 ?>
-    <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+    <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
     <div class="card-body">
-    <img src="image/pic5.png" width="150" height="90" alt="">
-                        <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+                    <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
         <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
     </div>
     </div>
@@ -238,9 +237,9 @@
 </div>
     </section>
 
- <section>
+ <section style="background-image:url('image/wood.jpg')">
         <div class="section_title text-center">
-                    <h2 class="title_color" style="margin-top: 100px">Cottage</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Cottage</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -252,11 +251,10 @@
                     if($data["facility_type"] == "cottage"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
-        <img src="image/pic5.png" width="150" height="90" alt="">
-                            <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
+                        <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
         </div>
         </div>
@@ -266,9 +264,9 @@
     </div>
 </section>
 
-<section>
+<section style="background-image:url('image/wood.jpg')">
         <div class="section_title text-center">
-                    <h2 class="title_color" style="margin-top: 100px">Function Pavillion</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Function Pavillion</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -280,10 +278,9 @@
                     if($data["facility_type"] == "function_pavillion"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
-        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
         </div>
@@ -294,9 +291,9 @@
     </div>
 </section>
 
-<section>
+<section style="background-image:url('image/wood.jpg')">
         <div class="section_title text-center">
-                    <h2 class="title_color" style="margin-top: 100px">Pools</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Pools</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -308,10 +305,9 @@
                     if($data["facility_type"] == "pool"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
-        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
         </div>
@@ -322,9 +318,9 @@
     </div>
 </section>
 
-<section>
+<section style="background-image:url('image/wood.jpg')">
         <div class="section_title text-center">
-                    <h2 class="title_color" style="margin-top: 100px">Sports Center</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Sports Center</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -336,10 +332,9 @@
                     if($data["facility_type"] == "sports_center"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
-        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
@@ -350,9 +345,9 @@
     </div>
 </section>
 
-<section>
+<section style="background-image:url('image/wood.jpg')">
         <div class="section_title text-center">
-                    <h2 class="title_color"style="margin-top: 100px">Adrenaline Game</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Adrenaline Game</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -364,10 +359,9 @@
                     if($data["facility_type"] == "adrenaline_game"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px;">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
-        <img src="image/pic5.png" width="150" height="90" alt="">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
             <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
