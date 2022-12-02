@@ -125,3 +125,6 @@
         <?php include('Pages/layouts/scripts.php');?>
 
         <script src="profileModal/profileFunctions.js"></script>
+
+
+        

@@ -6,6 +6,8 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profile</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      
+
       <div class="modal-body">
       <form method="POST" id="serviceform" action="profileModal/profileModalFunctions.php">
             <input type="hidden" name="id" id="id">
