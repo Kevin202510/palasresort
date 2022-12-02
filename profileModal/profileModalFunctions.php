@@ -4,8 +4,9 @@
     $newAPIFunctions = new InnovatechAPIFunctions();
 
 
+
+
      if(isset($_POST['updateUsers'])){
-        // echo "<script>alert('update');</script>";
         $id = $_POST['id'];
         $firstname = $_POST["fname"];
         $middlename = $_POST["mname"];
@@ -16,6 +17,7 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
         $permission_id = $_POST["permission_id"];
+        $profile =  $profiles;
 
         $newAPIFunctions->update('users',['permission_id'=>$permission_id,
         'fname'=>$firstname,
@@ -25,7 +27,7 @@
         'contact_num'=>$contact,
         'username'=>$username,
         'password'=>$password,
-        'email'=>$email,],"id='$id'");
+        'email'=>$email,'profile'=>$profile,],"id='$id'");
 
         if($newAPIFunctions){
             header('location: ../profile.php');

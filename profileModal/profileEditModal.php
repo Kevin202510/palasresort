@@ -6,15 +6,13 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profile</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      
-
       <div class="modal-body">
       <form method="POST" id="serviceform" action="profileModal/profileModalFunctions.php">
             <input type="hidden" name="id" id="id">
             <input type="hidden" id="permissions_id" name="permission_id">
             <input type="hidden" class="form-control" id="email" name="email" >
-
-            <div class="row">
+            <input type="file" name="profile" id="profile">
+            <div class="row"> 
              
               <div class="col-md-14">
                 <div class="form-group">

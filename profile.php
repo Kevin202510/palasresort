@@ -44,8 +44,7 @@
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
-            <img src="image/fac.jpg" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;">
+             <img src="profileModal/Profileimgs/<?php echo $data['profile']; ?>"  width="200" height="150" alt="avatar">
             <h5 class="my-3" style="color:black"><?php echo $data["fname"]  ." ". $data["lname"]; ?></h5>
             <a href="email-verification.php?email=<?php echo $data['email'];?>" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-key" aria-hidden="true"></i>Verify My Account</a>
             <button style="margin-right:5px;" type="button" class="btn btn-secondary" id="edit" data-id="<?php echo $data['id']; ?>"><i class="fa fa-pencil " aria-hidden="true"></i>Edit Profile</button>
