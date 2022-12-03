@@ -18,7 +18,7 @@
                         <img id="facilitiesImages" src="..." width="470" height="250">
                       </div>
                       <div class="mb-3">
-                    <label class="form-label">Change Facility img</label>
+                    <label class="form-label">Change Image</label>
                     <input type="file"  id="newimg" >
                 </div>
             </div>
@@ -32,7 +32,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Facility Descriptionme</label>
+                <label for="example-text-input" class="form-control-label">Description</label>
                 <input type="text" class="form-control" id="descriptions" name="description" required>
                 </div>
               </div>
@@ -51,13 +51,9 @@
                 <input type="number" class="form-control" id="night_rates" name="night_rate" required>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Over Night Rate</label>
-                <input type="number" class="form-control" id="overnigth_rates" name="overnigth_rate" required>
-                </div>
-              </div>
-            </div>
+              
+              
+              
 
             <!-- <div class="form-group">
                 <label for="exampleInputEmail1">Facility Name</label>
@@ -83,8 +79,8 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Facility Type</label>
                 <select class="dropdown-item" aria-labelledby="btnGroupDrop1" id="facility_types" name="facility_type" required>
-                  <option class="dropdown-item" value="rooms">PRIVATE ROOMS</option>
-                  <option class="dropdown-item" value="cottage">COTTAGE </option>
+                  <option class="dropdown-item" value="rooms">ROOMS</option>
+                  <option class="dropdown-item" value="cottage">COTTAGES </option>
                   <option class="dropdown-item" value="pool">POOL</option>
                   <option class="dropdown-item" value="adrenaline_game">ADRENALINE GAME</option>
                   <option class="dropdown-item" value="sports_center">SPORTS CENTER</option>
