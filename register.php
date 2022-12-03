@@ -110,7 +110,6 @@ require 'vendor/autoload.php';
         'username'=>$username,
         'email'=>$email,
         'password'=>$password,
-        'profile'=>$profile,
         'verification_code'=>$verification_code]);
 
         if($newAPIFunctions){
@@ -152,7 +151,6 @@ require 'vendor/autoload.php';
                         </div>
                     <form method="POST" id="serviceform">
                             <input type="hidden" name="id" id="id">
-                            <input type="hidden" name="	profile" value="profile.jpg">
 
                             <div class="row">
                             <div class="col-md-7">
