@@ -138,7 +138,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="input-group" >
+                                    <div class="input-group"style="background-color:white">
                                     <select class="wide"  aria-labelledby="btnGroupDrop1" id="customer_ids" name="customer_id" required>
                                         <?php
                                         if(isset($_SESSION['ID'])){
@@ -210,9 +210,9 @@
 <!--================ Accomodation Area  =================-->
 
 
-<section style="background-image:url('image/wood.jpg')">
+<section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
     <div class="section_title text-center">
-                <h2 class="title_color" style=" height:50px;background-color:#fae746;">Rooms Accomodation</h2>
+                <h2 class="title_color" style=" height:50px;background-color: #fae746;">Rooms</h2>
             </div> 
     <div class="container"> 
     <div class="row justify-content-center">
@@ -224,7 +224,7 @@
                 if($data["facility_type"] == "rooms"){
                 
                 ?>
-    <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+    <div class="card" style="width: 18rem;text-align:center;margin-right: 50px; margin-bottom: 30px">
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
     <div class="card-body">
                     <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
@@ -237,9 +237,9 @@
 </div>
     </section>
 
- <section style="background-image:url('image/wood.jpg')">
+ <section style="background-image:url('image/wood2.jpg') ;background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Cottage</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Cottages</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -251,7 +251,7 @@
                     if($data["facility_type"] == "cottage"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 30px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                         <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
@@ -264,7 +264,7 @@
     </div>
 </section>
 
-<section style="background-image:url('image/wood.jpg')">
+<section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
                     <h2 class="title_color" style=" height:50px;background-color:#fae746;">Function Pavillion</h2>
                 </div> 
@@ -278,7 +278,7 @@
                     if($data["facility_type"] == "function_pavillion"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:80px; margin-bottom: 50px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
@@ -291,7 +291,7 @@
     </div>
 </section>
 
-<section style="background-image:url('image/wood.jpg')">
+<section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
                     <h2 class="title_color" style=" height:50px;background-color:#fae746;">Pools</h2>
                 </div> 
@@ -305,7 +305,7 @@
                     if($data["facility_type"] == "pool"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 30px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
@@ -318,7 +318,7 @@
     </div>
 </section>
 
-<section style="background-image:url('image/wood.jpg')">
+<section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
                     <h2 class="title_color" style=" height:50px;background-color:#fae746;">Sports Center</h2>
                 </div> 
@@ -332,7 +332,7 @@
                     if($data["facility_type"] == "sports_center"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 50px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
@@ -345,9 +345,9 @@
     </div>
 </section>
 
-<section style="background-image:url('image/wood.jpg')">
+<section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Adrenaline Game</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Adrenaline Games</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -359,7 +359,7 @@
                     if($data["facility_type"] == "adrenaline_game"){
                     
                     ?>
-        <div class="card" style="width: 18rem;text-align:center;margin-right:10px; margin-bottom: 100px">
+        <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 50px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>

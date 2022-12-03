@@ -84,17 +84,17 @@ session_start();
       
     <section class="accomodation_area section_gap"style="background-image: url('image/act.jpg');background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;">
+  background-size: 100% 100%">
            
            <div class="container" >
             <div class="d-flex justify-content-center">
-            <div class="card" style="width: 30rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
+            <div class="card" style="width: 30rem;height: 30rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
             <div class="row" >
 			<div class="col-md-5 mx-auto">
 			<div  id="first">  
 				<div class="myform form">
 					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
+						 <div class="col-md-12 text-center" style="margin-top: 40px">
 							<h1 style="color:white;">Log In</h1>
 						 </div>
 					</div>
@@ -117,7 +117,7 @@ session_start();
                               <div class="login-or">
                                 
                            <div class="form-group">
-                              <p class="text-center"style="color:white;">Don't have account? <a href="register.php" id="signup">Create An Account</a></p>
+                              <br><p class="text-center"style="color:white;">Don't have account? <a href="register.php" id="signup">Create An Account</a></p>
                             </div>  
                           
                             </form>

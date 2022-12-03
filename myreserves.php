@@ -19,12 +19,13 @@
     <div class="card-header" style="background-color:#72cc50">
         <center><h1 style="color:white">MY RESERVATIONS</h1></center>
     </div>
-    <div class="card-body" style="background-image:url('image/wood.jpg')">
+    <div class="card-body" style="background-image:url('image/wood2.jpg')">
 <div class="row justify-content-center">
 <?php
     include('./Functions/InnovatechAPIFunctions.php');
     $newAPIFunctions = new InnovatechAPIFunctions();     
          if(isset($_SESSION['ID'])){
+            
             $id=$_SESSION['ID'];
             $sq="id='$id'";
             $newAPIFunctions->selectleftjoin3();
