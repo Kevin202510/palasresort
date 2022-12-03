@@ -7,11 +7,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form method="POST" id="serviceform" action="profileModal/profileModalFunctions.php">
+      <form method="POST" id="serviceform" action="profileModal/profileModalFunctions.php" enctype="multipart/form-data">
             <input type="hidden" name="id" id="id">
             <input type="hidden" id="permissions_id" name="permission_id">
             <input type="hidden" class="form-control" id="email" name="email" >
-            <input type="file" name="profile" id="profile">
+            <input type="file" name="fileToUpload" id="fileToUpload">
             <div class="row"> 
              
               <div class="col-md-14">

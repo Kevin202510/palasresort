@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 09:00 AM
+-- Generation Time: Dec 03, 2022 at 08:26 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -58,11 +58,13 @@ CREATE TABLE `facilities` (
 --
 
 INSERT INTO `facilities` (`id`, `name`, `description`, `image`, `day_rate`, `night_rate`, `overnigth_rate`, `facility_type`, `status`) VALUES
-(35, 'Pool', 'pools', 'palas.jpg', 150, 175, 200, 'pool', ''),
-(36, 'Cottage', 'Cottage', 'rum3.jpg', 300, 600, 900, 'cottage', ''),
-(37, 'luxroom', 'room1', 'rum2.jpg', 1000, 1500, 2000, 'rooms', ''),
+(35, 'Pool', 'pools', 'act3.jpg', 150, 175, 200, 'pool', ''),
+(36, 'Cottage', 'Cottage', 'cottage.jpg', 300, 600, 900, 'cottage', ''),
+(37, 'Newroom', 'room1', 'rum2.jpg', 1000, 1500, 2000, 'rooms', ''),
 (38, 'Teambuilding', 'Adrenaline Game', 'teambuilding.jpg', 30, 30, 30, 'adrenaline_game', ''),
-(39, 'Airsoft', 'Sports Center', 'earsoft.jpg', 100, 100, 100, 'sports_center', '');
+(39, 'Airsoft', 'Sports Center', 'earsoft.jpg', 100, 100, 100, 'sports_center', ''),
+(44, 'Function Favillion', 'Function Favillion', 'rum4.jpg', 2000, 3000, 4000, 'function_pavillion', ''),
+(45, 'Room2', 'rooms', 'rum4.jpg', 100, 200, 500, 'rooms', '');
 
 -- --------------------------------------------------------
 
@@ -164,9 +166,13 @@ CREATE TABLE `reservations` (
 --
 
 INSERT INTO `reservations` (`res_id`, `service_id`, `facility_id`, `customer_id`, `date`, `time`, `person_adult_quantity`, `person_kids_quantity`, `total_balance`, `reservation_status`, `created_at`, `updated_at`) VALUES
-(65, 5, 35, 60, '2022-11-30', '8:05 am', 1, 1, 300, 0, '2022-11-30 04:05:41', '2022-11-30 04:05:41'),
-(66, 5, 36, 60, '2022-11-29', '8:57 am', 1, 1, 300, 0, '2022-11-30 04:38:33', '2022-11-30 04:38:33'),
-(67, 5, 37, 60, '2022-11-30', '9:10 am', 1, 1, 1000, 0, '2022-11-30 05:10:16', '2022-11-30 05:10:16');
+(65, 5, 35, 60, '2022-11-30', '7:33 am', 2, 2, 600, 0, '2022-11-30 04:05:41', '2022-11-30 04:05:41'),
+(66, 5, 36, 60, '2022-12-03', '7:33 pm', 1, 4, 600, 0, '2022-11-30 04:38:33', '2022-11-30 04:38:33'),
+(71, 5, 35, 61, '2022-12-17', '8:35 pm', 2, 3, 875, 0, '2022-11-30 20:33:06', '2022-11-30 20:33:06'),
+(73, 5, 45, 61, '2022-12-02', '8:59 am', 1, 1, 100, 0, '2022-12-01 11:59:30', '2022-12-01 11:59:30'),
+(76, 5, 37, 61, '2022-12-02', '8:01 am', 1, 1, 1000, 0, '2022-12-01 12:01:41', '2022-12-01 12:01:41'),
+(78, 5, 44, 61, '2022-12-02', '4:07 am', 1, 1, 2000, 0, '2022-12-01 12:07:32', '2022-12-01 12:07:32'),
+(79, 5, 45, 62, '2022-12-03', '10:23 pm', 12, 12, 200, 0, '2022-12-02 18:23:47', '2022-12-02 18:23:47');
 
 -- --------------------------------------------------------
 
@@ -196,7 +202,7 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`service_id`, `service_name`) VALUES
-(3, 'walkin'),
+(3, 'Walkin'),
 (4, 'callsevice'),
 (5, 'online');
 
@@ -218,16 +224,20 @@ CREATE TABLE `users` (
   `verification_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` datetime DEFAULT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `profile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `verification_code`, `email_verified_at`, `username`, `password`) VALUES
-(59, 1, 'Jomari', 'banayos', 'Mallare', 'sampaguita', '0987675432', 'jomarimallare2020@gmail.com', '166140', '2022-11-27 09:21:13', 'superadmin', 'password'),
-(60, 2, 'jolo', 'banayo', 'Mallare', 'sampaguita', '0987675432', 'jomarimallare000@gmail.com', '233776', '2022-11-30 05:05:03', 'jolo', 'password');
+INSERT INTO `users` (`id`, `permission_id`, `fname`, `mname`, `lname`, `address`, `contact_num`, `email`, `verification_code`, `email_verified_at`, `username`, `password`, `profile`) VALUES
+(59, 1, 'Jomari', 'banayos', 'Mallare', 'sampaguita', '0987675432', 'jomarimallare2020@gmail.com', '166140', '2022-11-27 09:21:13', 'superadmin', 'password', 'profile.jpg'),
+(60, 2, 'Jolo', 'Banayo', 'Mallare', 'sampedro', '0987675432', 'jomarimallare000@gmail.com', '233776', '2022-11-30 05:05:03', 'jolo', 'password', 'profile.jpg'),
+(61, 2, 'Gherome', 'B', 'Biglang-Awas', 'samapaguitas', '09878765443', 'innovatechdeveloper0013@gmail.com', '171738', '2022-11-30 09:32:47', 'ghe', 'password', 'WIN_20220514_11_12_17_Pro.jpg'),
+(62, 2, 'KEVIN ', 'FELIX', 'CALUAG', 'BAGO GENERAL TINIO NE', '09261364720', 'customer1@gmail.com', '171738', '2022-11-30 09:32:47', 'BOSSKEVZ', 'password', '242260692_138514495162774_5629228213219838715_n.jpg'),
+(63, 2, 'Joana', 'Banayo', 'Mallare', 'samapaguita', '09878765443', 'joanamarimallare01@gmail.com', '118188', NULL, 'joana', 'password', '');
 
 --
 -- Indexes for dumped tables
@@ -317,7 +327,7 @@ ALTER TABLE `entrances`
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -341,7 +351,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `res_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `res_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -359,7 +369,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- Constraints for dumped tables
