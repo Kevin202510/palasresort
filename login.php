@@ -84,8 +84,9 @@ session_start();
       
     <section class="accomodation_area section_gap"style="background-image: url('image/act.jpg');background-repeat: no-repeat;
   background-attachment: fixed;
-background-size: 100% 100%;">
-            <div class="container" >
+  background-size: 100% 100%;">
+           
+           <div class="container" >
             <div class="d-flex justify-content-center">
             <div class="card" style="width: 30rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
             <div class="row" >

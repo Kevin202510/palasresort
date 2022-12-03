@@ -19,7 +19,7 @@
     <div class="card-header" style="background-color:#72cc50">
         <center><h1 style="color:white">MY RESERVATIONS</h1></center>
     </div>
-    <div class="card-body" style="background-color:#FFF36D">
+    <div class="card-body" style="background-image:url('image/wood.jpg')">
 <div class="row justify-content-center">
 <?php
     include('./Functions/InnovatechAPIFunctions.php');
