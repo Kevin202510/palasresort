@@ -68,6 +68,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">QRCODE</h5>
+        <img
+            src="image/pic5.png"
+            alt=""width="250" height="100"
+            />
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
       </div>
       <div class="modal-body">
