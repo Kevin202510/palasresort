@@ -46,7 +46,11 @@
           <div class="card-body text-center">
           <div class="image-upload">
             <label for="file-input">
+            <?php if($data['profile'] == NULL){ ?>
+            <img src="profileModal/Profileimgs/profile.jpg"  width="200" height="150" alt="avatar">
+            <?php } else{?>
             <img src="profileModal/Profileimgs/<?php echo $data['profile']; ?>"  width="200" height="150" alt="avatar">
+            <?php }?>
             </label>
             <input id="file-input" type="file" style="display: none;"/>
           </div>
