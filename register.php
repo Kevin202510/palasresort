@@ -244,5 +244,5 @@ require 'vendor/autoload.php';
 </section>
 
 
-<?php include('Pages/layouts/footer.php');?>  
+ 
 <?php include('Pages/layouts/scripts.php');?>
