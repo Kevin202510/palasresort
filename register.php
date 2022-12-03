@@ -114,7 +114,7 @@ require 'vendor/autoload.php';
 
         if($newAPIFunctions){
             echo "<script>alert('Sucess Fully To Create Account');</script>";
-            header('location: email-verification.php?email=' . $email);
+            header('location: login.php' );
             
         }else{
             echo "<script>alert('May Error!'');</script>";

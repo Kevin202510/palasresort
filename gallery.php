@@ -11,7 +11,7 @@
 <div class="row col-md-12" style="margin-top:50px;background-color: #FFF36D; padding-left:50px;">
 
 <div style="margin-right: 60px">
-  <video width="105%" height="95%"  autoplay loop>
+  <video width="115%" height="95%"  autoplay loop>
       <source src="image/vid.mp4" type="video/mp4">
   </video>
 </div>
@@ -118,9 +118,11 @@
     <img
     src="image/pic2.jpg"
       class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
+      alt=""width="286" height="458"
     />
+   
   </div>
+  
 
 
 
