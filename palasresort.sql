@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2022 at 08:26 AM
+-- Generation Time: Dec 05, 2022 at 04:49 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -58,13 +58,33 @@ CREATE TABLE `facilities` (
 --
 
 INSERT INTO `facilities` (`id`, `name`, `description`, `image`, `day_rate`, `night_rate`, `overnigth_rate`, `facility_type`, `status`) VALUES
-(35, 'Pool', 'pools', 'act3.jpg', 150, 175, 200, 'pool', ''),
-(36, 'Cottage', 'Cottage', 'cottage.jpg', 300, 600, 900, 'cottage', ''),
-(37, 'Newroom', 'room1', 'rum2.jpg', 1000, 1500, 2000, 'rooms', ''),
-(38, 'Teambuilding', 'Adrenaline Game', 'teambuilding.jpg', 30, 30, 30, 'adrenaline_game', ''),
-(39, 'Airsoft', 'Sports Center', 'earsoft.jpg', 100, 100, 100, 'sports_center', ''),
-(44, 'Function Favillion', 'Function Favillion', 'rum4.jpg', 2000, 3000, 4000, 'function_pavillion', ''),
-(45, 'Room2', 'rooms', 'rum4.jpg', 100, 200, 500, 'rooms', '');
+(46, 'Shipwrecked Cabin 1', '2 to 4 pax', 'CABIN 1.jpg', 2000, 2500, 0, 'rooms', ''),
+(47, 'Shipwrecked Cabin 2', '6 to 8 pax', 'CAVIN 2.jpg', 3000, 3500, 0, 'rooms', ''),
+(48, 'Grove Dormitory', '10 to 12 pax', 'GROVE DORMITORY.jpg', 4500, 5500, 0, 'rooms', ''),
+(49, 'Grove Top', '2', 'GROVE TOP.jpg', 3000, 3500, 0, 'rooms', ''),
+(50, 'Sunrise Pavillion', '6 to 8 pax', 'SUNRISE PAVILLION.jpg', 2000, 2500, 0, 'rooms', ''),
+(51, 'Twin Room', '2 to 4 pax', 'TWIN COTTAGE.jpg', 2000, 2500, 0, 'rooms', ''),
+(52, 'Big Nipa Cottage', '10 to 15 pax', 'BIG NIPA COTTAGE.jpg', 600, 800, 0, 'cottage', ''),
+(53, 'Lagoon Cottage', '3 to 5 pax', 'LAGOON COTTAGE.jpg', 1000, 1500, 0, 'cottage', ''),
+(54, 'Log Cabin', '6 to 8 pax', 'LOG CABIN.jpg', 3000, 3500, 0, 'cottage', ''),
+(55, 'Nipa Cottage`', '6 to 10 pax', 'NIPA COTTAGE.jpg', 400, 600, 0, 'cottage', ''),
+(56, 'Nipa with Room', '3 to 5 pax', 'NIPA WITH ROOM.jpg', 1000, 1500, 0, 'cottage', ''),
+(57, 'Rest House', '8 to 10 pax', 'REST HOUSE.jpg', 1500, 2000, 0, 'cottage', ''),
+(58, 'Classic Pavillion', '60 to 125 pax', 'classic pavillion.jpg', 9000, 10000, 0, 'function_pavillion', ''),
+(59, 'Flower Bloom ', '50 to 100 pax', 'flower bloom.jpg', 9000, 10000, 0, 'function_pavillion', ''),
+(60, 'Swimming Pool', '0', 'pic4.jpg', 140, 175, 200, 'pool', ''),
+(61, 'Swimming Pool', '0', 'q6.jpg', 140, 175, 0, 'pool', ''),
+(62, 'Swimming Pool', '0', 'q2.jpg', 140, 175, 200, 'pool', ''),
+(63, 'Airsoft', '7 Bullets', 'airsoft.jpg', 100, 0, 0, 'sports_center', ''),
+(64, 'Archery', '10 Arrows', 'archery.jpg', 100, 0, 0, 'sports_center', ''),
+(65, 'ATV', '1 Hour', 'atv.jpg', 350, 0, 0, 'sports_center', ''),
+(66, 'Billiards', '1 Hour', 'billiards.jpg', 80, 0, 0, 'sports_center', ''),
+(67, 'Darts', '1 Hour', 'darts.jpg', 50, 0, 0, 'sports_center', ''),
+(68, '13 - Cable Games', '1 Person', 'cable games.jpg', 80, 0, 0, 'adrenaline_game', ''),
+(69, 'Obstacle Course', '1 Person', 'obstacle course.jpg', 30, 0, 0, 'adrenaline_game', ''),
+(70, 'Garden Maze', '1 Person', 'gardenmaze.jpg', 30, 0, 0, 'adrenaline_game', ''),
+(71, 'Wall Climbing And Rappelling', '1 Person', 'wall climbing.jpg', 100, 0, 0, 'adrenaline_game', ''),
+(72, '2- Way Zipline', '1 Person', 'zipline.jpg', 100, 0, 0, 'adrenaline_game', '');
 
 -- --------------------------------------------------------
 
@@ -161,19 +181,6 @@ CREATE TABLE `reservations` (
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `reservations`
---
-
-INSERT INTO `reservations` (`res_id`, `service_id`, `facility_id`, `customer_id`, `date`, `time`, `person_adult_quantity`, `person_kids_quantity`, `total_balance`, `reservation_status`, `created_at`, `updated_at`) VALUES
-(65, 5, 35, 60, '2022-11-30', '7:33 am', 2, 2, 600, 0, '2022-11-30 04:05:41', '2022-11-30 04:05:41'),
-(66, 5, 36, 60, '2022-12-03', '7:33 pm', 1, 4, 600, 0, '2022-11-30 04:38:33', '2022-11-30 04:38:33'),
-(71, 5, 35, 61, '2022-12-17', '8:35 pm', 2, 3, 875, 0, '2022-11-30 20:33:06', '2022-11-30 20:33:06'),
-(73, 5, 45, 61, '2022-12-02', '8:59 am', 1, 1, 100, 0, '2022-12-01 11:59:30', '2022-12-01 11:59:30'),
-(76, 5, 37, 61, '2022-12-02', '8:01 am', 1, 1, 1000, 0, '2022-12-01 12:01:41', '2022-12-01 12:01:41'),
-(78, 5, 44, 61, '2022-12-02', '4:07 am', 1, 1, 2000, 0, '2022-12-01 12:07:32', '2022-12-01 12:07:32'),
-(79, 5, 45, 62, '2022-12-03', '10:23 pm', 12, 12, 200, 0, '2022-12-02 18:23:47', '2022-12-02 18:23:47');
-
 -- --------------------------------------------------------
 
 --
@@ -202,9 +209,9 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`service_id`, `service_name`) VALUES
-(3, 'Walkin'),
-(4, 'callsevice'),
-(5, 'online');
+(3, 'Walk-in'),
+(4, 'Thru-Call'),
+(5, 'Online Booking');
 
 -- --------------------------------------------------------
 
@@ -327,7 +334,7 @@ ALTER TABLE `entrances`
 -- AUTO_INCREMENT for table `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
