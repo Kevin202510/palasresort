@@ -17,7 +17,7 @@
               <div class="col-md-12">
                 <div class="input-group">
                   <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" id="reservation_id" placeholder="Reservation Customer Id">
+                  <input type="text" class="form-control" id="reservation_id" placeholder="Reservation Customer Id" >
                 </div>
               </div>
               </div>
