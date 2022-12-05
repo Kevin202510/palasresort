@@ -175,7 +175,7 @@ require 'vendor/autoload.php';
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">First Name</label>
-                                <input type="text" class="form-control"  name="fname"required>
+                                <input type="text" class="form-control"  name="fname"  required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -205,7 +205,7 @@ require 'vendor/autoload.php';
                             <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="example-text-input" class="form-control-label"style="color:white;">Contact Number</label>
-                                <input type="number" class="form-control"  name="contact_num"required>
+                                <input type="number" class="form-control"  name="contact_num" onkeypress="return isNumberKey(event)"required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -240,6 +240,15 @@ require 'vendor/autoload.php';
     </div> 
     </div>
 </section>
+
+<script>
+    function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+
 
 
  

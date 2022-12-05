@@ -5,6 +5,7 @@ $(document).ready(function(){
         var idss = $(e.currentTarget).data('id');
         $.post("profileModal/updateprofile.php",{id: idss},function(data,status){
             var datas = JSON.parse(data);
+            // $("#fileToUpload").prop("type","hidden");
             $("#id").val(datas.id);
             $("#fname").val(datas.fname);
             $("#mname").val(datas.mname);
@@ -16,6 +17,20 @@ $(document).ready(function(){
             $("#permissions_id").val(datas.permission_id);
             $("#password").val(datas.password)
             // alert(datas.permission_id);
+            alert(datas.profile);
+            $("#fileToUpload").val(datas.profile);
+            // $("#proImages").attr("src","profileModal/Profileimgs/"+datas.profile);
+            // $("#newimg").on("click",function(){
+            //     $("#fileToUpload").val('');
+            //     //  alert("sadas");
+            // });
+        
+            // $("#newimg").on("change",function(){
+            //     $("#fileToUpload").val($("#newimg").val().split('\\').pop());
+            //     $("#proImages").attr("src","profileModal/Profileimgs/"+$("#fileToUpload").val());
+            // });
+            
+            // alert(image);
         })
 
         // $("#myModalLabel").html("Update User");

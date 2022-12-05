@@ -11,9 +11,19 @@
             <input type="hidden" name="id" id="id">
             <input type="hidden" id="permissions_id" name="permission_id">
             <input type="hidden" class="form-control" id="email" name="email" >
+            upload Profile...
             <input type="file" name="fileToUpload" id="fileToUpload">
+            
+            <!-- <div id="tagomoto">
+                  <label class="form-label">Facility Image</label>
+                        <img id="proImages" src="..." width="470" height="250">
+                      </div>
+                      <div class="mb-3">
+                    <label class="form-label">Change Image</label>
+                    <input type="file"  id="newimg" >
+                </div>
+            </div> -->
             <div class="row"> 
-             
               <div class="col-md-14">
                 <div class="form-group">
                 <label for="example-text-input" class="form-control-label">First Name</label>
@@ -21,6 +31,7 @@
                 </div>
               </div>
             </div>
+            
 
             <div class="row">
               <div class="col-md-6">
