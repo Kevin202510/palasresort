@@ -53,7 +53,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Night Rate</label>
+                <label for="example-text-input" class="form-control-label">Overnight Rates</label>
                 <input type="number" class="form-control" id="overnigth_rates" name="overnigth_rate" required>
                 </div>
               </div>
