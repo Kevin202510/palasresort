@@ -228,7 +228,7 @@
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
     <div class="card-body">
                     <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-        <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+        <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
     </div>
     </div>
     <?php }}?>
@@ -255,7 +255,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                         <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+                        <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -282,7 +282,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -336,7 +336,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -363,7 +363,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
