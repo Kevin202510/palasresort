@@ -145,8 +145,8 @@ require 'vendor/autoload.php';
                 <div id="second">
 			      <div class="myform form">
                         <div class="logo mb-3">
-                           <div class="col-md-12 text-center">
-                              <h1 style="color:white;">Sign Up</h1>
+                           <div class="col-md-12 text-center"style="margin-top: 40px">
+                              <h1 style="color:white; font-family: comic sans ms, cursive;">Sign Up</h1>
                            </div>
                         </div>
                     <form method="POST" id="serviceform">
@@ -232,7 +232,7 @@ require 'vendor/autoload.php';
                             <button type="submit" class="btn btn-info"  name="register">Create Account</button>
                             </div>
                         </form>
-                        <p class="text-center"style="color:white;">You have account? <a href="login.php" id="signup">LogIn Account</a></p>
+                        <p class="text-center"style="color:white;">Already have an account ?  <a href="login.php" id="signup">LogIn Account</a></p>
                     </div>
                 </div>
             </div> 
