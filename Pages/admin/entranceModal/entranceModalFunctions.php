@@ -19,38 +19,26 @@
         }else{
             echo '<script>alert("May Error!");</script>';
         }
-    }else if(isset($_POST['updateReservations'])){
-        // echo "<script>alert('update');</script>";
-        $id = $_POST['id'];
-        $service_id = $_POST["service_id"];
-        $facility_id = $_POST["facility_id"];
-        $customer_id = $_POST["customer_id"];
-        $date = $_POST["date"];
-        $time = date("g:i a", strtotime($_POST["time"]));
-        $person_adult_quantity = $_POST["person_adult_quantity"];
-        $person_kids_quantity = $_POST["person_kids_quantity"];
-
-        $newAPIFunctions->update('reservations',['service_id'=>$service_id,
-        'facility_id'=>$facility_id,
-        'customer_id'=>$customer_id,
-        'date'=>$date,
-        'time'=>$time,
-        'person_adult_quantity'=>$person_adult_quantity,
-        'person_kids_quantity'=>$person_kids_quantity,],"res_id='$id'");
-
-        if($newAPIFunctions){
-            header('location: ../../admin/reservationManagement.php');
-        }else{
-            echo '<script>alert("May Error!");</script>';
-        }
-    }else if(isset($_POST['delete'])){
         
-        $id = $_POST['id'];
+   }else if(isset($_POST['print'])){
+   
+        $bl = $_POST["balancessss"];
+        $pay =  $_POST["paymentssss"];
+        $sukli =  $bl-$pay; 
+        $total = $sukli- $sukli;
+        
+    
+        $id = $_POST['idssss'];
+        $reservation_id = $_POST["reservation_idssss"];
+        $time_in = $_POST["time_inssss"];
+        $balance =  $total;
 
-        $newAPIFunctions->delete('reservations',"res_id='$id'");
+        $newAPIFunctions->update('entrances',['reservation_id'=>$reservation_id,
+        'time_in'=>$time_in,
+        'balance'=>$balance,],"id='$id'");
 
         if($newAPIFunctions){
-            header('location: ../../admin/reservationManagement.php');
+            header('location: ../../admin/entranceManagement.php');
         }else{
             echo '<script>alert("May Error!");</script>';
         }

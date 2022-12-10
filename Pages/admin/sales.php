@@ -16,8 +16,6 @@
               <div class="row" style="float:right;">
               <div class="col-md-12">
                 <div class="input-group">
-                  <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" id="reservation_id" placeholder="Reservation Customer Id" >
                 </div>
               </div>
               </div>
@@ -29,22 +27,20 @@
                 <tr>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reservation Id</th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Time In</th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Time Out</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Balance</th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fullname</th>
                 </tr>
               </thead>
               <tbody>
               <?php
                   include('../../Functions/InnovatechAPIFunctions.php');
                   $newAPIFunctions = new InnovatechAPIFunctions();
-                  $newAPIFunctions->select4();
+                  $newAPIFunctions->select41();
                   $serviceLists = $newAPIFunctions->sql;
           
                   $index = 1;
-                  $reserv_stat="Paid";
+                //   $reserv_stat="Paid";
                   while ($data = mysqli_fetch_assoc($serviceLists)){
                     // if($data['reservation_status']==0){
                     //   $reserv_stat = "Not Paid";
@@ -53,11 +49,9 @@
               <tr>
                 <td class="text-wrap"><?php echo $index?></td>
                 <td class="text-wrap"><?php echo $data["reservation_id"];?></td>
-                <td class="text-wrap"><?php echo $data["time_in"]; ?></td>
-                <td class="text-wrap"><?php echo $data["time_out"]; ?></td>
-                <td class="text-wrap"><?php echo $data["balance"]; ?></td>
-                <td class="text-wrap"><?php echo $reserv_stat; ?></td>
-                <td><button style="margin-right:5px;" type="button" class="btn btn-success" id="pays" data-id="<?php echo $data['customer_id']; ?>">Payment</button></td>
+                <td class="text-wrap"><?php echo $data["updated_at"]; ?></td>
+                <td class="text-wrap"><?php echo $data["total_balance"]; ?></td>
+                <td class="text-wrap"><?php echo $data["fname"]; ?></td>
               </tr>
               <?php $index++; } ?>
               </tbody>
