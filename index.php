@@ -11,7 +11,7 @@
             <div class="booking_table d_flex align-items-center">
             	<div class="overlay bg-parallax"  style="background-image:url('image/pic1.jpg'); background-size:120%" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
-					<div class="banner_content text-center">
+					<div class="banner_content text-center" style="margin-top:50px;">
 						<h6>A Perfect Place to Stay & Relax</h6>
 						<h2>PALAS RESORT</h2>
 						<p>A place where you can go and relax your mind in the heart of nature</p>
@@ -173,7 +173,6 @@
             <div class="container">
                 <div class="section_title text-center">
                     <h2 class="title_color" style="color: white">Posts from blog</h2>
-                    <p>Life should not only be lived, it should be celebrated.Celebrate life and love at Palas Resort. </p>
                 </div>
                 <div class="row mb_30">
                     <div class="col-lg-4 col-md-6">

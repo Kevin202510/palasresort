@@ -28,7 +28,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">First Nmae</label>
+                <label for="example-text-input" class="form-control-label">First Name</label>
                 <input type="text" class="form-control" id="fname" name="fname"required>
                 </div>
               </div>
@@ -37,7 +37,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Midle Name</label>
+                <label for="example-text-input" class="form-control-label">Middle Name</label>
                 <input type="text" class="form-control" id="mname" name="mname"required>
                 </div>
               </div>

@@ -212,7 +212,7 @@
 
 <section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
     <div class="section_title text-center">
-                <h2 class="title_color" style=" height:50px;background-color: #fae746;">Rooms</h2>
+                <h2 class="title_color" style=" height:50px;background-color: #fae746;font-family: impact, sans-serif;">Rooms</h2>
             </div> 
     <div class="container"> 
     <div class="row justify-content-center">
@@ -228,7 +228,7 @@
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
     <div class="card-body">
                     <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-        <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+        <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
     </div>
     </div>
     <?php }}?>
@@ -239,7 +239,7 @@
 
  <section style="background-image:url('image/wood2.jpg') ;background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Cottages</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;font-family: impact, sans-serif;">Cottages</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -255,7 +255,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                         <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                        <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                        <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -266,7 +266,7 @@
 
 <section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Function Pavillion</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;font-family: impact, sans-serif;">Function Pavillion</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -282,7 +282,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -293,7 +293,7 @@
 
 <section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Pools</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;font-family: impact, sans-serif;">Pools</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -309,7 +309,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?><br>Over Night: <?php echo $data["overnigth_rate"]; ?></small></h4>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?><br>Over Night: ₱ <?php echo $data["overnigth_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -320,7 +320,7 @@
 
 <section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Sports Center</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;font-family: impact, sans-serif;">Sports Center</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -336,7 +336,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate: ₱<?php echo $data["day_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>
@@ -347,7 +347,7 @@
 
 <section style="background-image:url('image/wood2.jpg');background-repeat: no-repeat; background-size: 100% 100%">
         <div class="section_title text-center">
-                    <h2 class="title_color" style=" height:50px;background-color:#fae746;">Adrenaline Games</h2>
+                    <h2 class="title_color" style=" height:50px;background-color:#fae746;font-family: impact, sans-serif;">Adrenaline Games</h2>
                 </div> 
         <div class="container"> 
         <div class="row justify-content-center">
@@ -363,7 +363,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}?>

@@ -94,18 +94,18 @@ session_start();
            
            <div class="container" >
             <div class="d-flex justify-content-center">
-            <div class="card" style="width: 30rem;height: 30rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
+            <div class="card" style="width: 30rem;height: 33rem;background-color: hsla(0, 0%, 0%, 0.5);" > 
             <div class="row" >
 			<div class="col-md-5 mx-auto">
 			<div  id="first">  
 				<div class="myform form">
 					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center" style="margin-top: 40px">
-							<h1 style="color:white;">Log In</h1>
+						 <div class="col-md-12 text-center" style="margin-top: 60px">
+							<h1 style="color:white;font-family: comic sans ms, cursive;">Log In</h1>
 						 </div>
 					</div>
              
-                           <form action="" method="post" >
+                           <form action="" method="post" style="margin-top: 50px" >
                            <div class="form-group">
                               <label for="exampleInputEmail1"style="color:white;">Username</label>
                               <input type="text" name="username"  class="form-control"   placeholder="User">
