@@ -24,6 +24,12 @@ session_start();
         if($data['permission_id']==1 || $data['permission_id']==3){
             $_SESSION['PERMISSION_ID'] = $data['permission_id'];
             $_SESSION['FULLNAME'] = $data['fname']." ".$data['lname'];
+            $_SESSION['ADDRESS'] = $data['address'];
+            $_SESSION['CONTACT_NUM'] = $data['contact_num'];
+            $_SESSION['EMAIL'] = $data['email '];
+            $_SESSION['USERNAME'] = $data['username'];
+            $_SESSION['PASSWORD'] = $data['	password'];
+            $_SESSION['ID'] = $data['id'];
         
             header("location: Pages/admin/index.php");
         }else{

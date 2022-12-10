@@ -81,5 +81,24 @@
 
             $this->sql = $result = $this->mysqli->query($sql);
         }
+
+        public function select3($customer_id){
+            $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id LEFT JOIN users ON users.id = reservations.customer_id WHERE reservations.customer_id = $customer_id";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
+        public function select4(){
+            $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
+        public function select41(){
+            $sql = "SELECT * FROM `sales` LEFT JOIN users ON users.id = sales.user_id LEFT JOIN reservations ON reservations.res_id=sales.reservation_id";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
     }
 ?>
