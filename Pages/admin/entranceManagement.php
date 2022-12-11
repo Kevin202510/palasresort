@@ -12,7 +12,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Entrance Management</h6>
+              <h6 style="color:#987554;font-family : bradley hand, cursive">Entrance Management</h6>
               <div class="row" style="float:right;">
               <div class="col-md-12">
                 <div class="input-group">

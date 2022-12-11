@@ -8,11 +8,11 @@
     <div class="collapse navbar-collapse w-auto h-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav"style="margin-top:50px">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">
+          <a class="nav-link" href="index.php">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Dashboard</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Dashboard</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -20,7 +20,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
             <i class="ni ni-shop text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Home</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Home</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -28,7 +28,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
             <i class="ni ni-single-02 text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Users</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Users</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -36,7 +36,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-mobile-button text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Services</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Services</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -44,7 +44,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-building text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Facilities</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Facilities</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -52,7 +52,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-books text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1"style="color:#422311;font-family : bradley hand, cursive"><b>Reservations</b></span>
+            <span class="nav-link-text ms-1"style="color:#987554;font-family : bradley hand, cursive"><b>Reservations</b></span>
           </a>
         </li>
         <li class="nav-item">
@@ -60,7 +60,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-money-coins text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1" style="color:#422311;font-family : bradley hand, cursive"><b>Entrance</b></span>
+            <span class="nav-link-text ms-1" style="color:#987554;font-family : bradley hand, cursive"><b>Entrance</b></span>
           </a>
         </li>
      

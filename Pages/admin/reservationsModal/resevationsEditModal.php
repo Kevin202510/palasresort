@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Reservation</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"style="color:#987554;font-family : bradley hand, cursive">Add Reservation</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -13,7 +13,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Service</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Service</label>
                 <select class="dropdown-item"  aria-labelledby="btnGroupDrop1" id="service_ids" name="service_id" required>
                   <?php
                       $newAPIFunctions->select("services","*");
@@ -27,7 +27,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Facilities</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Facilities</label>
                 <select class="dropdown-item"  aria-labelledby="btnGroupDrop1" id="facility_ids" name="facility_id" required>
                   <?php
                       $newAPIFunctions->select("facilities","*");
@@ -43,7 +43,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Customer</label>
+                <label for="exampleInputEmail1"style="color:#987554;font-family : bradley hand, cursive">Customer</label>
                 <select class="dropdown-item"  aria-labelledby="btnGroupDrop1" id="customer_ids" name="customer_id" required>
               <?php
                   $newAPIFunctions->select("users","*","permission_id=2");
@@ -58,13 +58,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Date</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Date</label>
                 <input type="date" class="form-control" id="dates" name="date">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Time</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Time</label>
                 <input type="time" class="form-control" id="times" name="time">
                 </div>
               </div>
@@ -73,13 +73,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Adult</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Adult</label>
                 <input type="number" class="form-control" id="person_adult_quantitys" name="person_adult_quantity">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Kids</label>
+                <label for="example-text-input" class="form-control-label"style="color:#987554;font-family : bradley hand, cursive">Kids</label>
                 <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity">
                 </div>
               </div>
@@ -106,7 +106,7 @@
       <div class="modal-body">
       <form method="POST" action="reservationsModal/reservationsModalFunctions.php">
             <input type="hidden" name="id" id="ids">
-            <p>ARE YOU SURE YOU WANT TO DELETE THIS?</p>
+            <p style="color:#987554;font-family : bradley hand, cursive">ARE YOU SURE YOU WANT TO DELETE THIS?</p>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary" id="btn-mul" name="delete">Save changes</button>

@@ -3,14 +3,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Service</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"style="color:#987554;font-family : bradley hand, cursive">Add New Service</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form method="POST" id="serviceform" action="servicesModal/servicesModalFunctions.php">
             <input type="hidden" name="id" id="id">
             <div class="form-group">
-                <label for="exampleInputEmail1">Service Name</label>
+                <label for="exampleInputEmail1"style="color:#987554;font-family : bradley hand, cursive">Service Name</label>
                 <input type="text" class="form-control" id="service_name" name="service_name" required>
             </div>
             <div class="modal-footer">
@@ -29,13 +29,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New User</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"style="color:#987554;font-family : bradley hand, cursive">Add New User</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
       <form method="POST" action="servicesModal/servicesModalFunctions.php">
             <input type="hidden" name="id" id="ids">
-            <p>ARE YOU SURE YOU WANT TO DELETE THIS?</p>
+            <p style="color:#987554;font-family : bradley hand, cursive">ARE YOU SURE YOU WANT TO DELETE THIS?</p>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary" id="btn-mul" name="delete">Save changes</button>
