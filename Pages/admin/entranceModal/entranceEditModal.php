@@ -31,6 +31,34 @@
 </div>
 <!-- PRINT MODAL -->
 
+<!-- TIME OUT -->
+<div class="modal fade" id="outModal" tabindex="-1" aria-labelledby="outModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="outModalLabel">Time Out</h1>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> -->
+      </div>
+      <div class="modal-body">
+      <form method="POST" id="serviceform" action="entranceModal/entranceModalFunctions.php">
+        <div class="row">
+           <input type="text" name="idz" id="idzz">
+           <input type="text" name="reservation_idz" id="reservation_idzz">
+           <input type="text" name="time_inz" id="time_inzz">
+           <input type="text" name="time_out" id="time_outzz">
+           <input type="text" name="balancez" id="balancezz">
+          </div> 
+            <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="submit" class="btn btn-primary" id="btns" name="addNew">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- TIME OUT -->  
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

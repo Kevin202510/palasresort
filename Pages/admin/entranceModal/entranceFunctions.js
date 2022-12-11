@@ -24,6 +24,30 @@ $(document).ready(function(){
       }
   });
 
+  $("body").on('click','#out',function(e){
+        
+    var idss = $(e.currentTarget).data('id');
+  
+    $.post("entranceModal/updateentrance.php",{id: idss},function(data,status){
+        var data = JSON.parse(data);
+        $("#idzz").val(data.id);
+        $("#reservation_idzz").val(data.reservation_id);
+        $("#time_inzz").val(data.time_in);
+        $("#time_outzz").val(data.time_out);
+        $("#balancezz").val(data.balance);
+  
+        
+        $("#btns").attr('name',"OutEntance");
+        $("#btns").html("Time Out");
+        $("#outModal").modal("show");
+        
+     
+    })
+  
+    // $("#myModalLabel").html("Update User");
+  });
+  
+
   $("body").on('click','#pays',function(e){
         
     var idss = $(e.currentTarget).data('id');
@@ -72,6 +96,10 @@ $("body").on('click',"#prints",function(e){
   })
 
 });
+
+
+
+
     $("body").on('click','#delete',function(e){
         
         var idss = $(e.currentTarget).data('id');

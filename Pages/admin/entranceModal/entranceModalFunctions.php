@@ -20,21 +20,17 @@
             echo '<script>alert("May Error!");</script>';
         }
         
-   }else if(isset($_POST['print'])){
+   }else if(isset($_POST['OutEntance'])){
    
-        $bl = $_POST["balancessss"];
-        $pay =  $_POST["paymentssss"];
-        $sukli =  $bl-$pay; 
-        $total = $sukli- $sukli;
-        
-    
-        $id = $_POST['idssss'];
-        $reservation_id = $_POST["reservation_idssss"];
-        $time_in = $_POST["time_inssss"];
-        $balance =  $total;
+        $id = $_POST['idz'];
+        $reservation_id = $_POST["reservation_idz"];
+        $time_in = $_POST["time_inz"];
+        $time_out = date("h:i a");
+        $balance = $_POST["balancez"];
 
         $newAPIFunctions->update('entrances',['reservation_id'=>$reservation_id,
         'time_in'=>$time_in,
+        'time_out'=>$time_out,
         'balance'=>$balance,],"id='$id'");
 
         if($newAPIFunctions){
