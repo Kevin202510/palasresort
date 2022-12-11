@@ -63,6 +63,14 @@
             <span class="nav-link-text ms-1" style="color:#987554;font-family : bradley hand, cursive"><b>Entrance</b></span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " href="sales.php">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-money-coins text-success text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1" style="color:#987554;font-family : bradley hand, cursive"><b>Sales</b></span>
+          </a>
+        </li>
      
 
    

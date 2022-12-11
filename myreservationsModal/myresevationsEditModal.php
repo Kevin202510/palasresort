@@ -65,6 +65,7 @@
       <div class="modal-body">
       <form method="POST" action="myreservationsModal/myreservationsModalFunctions.php">
             <input type="hidden" name="id" id="ids">
+            <input type="hidden" name="facility_id" id="facility_idz">
             <p>ARE YOU SURE YOU WANT TO CANCEL YOUR RESERVATION?</p>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
