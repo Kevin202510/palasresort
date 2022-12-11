@@ -183,16 +183,20 @@
                                        $newAPIFunctions->select("users","*",$sq);
                                             $userLists = $newAPIFunctions->sql;
                                                 while ($data = mysqli_fetch_assoc($userLists)){?>
-                                                    <?php
-                                                    if($data["email_verified_at"] == NULL) {
-                                                        ?>
-                                                     <li class="nav-item"><a class="book_now_btn button_hover" href="profile.php">Verify Account</a></li>
-                                                
-                                                      <?php } else{?>
-                                                      
-                                                     <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking">Book Now</button>
-                                                     <?php }?> 
-                                         <?php }}}else{ ?>
+                                                <?php  if($_SESSION['PERMISSION_ID'] == 1 || $_SESSION['PERMISSION_ID'] == 3) { ?>
+                                                    <li class="nav-item"><a class="book_now_btn button_hover" href="Pages/admin/index.php"><?php echo  $_SESSION['FULLNAME']; ?></a></li>
+                                                    <?php } else{?>
+                                                         <?php
+                                                            
+                                                                if($data["email_verified_at"] == NULL) {
+                                                                    ?>
+                                                                <li class="nav-item"><a class="book_now_btn button_hover" href="profile.php">Verify Account</a></li>
+                                                            
+                                                                <?php } else{?>
+                                                                
+                                                                <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking">Book Now</button>
+                                                                <?php }?> 
+                                         <?php }}}}else{ ?>
 
                                         <li class="nav-item"><a class="book_now_btn button_hover" href="register.php">Register</a></li>
                                 <?php }?>

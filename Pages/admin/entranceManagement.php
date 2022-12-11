@@ -44,11 +44,20 @@
                   $serviceLists = $newAPIFunctions->sql;
           
                   $index = 1;
-                  $reserv_stat="Paid";
+                
                   while ($data = mysqli_fetch_assoc($serviceLists)){
                     // if($data['reservation_status']==0){
                     //   $reserv_stat = "Not Paid";
                     // }
+                    $r = $data["reservation_status"];
+                    if($r == 1){
+                    $reserv_stat="Paid";
+                    }
+                    else{
+                      $reserv_stat="Not Paid";
+                    }
+
+                    if($data["res_id"] == $data["reservation_id"]){       
               ?>
               <tr>
                 <td class="text-wrap"><?php echo $index?></td>
@@ -57,9 +66,9 @@
                 <td class="text-wrap"><?php echo $data["time_out"]; ?></td>
                 <td class="text-wrap"><?php echo $data["balance"]; ?></td>
                 <td class="text-wrap"><?php echo $reserv_stat; ?></td>
-                <td><button style="margin-right:5px;" type="button" class="btn btn-success" id="pays" data-id="<?php echo $data['customer_id']; ?>">Payment</button></td>
+                <td><button style="margin-right:5px;" type="button" class="btn btn-success" id="pays" data-id="<?php echo $data['customer_id']; ?>">Payment<button style="margin-right:5px;" type="button" class="btn btn-warning" id="out" data-id="<?php echo $data['customer_id']; ?>">Out</button></td>
               </tr>
-              <?php $index++; } ?>
+              <?php $index++; }} ?>
               </tbody>
               </table>
                 </div>
