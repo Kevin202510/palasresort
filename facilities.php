@@ -79,6 +79,7 @@
         'total_balance'=>$bal,
         'person_adult_quantity'=>$person_adult_quantity,
         'person_kids_quantity'=>$person_kids_quantity,]);
+        
         if($newAPIFunctions){
             echo "<script>alert('Sucess Reserve!');</script>";
 
@@ -114,18 +115,26 @@
                                 <div class="book_tabel_item">
                             <form method="POST" >
                                 <input type="hidden" name="id" id="id">
-                                    <div class="input-group"  style="background-color:white">
-                                    <select class="wide"  aria-labelledby="btnGroupDrop1" id="service_ids" name="service_id" required>
-                                        <?php
-                                            $newAPIFunctions->select("services","*","service_id=5");
-                                            $serviceLists = $newAPIFunctions->sql;
-                                            while ($data = mysqli_fetch_assoc($serviceLists)){
-                                                ?>
-                                        <option class="dropdown-item" value = "<?php echo $data['service_id']; ?>" ><?php echo $data['service_name']; ?></option>
-                                        <?php } ?>
-                                        </select>
-                                    </div>
-                                    
+                                    <?php
+                                        $newAPIFunctions->select("services","*","service_id=5");
+                                        $serviceLists = $newAPIFunctions->sql;
+                                        while ($data = mysqli_fetch_assoc($serviceLists)){
+                                            ?>
+                                    <input type="hidden" id="service_ids" name="service_id"  value = "<?php echo $data['service_id']; ?>">
+                                    <?php } ?>
+                                
+                                    <?php
+                                    if(isset($_SESSION['ID'])){
+                                        $id=$_SESSION['ID'];
+                                        $sq="id='$id'";
+                                        $newAPIFunctions->select("users","*",$sq);
+                                        $userLists = $newAPIFunctions->sql;
+                                            while ($data = mysqli_fetch_assoc($userLists)){
+                                            ?>
+                                    <input type="hidden" id="customer_ids" name="customer_id"  value = "<?php echo $data['id']; ?>">
+                                    <?php }} ?>
+
+
                                     <div class="input-group"  style="background-color:white">
                                         <select class="wide"  aria-labelledby="btnGroupDrop1" id="facility_ids" name="facility_id" required>
                                         <?php
@@ -137,43 +146,30 @@
                                         <?php } ?>
                                         </select>
                                     </div>
-
-                                    <div class="input-group"style="background-color:white">
-                                    <select class="wide"  aria-labelledby="btnGroupDrop1" id="customer_ids" name="customer_id" required>
-                                        <?php
-                                        if(isset($_SESSION['ID'])){
-                                            $id=$_SESSION['ID'];
-                                            $sq="id='$id'";
-                                            $newAPIFunctions->select("users","*",$sq);
-                                            $userLists = $newAPIFunctions->sql;
-                                                while ($data = mysqli_fetch_assoc($userLists)){
-                                                ?>
-                                        <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data["fname"] ." ". $data["mname"] ." ". $data["lname"]; ?></option>
-                                        <?php }} ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
                                     <div class="input-group">
                                     <input type="number" class="form-control" id="person_adult_quantitys" name="person_adult_quantity" placeholder="Adult Quantity" required>
                                     </div>
-                                    <div class="input-group">
-                                    <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity" placeholder="Kids Quantity" >
-                                    </div>
                                 </div>
                             </div>
-
                             <div class="col-md-4">
-                                <div class="book_tabel_item">
+                            <div class="book_tabel_item">
                                     <div class="input-group">
                                     <input type="date" class="form-control" id="dates" name="date">
                                     </div>
                                     <div class="input-group">
+                                    <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity" placeholder="Kids Quantity" >
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                               
+                                    <div class="input-group">
                                     <input type="time" class="form-control" id="times" name="time">
                                     </div>
-                                </div>
+                                
+
                                 <?php if(isset($_SESSION['PERMISSION_ID'])){?>
                                        <?php 
                                         if(isset($_SESSION['ID'])){
@@ -184,23 +180,24 @@
                                             $userLists = $newAPIFunctions->sql;
                                                 while ($data = mysqli_fetch_assoc($userLists)){?>
                                                 <?php  if($_SESSION['PERMISSION_ID'] == 1 || $_SESSION['PERMISSION_ID'] == 3) { ?>
-                                                    <li class="nav-item"><a class="book_now_btn button_hover" href="Pages/admin/index.php"><?php echo  $_SESSION['FULLNAME']; ?></a></li>
+                                                    <a style="margin-top:10px" class="book_now_btn button_hover" href="Pages/admin/index.php">Cant Reserve</a>
                                                     <?php } else{?>
                                                          <?php
                                                             
                                                                 if($data["email_verified_at"] == NULL) {
                                                                     ?>
-                                                                <li class="nav-item"><a class="book_now_btn button_hover" href="profile.php">Verify Account</a></li>
+                                                                <a style="margin-top:10px" class="book_now_btn button_hover" href="profile.php">Verify Account</a>
                                                             
                                                                 <?php } else{?>
                                                                 
-                                                                <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking">Book Now</button>
+                                                                <button type="submit" class="book_now_btn button_hover" id="btn-mul" name="booking" style="margin-top:10px">Book Now</button>
                                                                 <?php }?> 
                                          <?php }}}}else{ ?>
 
-                                        <li class="nav-item"><a class="book_now_btn button_hover" href="register.php">Register</a></li>
+                                        <a style="margin-top:10px" class="book_now_btn button_hover" href="register.php">Register</a>
                                 <?php }?>
-                            </div>       
+                            </div> 
+                            </div>      
                       </form> 
                         </div>
                     </div>
