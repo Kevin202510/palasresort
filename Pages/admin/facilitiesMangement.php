@@ -12,7 +12,7 @@
             <div class="card" style="margin-top:50px;">
               <div class="card-body">
                   <div class="card-title">
-                    <h4 class="card-title">Facilities Management</h4>
+                    <h4 class="card-title" style="color:#987554;font-family : bradley hand, cursive">Facilities Management</h4>
                     <div class="d-flex flex-row-reverse">
                       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
