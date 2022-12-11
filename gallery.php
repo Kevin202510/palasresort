@@ -10,7 +10,7 @@
 <div class="row"style="margin-top:100px;background-color: #FFF36D">
 <div class="row col-md-12" style="margin-top:50px;background-color: #FFF36D; padding-left:50px;">
 
-<div style="margin-left: 15px">
+<div style="margin-left: 80px">
   <video width="100%" height="95%"  autoplay loop>
       <source src="image/vid.mp4" type="video/mp4">
   </video>
