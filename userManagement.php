@@ -11,7 +11,7 @@
         <div class="section-top-border">
             <h3 class="mb-30 title_color">Users</h3>
             <div class="col-md-2"><button type="button" class="btn btn-success" style="float: right;" data-toggle="modal" data-target="#myModal">Add</button></div>
-            <div class="progress-table-wrap">
+            <div class="progress-table-wrap" >
             <table class="table table-hover">
                 <thead>
                     <tr>
