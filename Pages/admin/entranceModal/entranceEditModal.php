@@ -5,7 +5,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="resiboModalLabel">Recipt</h1>
+        <h1 class="modal-title fs-5" id="resiboModalLabel">Receipt</h1>
         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> -->
       </div>
       <div class="modal-body">
@@ -18,7 +18,7 @@
            Balance:<input type="number" name="balancessss" id="balancesss" readonly>
            Payment:<input type="number" name="paymentssss" id="paymentsss" readonly>
            Change:<input type="number" name="change" id="change" readonly>
-           Recipt:<input type="number" id="recip" disabled >
+           Receipt:<input type="number" id="recip" disabled >
           </div> 
             <div class="modal-footer">
             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
