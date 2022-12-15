@@ -14,11 +14,11 @@
            <input type="hidden" name="idssss" id="idsss">
            <input type="hidden" name="reservation_idssss" id="reservation_idsss">
            <input type="hidden" name="time_inssss" id="time_insss">
-           <input type="text" id="fullname" disabled>
+           <!-- <input type="text" id="fullname" disabled> -->
            Balance:<input type="number" name="balancessss" id="balancesss" readonly>
            Payment:<input type="number" name="paymentssss" id="paymentsss" readonly>
            Change:<input type="number" name="change" id="change" readonly>
-           Receipt:<input type="number" id="recip" disabled >
+           <!-- Receipt:<input type="number" id="recip" disabled > -->
           </div> 
             <div class="modal-footer">
             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
@@ -37,16 +37,23 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="outModalLabel">Time Out</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> -->
       </div>
       <div class="modal-body">
       <form method="POST" id="serviceform" action="entranceModal/entranceModalFunctions.php">
         <div class="row">
-           <input type="text" name="idz" id="idzz">
-           <input type="text" name="reservation_idz" id="reservation_idzz">
-           <input type="text" name="time_inz" id="time_inzz">
-           <input type="text" name="time_out" id="time_outzz">
-           <input type="text" name="balancez" id="balancezz">
+          <center><p>Time Out........</p></center>
+           <input type="hidden" name="idz" id="idzz">
+           <input type="hidden" name="customer_idzzz" id="customer_idzz">
+           <input type="hidden" name="reservation_idz" id="reservation_idzz">
+           <input type="hidden" name="time_inz" id="time_inzz">
+           <input type="hidden" name="time_out" id="time_outzz">
+           <input type="hidden" name="balancez" id="balancezz">
+           <input type="hidden" name="facility_idzz" id="facility_idz">
+           
+           
+           
           </div> 
             <div class="modal-footer">
             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
@@ -65,7 +72,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Entrance</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="modal-body">
       <form method="POST" id="serviceform" action="entranceModal/entranceModalFunctions.php">
@@ -138,19 +145,14 @@
       <form method="POST" id="serviceform">
       <input type="hidden" id="idss" name="id">
         <div class="row">
-              <div class="col-md-4">
-                <div class="form-group">
-                <label for="example-text-input" class="form-control-label">Fullname</label>
-                <input type="text" class="form-control"  id="customer_names" disabled>
-                </div>
-              </div>
-              <div class="col-md-4">
+          
+              <div class="col-md-6">
                 <div class="form-group">
                 <label for="example-text-input" class="form-control-label">Reservation ID</label>
                 <input type="text" class="form-control"  id="reservation_idss" disabled>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="form-group">
                 <label for="example-text-input" class="form-control-label">Time in</label>
                 <input type="text" class="form-control" id="time_inss" disabled>

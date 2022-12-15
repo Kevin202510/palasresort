@@ -88,11 +88,18 @@
             $this->sql = $result = $this->mysqli->query($sql);
         }
 
-        public function select4(){
+        public function select4($id){
+            $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id WHERE entrances . id =$id";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
+        public function select45(){
             $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id";
 
             $this->sql = $result = $this->mysqli->query($sql);
         }
+
 
         public function select41(){
             $sql = "SELECT * FROM `sales` LEFT JOIN users ON users.id = sales.user_id LEFT JOIN reservations ON reservations.res_id=sales.reservation_id";

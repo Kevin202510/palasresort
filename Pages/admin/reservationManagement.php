@@ -22,7 +22,7 @@
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">
               <table class="table align-items-center mb-0">
-              <thead>
+              <thead style="background-color:#FFE900">
                 <tr>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reservation Type</th>
@@ -45,6 +45,7 @@
                   $index = 1;
                   $reserv_stat="Paid";
                   while ($data = mysqli_fetch_assoc($serviceLists)){
+                  if($data['reservation_status']==0){  
                     if($data['reservation_status']==0){
                       $reserv_stat = "Not Paid";
                     }
@@ -64,7 +65,7 @@
                             <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
                           </svg></button></td>
               </tr>
-              <?php $index++; } ?>
+              <?php $index++; }} ?>
               </tbody>
               </table>
                 </div>

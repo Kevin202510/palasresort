@@ -22,7 +22,7 @@
                     </div>
                   </div>
                   <table class="table table-hover">
-                    <thead>
+                    <thead style="background-color:#FFE900">
                       <tr >
                       <th scope="col">#</th>
                         <th scope="col">Image</th>

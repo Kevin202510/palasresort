@@ -158,7 +158,7 @@
                             <div class="col-md-4">
                             <div class="book_tabel_item">
                                     <div class="input-group">
-                                    <input type="date" class="form-control" id="dates" name="date">
+                                    <input type="date" class="form-control" id="datePickerId" name="date">
                                     </div>
                                     <div class="input-group">
                                     <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity" placeholder="Kids Quantity" >
@@ -317,7 +317,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?><br>Over Night: ₱ <?php echo $data["overnigth_rate"]; ?></small></h4>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}}?>
@@ -345,7 +345,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}}?>
@@ -373,7 +373,7 @@
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
         </div>
         <?php }}}?>
@@ -402,3 +402,28 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <?php include('Pages/layouts/scripts.php');?>
+
+<script>
+    $(document).ready(function(){
+
+datePickerId.min = new Date().toISOString().split("T")[0];
+
+$("#datePickerId").focusout(function(){
+
+console.log($("#datePickerId").val());
+var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+
+// var dt = new Date($("#datePickerId").val());
+
+var a = new Date((new Date($("#datePickerId").val())).valueOf() + 1000*3600*48).toISOString().split("T")[0];
+// var b = new Date((new Date($("#datePickerId").val())).valueOf() + 1000*3600*24).toISOString().split("T")[0];
+
+datePickerId2.max = a;
+datePickerId2.min = b;
+
+});
+
+});
+    
+</script>
