@@ -34,6 +34,11 @@
                  $reserv_stat="Paid";
                  while ($data = mysqli_fetch_assoc($serviceLists)){
                if($data["customer_id"]==$id){
+                if($data['reservation_status']==0){  
+                    if($data['reservation_status']==0){
+                      $reserv_stat = "Not Paid";
+                    }
+                
              
              ?>
              <div class="card" style="margin-right:10px; margin-top:10px;">
@@ -50,7 +55,7 @@
                     <button type="button" class="btn btn-light" id="qrcodegen"  data-id="<?php echo $data['res_id']; ?>" ><span><i class="fa fa-qrcode fa-3x" aria-hidden="true"></i></span></button>
                 </div>
              </div>
-            <?php }}}?>
+            <?php }}}}?>
             
     </div>
 </div>

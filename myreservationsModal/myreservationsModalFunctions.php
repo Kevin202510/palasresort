@@ -85,6 +85,9 @@
         $id = $_POST['id'];
 
         $newAPIFunctions->delete('reservations',"res_id='$id'");
+        
+        $valid = $_POST["facility_id"];
+        $newAPIFunctions->update('facilities',['status'=>0],"id='$valid'");
 
         if($newAPIFunctions){
             header('location:../myreserves.php');

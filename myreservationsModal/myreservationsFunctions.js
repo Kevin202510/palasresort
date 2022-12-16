@@ -31,9 +31,14 @@ $(document).ready(function(){
     $("body").on('click','#delete',function(e){
         
         var idss = $(e.currentTarget).data('id');
+        $.post("myreservationsModal/myupdatereservations.php",{id: idss},function(data,status){
+        var datas = JSON.parse(data);
         $("#ids").val(idss);
+        $("#facility_idz").val(datas.facility_id); 
+        
         $("#exampleModalDelete").modal("show");
     });
+  });  
     
     $("#closeform").click(function(){
         $("#serviceform")[0].reset();

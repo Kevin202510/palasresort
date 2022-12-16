@@ -33,9 +33,10 @@
                       $newAPIFunctions->select("facilities","*");
                       $serviceLists = $newAPIFunctions->sql;
                       while ($data = mysqli_fetch_assoc($serviceLists)){
+                        if($data['status'] == 0){
                           ?>
                   <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data['name']; ?></option>
-                  <?php } ?>
+                  <?php }} ?>
                 </select>
                 </div>
               </div>

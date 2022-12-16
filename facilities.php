@@ -79,6 +79,9 @@
         'total_balance'=>$bal,
         'person_adult_quantity'=>$person_adult_quantity,
         'person_kids_quantity'=>$person_kids_quantity,]);
+
+        $valid = $_POST["facility_id"];
+        $newAPIFunctions->update('facilities',['status'=>1],"id='$valid'");
         
         if($newAPIFunctions){
             echo "<script>alert('Sucess Reserve!');</script>";
@@ -106,7 +109,7 @@
             <div class="hotel_booking_table">
                 <div class="col-md-3">
                     
-                    <h2>Book<br>Your Room</h2>
+                    <h2>Book<br>Your Facilities</h2>
                 </div>
                 <div class="col-md-9">
                     <div class="boking_table">
@@ -141,9 +144,10 @@
                                             $newAPIFunctions->select("facilities","*");
                                             $serviceLists = $newAPIFunctions->sql;
                                             while ($data = mysqli_fetch_assoc($serviceLists)){
+                                                if($data['status'] == 0){
                                                 ?>
                                         <option class="dropdown-item" value = "<?php echo $data['id']; ?>" ><?php echo $data['name']; ?></option>
-                                        <?php } ?>
+                                        <?php } }?>
                                         </select>
                                     </div>
                                     <div class="input-group">
@@ -154,7 +158,7 @@
                             <div class="col-md-4">
                             <div class="book_tabel_item">
                                     <div class="input-group">
-                                    <input type="date" class="form-control" id="dates" name="date">
+                                    <input type="date" class="form-control" id="datePickerId" name="date">
                                     </div>
                                     <div class="input-group">
                                     <input type="number" class="form-control" id="person_kids_quantitys" name="person_kids_quantity" placeholder="Kids Quantity" >
@@ -223,7 +227,7 @@
 
             while ($data = mysqli_fetch_assoc($userLists)){
                 if($data["facility_type"] == "rooms"){
-                
+                    if($data['status'] == 0){                
                 ?>
     <div class="card" style="width: 18rem;text-align:center;margin-right: 50px; margin-bottom: 30px">
     <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
@@ -232,7 +236,7 @@
         <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
     </div>
     </div>
-    <?php }}?>
+    <?php }}}?>
     </div>
 
 </div>
@@ -250,6 +254,7 @@
 
                 while ($data = mysqli_fetch_assoc($userLists)){
                     if($data["facility_type"] == "cottage"){
+                        if($data['status'] == 0){
                     
                     ?>
         <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 30px">
@@ -259,7 +264,7 @@
                         <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
-        <?php }}?>
+        <?php }}}?>
         </div>
 
     </div>
@@ -277,6 +282,7 @@
 
                 while ($data = mysqli_fetch_assoc($userLists)){
                     if($data["facility_type"] == "function_pavillion"){
+                        if($data['status'] == 0){
                     
                     ?>
         <div class="card" style="width: 18rem;text-align:center;margin-right:80px; margin-bottom: 50px">
@@ -286,7 +292,7 @@
                             <h4 class="card-text"><small> Description : <?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
-        <?php }}?>
+        <?php }}}?>
         </div>
 
     </div>
@@ -304,16 +310,17 @@
 
                 while ($data = mysqli_fetch_assoc($userLists)){
                     if($data["facility_type"] == "pool"){
+                        if($data['status'] == 0){
                     
                     ?>
         <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 30px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?><br>Over Night: ₱ <?php echo $data["overnigth_rate"]; ?></small></h4>
+            <h4 class="card-text"><small description:<?php echo $data["description"]; ?><br>Day Rate: ₱ <?php echo $data["day_rate"]; ?><br>Night Rate: ₱ <?php echo $data["night_rate"]; ?></small></h4>
         </div>
         </div>
-        <?php }}?>
+        <?php }}}?>
         </div>
 
     </div>
@@ -331,16 +338,17 @@
 
                 while ($data = mysqli_fetch_assoc($userLists)){
                     if($data["facility_type"] == "sports_center"){
+                        if($data['status'] == 0){
                     
                     ?>
         <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 50px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
         </div>
-        <?php }}?>
+        <?php }}}?>
         </div>
 
     </div>
@@ -358,16 +366,17 @@
 
                 while ($data = mysqli_fetch_assoc($userLists)){
                     if($data["facility_type"] == "adrenaline_game"){
+                        if($data['status'] == 0){
                     
                     ?>
         <div class="card" style="width: 18rem;text-align:center;margin-right:50px; margin-bottom: 50px">
         <img src="Pages/admin/facilitiesimage/images/<?php echo $data['image']; ?>" width="286" height="230" alt="">
         <div class="card-body">
                             <a href="#"><h4 class="sec_h4"><?php echo $data["name"]; ?></h4></a>
-                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Day Rate:₱<?php echo $data["day_rate"]; ?><br>Night Rate: ₱<?php echo $data["night_rate"]; ?></small></h4>
+                            <h4 class="card-text"><small> Description:<?php echo $data["description"]; ?><br>Rate:₱<?php echo $data["day_rate"]; ?></small></h4>
         </div>
         </div>
-        <?php }}?>
+        <?php }}}?>
         </div>
 
     </div>
@@ -393,3 +402,28 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <?php include('Pages/layouts/scripts.php');?>
+
+<script>
+    $(document).ready(function(){
+
+datePickerId.min = new Date().toISOString().split("T")[0];
+
+$("#datePickerId").focusout(function(){
+
+console.log($("#datePickerId").val());
+var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+
+// var dt = new Date($("#datePickerId").val());
+
+var a = new Date((new Date($("#datePickerId").val())).valueOf() + 1000*3600*48).toISOString().split("T")[0];
+// var b = new Date((new Date($("#datePickerId").val())).valueOf() + 1000*3600*24).toISOString().split("T")[0];
+
+datePickerId2.max = a;
+datePickerId2.min = b;
+
+});
+
+});
+    
+</script>

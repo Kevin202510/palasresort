@@ -71,6 +71,9 @@
         'total_balance'=>$bal,
         'person_adult_quantity'=>$person_adult_quantity,
         'person_kids_quantity'=>$person_kids_quantity,]);
+        
+        $valid = $_POST["facility_id"];
+        $newAPIFunctions->update('facilities',['status'=>1],"id='$valid'");
         if($newAPIFunctions){
             header('location: ../../admin/reservationManagement.php');
         }else{

@@ -6,7 +6,7 @@
    
     if(isset($_POST['id'])){
         $dataid = $_POST['id'];
-        $newAPIFunctions->select3($dataid);
+        $newAPIFunctions->select45();
         $getUser = $newAPIFunctions->sql;
         $res = array();
         while($datass = mysqli_fetch_assoc($getUser)){
@@ -35,6 +35,12 @@
     }else if(isset($_POST["resi_id"])){
         $valid = $_POST["resi_id"];
         $newAPIFunctions->update('reservations',['reservation_status'=>1],"res_id='$valid'");
+         
+            if($newAPIFunctions){
+                header('location: ../../admin/entranceManagement.php');
+            }else{
+                echo '<script>alert("May Error!");</script>';
+            }
     }
 
 

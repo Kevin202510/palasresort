@@ -30,11 +30,17 @@ $(document).ready(function(){
   
     $.post("entranceModal/updateentrance.php",{id: idss},function(data,status){
         var data = JSON.parse(data);
+        console.log(data);
         $("#idzz").val(data.id);
+        $("#customer_idzz").val(data.customer_id);
         $("#reservation_idzz").val(data.reservation_id);
         $("#time_inzz").val(data.time_in);
         $("#time_outzz").val(data.time_out);
         $("#balancezz").val(data.balance);
+        $("#facility_idz").val(data.facility_id);
+
+        
+        
   
         
         $("#btns").attr('name',"OutEntance");
