@@ -24,6 +24,30 @@ $(document).ready(function(){
       }
   });
 
+
+  $("body").on('click','#extend',function(e){
+        
+    var idss = $(e.currentTarget).data('id');
+  
+    $.post("entranceModal/updateentrance.php",{id: idss},function(data,status){
+        var data = JSON.parse(data);
+        console.log(data);
+        $("#idmm").val(data.id);
+        $("#customer_idmm").val(data.customer_id);
+        $("#reservation_idmm").val(data.reservation_id);
+        $("#balancemm").val(data.balance);
+        $("#facility_idmm").val(data.facility_id);
+   
+        $("#bt").attr('name',"extendkoto");
+        $("#bt").html("Extend");
+        $("#extendModal").modal("show");
+        
+     
+    })
+  
+    // $("#myModalLabel").html("Update User");
+  });
+
   $("body").on('click','#out',function(e){
         
     var idss = $(e.currentTarget).data('id');
@@ -38,11 +62,7 @@ $(document).ready(function(){
         $("#time_outzz").val(data.time_out);
         $("#balancezz").val(data.balance);
         $("#facility_idz").val(data.facility_id);
-
-        
-        
-  
-        
+   
         $("#btns").attr('name',"OutEntance");
         $("#btns").html("Time Out");
         $("#outModal").modal("show");
@@ -52,8 +72,13 @@ $(document).ready(function(){
   
     // $("#myModalLabel").html("Update User");
   });
-  
 
+
+
+
+
+
+  
   $("body").on('click','#pays',function(e){
         
     var idss = $(e.currentTarget).data('id');
@@ -64,8 +89,7 @@ $(document).ready(function(){
         $("#reservation_idss").val(datas.reservation_id );
         $("#time_inss").val(datas.time_in);
         $("#balancess").val(datas.balance);
-        $("#customer_names").val(datas.fname+" "+datas.lname);
-        
+     
         $("#muls").attr('name',"bayad");
         $("#muls").html("Payment");
     })
@@ -96,12 +120,15 @@ function renderReciept(){
 $("body").on('click',"#prints",function(e){
   // e.preventDefault();
 
-  alert($("#reservation_idsss").val());
+  // alert($("#reservation_idsss").val());
   $.post("entranceModal/updateentrance.php",{resi_id: $("#reservation_idsss").val()},function(data,status){
-    alert("tapos na");
+    location.href = "http://localhost/palasresort/Pages/admin/entranceManagement.php";
+   
   })
 
 });
+
+
 
 
 
@@ -113,9 +140,19 @@ $("body").on('click',"#prints",function(e){
         $("#exampleModalDelete").modal("show");
     });
     
+
+
+    $("#closeform").click(function(){
+      $("#serviceform")[0].reset();
+
+
+      $("#extendModal").modal("hide");
+  });
+
+
     $("#closeform").click(function(){
         $("#serviceform")[0].reset();
-
+ 
 
         $("#exampleModal").modal("hide");
     });

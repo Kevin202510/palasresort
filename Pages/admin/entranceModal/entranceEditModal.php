@@ -9,11 +9,11 @@
         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> -->
       </div>
       <div class="modal-body">
-      <form method="POST" id="salesform">
+      <form method="POST" id="printform">
         <div class="row">
            <input type="hidden" name="idssss" id="idsss">
-           <input type="hidden" name="reservation_idssss" id="reservation_idsss">
-           <input type="hidden" name="time_inssss" id="time_insss">
+           <input type="text" name="reservation_idssss" id="reservation_idsss">
+           <input type="text" name="time_inssss" id="time_insss">
            <!-- <input type="text" id="fullname" disabled> -->
            Balance:<input type="number" name="balancessss" id="balancesss" readonly>
            Payment:<input type="number" name="paymentssss" id="paymentsss" readonly>
@@ -64,7 +64,51 @@
     </div>
   </div>
 </div>
-<!-- TIME OUT -->  
+<!-- TIME OUT --> 
+
+
+
+<!-- EXTEND OUT -->
+<div class="modal fade" id="extendModal" tabindex="-1" aria-labelledby="extendModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="extendModalLabel">Extend</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> -->
+      </div>
+      <div class="modal-body">
+      <form method="POST" id="serviceform" action="entranceModal/entranceModalFunctions.php">
+        <div class="row">
+           <input type="hidden" name="idm" id="idmm">
+           <input type="hidden" name="customer_idm" id="customer_idmm">
+           <input type="hidden" name="reservation_idm" id="reservation_idmm">
+           <input type="hidden" name="balancem" id="balancemm">
+           <input type="hidden" name="facility_idmm" id="facility_idmm">
+           <div class="col-md">
+           <div class="row">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Enter Extend Fee</label>
+                <input type="text" class="form-control"name="extendm" id="extend">
+                </div>
+              </div>
+            </div>   
+           
+           
+           
+          </div> 
+            <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-secondary" id="closeform">Close</button>
+            <button type="submit" class="btn btn-primary" id="bt" name="addNew">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EXTEND OUT -->
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -152,6 +196,12 @@
                 <input type="text" class="form-control"  id="reservation_idss" disabled>
                 </div>
               </div>
+              <!-- <div class="col-md-6">
+                <div class="form-group">
+                <label for="example-text-input" class="form-control-label">Customer ID</label>
+                <input type="text" class="form-control"  id="reservation_idss" disabled>
+                </div>
+              </div> -->
               <div class="col-md-6">
                 <div class="form-group">
                 <label for="example-text-input" class="form-control-label">Time in</label>

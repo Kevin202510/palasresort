@@ -95,7 +95,13 @@
         }
 
         public function select45(){
-            $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id";
+            $sql = "SELECT * FROM reservations LEFT JOIN entrances on entrances.reservation_id = reservations.res_id ";
+
+            $this->sql = $result = $this->mysqli->query($sql);
+        }
+
+        public function select49($ids){
+            $sql = "SELECT * FROM entrances LEFT JOIN reservations on reservations.res_id = entrances.reservation_id WHERE entrances . id =$ids";
 
             $this->sql = $result = $this->mysqli->query($sql);
         }

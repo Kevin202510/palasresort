@@ -20,7 +20,8 @@
             echo '<script>alert("May Error!");</script>';
         }
         
-   }else if(isset($_POST['OutEntance'])){
+   }
+    else if(isset($_POST['OutEntance'])){
         $id = $_POST['idz'];
         $reservation_id = $_POST["reservation_idz"];
         $time_in = $_POST["time_inz"];
@@ -37,6 +38,30 @@
         $newAPIFunctions->update('facilities',['status'=>0,],"id='$status'");
          $newAPIFunctions->insert('sales',['user_id'=> $customer_idz ,'reservation_id'=>$reservation_id]);
         
+
+
+
+        if($newAPIFunctions){
+            header('location: ../../admin/entranceManagement.php');
+        }else{
+            echo '<script>alert("May Error!");</script>';
+        }
+    }
+
+
+    else if(isset($_POST['extendkoto'])){
+        $xt= $_POST["extendm"];
+        $blanc= $_POST["balancem"];
+
+        $extend=  $xt+ $blanc;
+
+        $id = $_POST['idm'];
+        $reservation_id = $_POST["reservation_idm"];
+        $facility_id = $_POST["facility_idm"];
+        $customer_id = $_POST["customer_idm"];
+        
+
+        $newAPIFunctions->update('reservations',[ 'total_balance'=>$extend,],"res_id ='$reservation_id'");
 
 
 
